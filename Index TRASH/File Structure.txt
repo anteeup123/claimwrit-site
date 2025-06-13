@@ -1,0 +1,7 @@
+/ (root folder)
+├── index.html
+├── about.html
+├── more-about-us.html
+├── request-sample.html
+├── blog.html
+└── styles.css

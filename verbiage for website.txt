@@ -1,0 +1,14 @@
+verbiage for website:
+
+"View the precision of our work firsthand—samples of demand letters previously submitted to insurers and opposing counsel are available upon request."
+
+
+SHOW a mock-up of how the request would look on  website.
+
+
+asked chatgpt to incorporate copilots code, but i dont think it did it properly, results are:
+notes on current deployment. 
+1. cant navigate from About ClaimWrit back to main page ( need a navigation button on every page) so viewer doesn't have to use back button on navigation button
+about page is cut off. 
+2. cant scroll down to read all of whats on the page.
+3.welcom to claimwrit is first page. it looks empty. there are two buttons on it. one says find out more about us and the second says "get started"  and at very bottom it says request a sample.  get started was supposed to be used instead of request a sample. most of the verbiage that should be on the page isn't.  coloring looks nothing like the sample photos from copilot
