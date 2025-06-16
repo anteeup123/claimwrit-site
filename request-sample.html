@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Request a Sample | ClaimWrit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="more-about-us.html">More About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="request-sample.html" class="active">Request Sample</a></li>
+      <li><a href="client-upload.html">Client Portal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+  <h1 class="page-title">Request a Demand-Letter Sample</h1>
+</header>
+
+<main class="sample-request-form">
+  <form action="submit-request.php" method="POST">
+    <label for="name">Your Name*:</label>
+    <input id="name" name="name" type="text" required />
+
+    <label for="email">Your Email*:</label>
+    <input id="email" name="email" type="email" required />
+
+    <label for="phone">Contact Phone*:</label>
+    <input id="phone" name="phone" type="tel" required />
+
+    <label for="sample-type">Sample Requested*:</label>
+    <select id="sample-type" name="sample-type" required>
+      <option value="" disabled selected>Select a sample type</option>
+      <option value="slip-trip-fall">Slip, Trip &amp; Fall</option>
+      <option value="assault-battery">Assault &amp; Battery</option>
+      <option value="bodily-injury-mva">Bodily Injury Motor Vehicle Accident</option>
+      <option value="uninsured-motorist-mva">Uninsured Motorist MVA</option>
+      <option value="premises-liability">Premises Liability</option>
+      <option value="product-liability">Product Liability</option>
+      <option value="dog-bite-injury">Dog Bite Injury</option>
+    </select>
+
+    <button type="submit" class="cta-button">Request Sample</button>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2025 Envisage Companies, LLC. All rights reserved · <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+</body>
+</html>
+

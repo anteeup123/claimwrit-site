@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>ClaimWrit | Home</title>
+  <title>Thank You | ClaimWrit</title>
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.onload = function(){
+      const params=new URLSearchParams(window.location.search);
+      document.getElementById('sampleType').textContent = params.get('sampleType') || 'your selected';
+    };
+  </script>
 </head>
 <body>
 
 <header>
   <nav>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="more-about-us.html">More About Us</a></li>
       <li><a href="services.html">Services</a></li>
@@ -21,15 +27,14 @@
       <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
-  <h1 class="page-title">Precision Demand-Letter Drafting</h1>
-  <p class="page-tagline">Empowering law firms with litigation-ready correspondence.</p>
+  <h1 class="page-title">Thank You for Your Request!</h1>
 </header>
 
 <main class="success-card">
-  <p>Welcome to ClaimWrit. Explore our services or request a sample letter below.</p>
-  <a href="services.html"        class="cta-button">View Services</a>
-  <a href="request-sample.html"  class="cta-button">Request a Sample</a>
-  <a href="client-upload.html"   class="cta-button">Secure Client Portal</a>
+  <p>Your request for the <strong id="sampleType"></strong> sample has been received.</p>
+  <p>We will review your details and follow up with you shortly.</p>
+  <a href="index.html" class="cta-button">Return Home</a>
+  <a href="blog.html" class="cta-button">Explore Blog</a>
 </main>
 
 <footer>
