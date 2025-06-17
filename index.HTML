@@ -6,100 +6,70 @@
   <title>ClaimWrit | Home</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* NAV BAR */
-    .site-nav {
+    /* Fallback styling in case JavaScript is disabled */
+    .site-nav-fallback {
       background: #8ED1C6;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       padding: 0.5rem 0;
     }
-    .site-nav .nav-bar {
-      display: inline-block;
+    .site-nav-fallback ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
-    .site-nav .nav-link {
+    .site-nav-fallback li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+    .site-nav-fallback a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 0.75rem;
       padding: 0.5rem 0;
     }
-    .site-nav .nav-link.active,
-    .site-nav .nav-link:hover {
+    .site-nav-fallback a.active,
+    .site-nav-fallback a:hover {
       text-decoration: underline;
     }
-
-    /* HOVER BOX */
-    .box {
-      position: relative;
-      width: 6em;
-      height: 6em;
-      margin: 2rem auto;
-      line-height: 6em;
-      overflow: hidden;
-      transform: translateZ(0);
-    }
-    .box div {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      line-height: inherit;
-      transition: transform .4s ease;
-      font-weight: 600;
-      color: #fff;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-    }
-    .box div::before {
-      content: '';
-      position: absolute;
-      width: 70.71%;
-      height: 70.71%;
-      background: inherit;
-      transform: rotate(45deg);
-      transition: all .4s ease;
-    }
-    .box__right  { background: #0a9d9a; transform: translateX(100%); }
-    .box__left   { background: #197278; transform: translateX(-100%); }
-    .box__top    { background: #ff6f5e; transform: translateY(-100%); }
-    .box__bottom { background: #ffc43d; transform: translateY(100%); }
-    .box__center { background: #ff914d; z-index: -1; }
-    .box__right::before  { right:100%; bottom:0; transform-origin:100% 100%; }
-    .box__left::before   { left:100%; top:0;   transform-origin:0 0;      }
-    .box__top::before    { right:0;    top:100%; transform-origin:100% 0;   }
-    .box__bottom::before { left:0;     bottom:100%;transform-origin:0 100%; }
-    .box__right:hover,
-    .box__left:hover,
-    .box__top:hover,
-    .box__bottom:hover {
-      transform: translate(0,0);
-      z-index:1;
-    }
-    .box__right:hover::before,
-    .box__left:hover::before,
-    .box__top:hover::before,
-    .box__bottom:hover::before {
-      width:100%; height:100%; transform:none;
-    }
-    .box__right:hover  ~ .box__center { transform:translateX(-100%); }
-    .box__left:hover   ~ .box__center { transform:translateX(100%); }
-    .box__top:hover    ~ .box__center { transform:translateY(100%); }
-    .box__bottom:hover ~ .box__center { transform:translateY(-100%); }
   </style>
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="nav-bar">
-      <a href="index.html" class="nav-link active">Home</a>;
-      <a href="our-mission.html" class="nav-link">Our Mission & Expertise</a>;
-      <a href="how-we-help.html" class="nav-link">How We Help</a>;
-      <a href="request-sample.html" class="nav-link">Request Sample DEMAND</a>;
-      <a href="client-upload.html" class="nav-link">Client Portal</a>;
-      <a href="contact.html" class="nav-link">Contact</a>;
-      <a href="blog.html" class="nav-link">Blog</a>
-    </div>
-  </nav>
+  <!-- Shared nav will be injected here -->
+  <div id="nav-placeholder"></div>
+
+  <noscript>
+    <!-- Fallback nav if JavaScript is disabled -->
+    <nav class="site-nav-fallback">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="our-mission.html">Our Mission & Expertise</a></li>
+        <li><a href="how-we-help.html">How We Help</a></li>
+        <li><a href="request-sample.html">Request Sample Demand</a></li>
+        <li><a href="client-upload.html">Client Portal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </noscript>
+
+  <script>
+    // Dynamically include the shared nav from nav.html
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+        // Highlight the active link
+        document.querySelectorAll('#nav-placeholder a').forEach(link => {
+          if (link.getAttribute('href') === 'index.html') {
+            link.classList.add('active');
+          }
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load nav:', err);
+      });
+  </script>
 
   <header style="text-align:center; margin-top:2rem;">
     <h1>Precision Demand-Letter Drafting &amp; Post-Settlement Support</h1>
