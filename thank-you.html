@@ -1,44 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Thank You | ClaimWrit</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script>
-    window.onload = function(){
-      const params=new URLSearchParams(window.location.search);
-      document.getElementById('sampleType').textContent = params.get('sampleType') || 'your selected';
-    };
-  </script>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="more-about-us.html">More About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="request-sample.html">Request Sample</a></li>
-      <li><a href="client-upload.html">Client Portal</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
-  </nav>
-  <h1 class="page-title">Thank You for Your Request!</h1>
-</header>
-
-<main class="success-card">
-  <p>Your request for the <strong id="sampleType"></strong> sample has been received.</p>
-  <p>We will review your details and follow up with you shortly.</p>
-  <a href="index.html" class="cta-button">Return Home</a>
-  <a href="blog.html" class="cta-button">Explore Blog</a>
-</main>
-
-<footer>
-  <p>&copy; 2025 Envisage Companies, LLC. All rights reserved · <a href="privacy.html">Privacy Policy</a></p>
-</footer>
+  <nav>…same nav…</nav>
+  <main style="text-align:center; padding:3rem;">
+    <h1>Thank You for Your Request!</h1>
+    <p>Your request for a sample demand letter has been received. We’ll follow up shortly.</p>
+    <a href="index.html" class="cta-button">Return Home</a>
+  </main>
+  <footer>
+    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL</p>
+  </footer>
 </body>
 </html>

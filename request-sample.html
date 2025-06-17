@@ -2,58 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Request a Sample | ClaimWrit</title>
+  <title>Request Sample | ClaimWrit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="more-about-us.html">More About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="request-sample.html" class="active">Request Sample</a></li>
+      <li><a href="our-mission.html">Our Mission & Expertise</a></li>
+      <li><a href="how-we-help.html">How We Help</a></li>
+      <li><a href="request-sample.html" class="active">Request Sample DEMAND</a></li>
       <li><a href="client-upload.html">Client Portal</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
-  <h1 class="page-title">Request a Demand-Letter Sample</h1>
-</header>
 
-<main class="sample-request-form">
-  <form action="submit-request.php" method="POST">
-    <label for="name">Your Name*:</label>
-    <input id="name" name="name" type="text" required />
+  <main>
+    <h1 style="text-align:center; margin-top:2rem;">Request a Sample Demand Letter</h1>
+    <p style="text-align:center; max-width:800px; margin:1rem auto;">
+      Attorneys can request copies of redacted demand letters previously written and issued by ClaimWrit. These samples showcase our structured approach to case presentation, highlighting strategic formatting, liability analysis, and medical chronology integration—reinforcing how precision strengthens negotiations.
+    </p>
 
-    <label for="email">Your Email*:</label>
-    <input id="email" name="email" type="email" required />
+    <h2 style="text-align:center;">Why Precision Matters</h2>
+    <ul style="max-width:700px; margin:1rem auto;">
+      <li>Clearly articulates damages with supporting evidence.</li>
+      <li>Integrates medical findings for a compelling case narrative.</li>
+      <li>Follows insurer-preferred formatting to streamline review and response.</li>
+    </ul>
 
-    <label for="phone">Contact Phone*:</label>
-    <input id="phone" name="phone" type="tel" required />
+    <h2 style="text-align:center;">Request a Sample</h2>
+    <p style="text-align:center; max-width:700px; margin:1rem auto 2rem;">
+      Click below to request redacted sample demand letters, and see firsthand how ClaimWrit enhances settlement strategy through structured documentation.
+    </p>
 
-    <label for="sample-type">Sample Requested*:</label>
-    <select id="sample-type" name="sample-type" required>
-      <option value="" disabled selected>Select a sample type</option>
-      <option value="slip-trip-fall">Slip, Trip &amp; Fall</option>
-      <option value="assault-battery">Assault &amp; Battery</option>
-      <option value="bodily-injury-mva">Bodily Injury Motor Vehicle Accident</option>
-      <option value="uninsured-motorist-mva">Uninsured Motorist MVA</option>
-      <option value="premises-liability">Premises Liability</option>
-      <option value="product-liability">Product Liability</option>
-      <option value="dog-bite-injury">Dog Bite Injury</option>
-    </select>
+    <form class="sample-request-form" action="https://formspree.io/f/xyza1234" method="POST">
+      <label for="name">Your Name*:</label>
+      <input type="text" id="name" name="name" required />
 
-    <button type="submit" class="cta-button">Request Sample</button>
-  </form>
-</main>
+      <label for="email">Your Email*:</label>
+      <input type="email" id="email" name="_replyto" required />
 
-<footer>
-  <p>&copy; 2025 Envisage Companies, LLC. All rights reserved · <a href="privacy.html">Privacy Policy</a></p>
-</footer>
+      <label for="phone">Contact Phone*:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="sample-type">Sample Requested*:</label>
+      <select id="sample-type" name="sample-type" required>
+        <option value="" disabled selected>Select a sample type</option>
+        <option value="slip-trip-fall">Slip, Trip & Fall</option>
+        <option value="assault-battery">Assault & Battery</option>
+        <option value="bodily-injury-mva">Bodily Injury – MVA</option>
+        <option value="uninsured-motorist-mva">Uninsured Motorist – MVA</option>
+        <option value="premises-liability">Premises Liability</option>
+        <option value="product-liability">Product Liability</option>
+        <option value="dog-bite-injury">Dog Bite Injury</option>
+      </select>
+
+      <button type="submit" class="cta-button">Request Samples</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL</p>
+  </footer>
 </body>
 </html>
-

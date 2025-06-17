@@ -1,41 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Upload Received | ClaimWrit</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Upload Success | ClaimWrit</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<?php session_start(); $cid = $_SESSION['client_id'] ?? 'your secure folder'; ?>
-
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="more-about-us.html">More About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="request-sample.html">Request Sample</a></li>
-      <li><a href="client-upload.html">Client Portal</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
-  </nav>
-  <h1 class="page-title">Upload Successful</h1>
-</header>
-
-<main class="success-card">
-  <p>Your documents have been saved to the secure folder:</p>
-  <p><strong><?= htmlspecialchars($cid) ?></strong></p>
-  <p>We’ll review them and confirm receipt within one business day.</p>
-
-  <a href="client-upload.html" class="cta-button">Upload More Files</a>
-  <a href="index.html" class="cta-button">Return Home</a>
-</main>
-
-<footer>
-  <p>&copy; 2025 Envisage Companies, LLC. All rights reserved · <a href="privacy.html">Privacy Policy</a></p>
-</footer>
+  <nav>…same nav…</nav>
+  <main style="text-align:center; padding:3rem;">
+    <h1>Upload Successful!</h1>
+    <p>Your document has been securely uploaded. We’ll notify you as soon as it’s processed.</p>
+    <a href="index.html" class="cta-button">Return Home</a>
+  </main>
+  <footer>
+    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL</p>
+  </footer>
 </body>
 </html>
