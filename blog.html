@@ -1,21 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>ClaimWrit Blog</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Site Navigation Styles */
+    .site-nav {
+      background-color: #7dbeb7;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .site-nav .nav-menu {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 1rem 0;
+      gap: 2rem;
+    }
+    .site-nav .nav-link {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: none;
+    }
+    .site-nav .nav-link:hover {
+      opacity: 0.8;
+    }
+    .site-nav .nav-link.active {
+      text-decoration: underline;
+    }
+
+    /* Remove default bullets and markers for topics */
+    .topics-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5em 0;
+    }
+    .topics-list summary {
+      display: block;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+      padding-left: 1.2em;
+      margin-bottom: 0.5em;
+      outline: none;
+    }
+    .topics-list summary::-webkit-details-marker {
+      display: none;
+    }
+    .topics-list summary::before {
+      content: "♦";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0056b3;
+    }
+    details {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    details[open] summary {
+      color: #0056b3;
+    }
+    /* Inner custom lists use check marks, no default bullets */
+    .topic-content ul {
+      list-style: none;
+      padding-left: 1em;
+      margin: 0.5em 0 1em;
+    }
+    .topic-content ul li {
+      margin: 0.3em 0;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="our-mission.html">Our Mission & Expertise</a></li>
-      <li><a href="how-we-help.html">How We Help</a></li>
-      <li><a href="request-sample.html">Request Sample DEMAND</a></li>
-      <li><a href="client-upload.html">Client Portal</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
+  <nav class="site-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="our-mission.html" class="nav-link">Our Mission & Expertise</a></li>
+      <li><a href="how-we-help.html" class="nav-link">How We Help</a></li>
+      <li><a href="request-sample.html" class="nav-link">Request Sample Demand</a></li>
+      <li><a href="client-upload.html" class="nav-link">Client Portal</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="blog.html" class="nav-link active">Blog</a></li>
     </ul>
   </nav>
 
@@ -24,19 +96,91 @@
     <p>Stay informed on best practices in demand-letter drafting, settlement strategies, and lien negotiation with ClaimWrit’s expert insights.</p>
 
     <h2>Featured Topics</h2>
-    <ul>
-      <li>🔹 <strong>Best Practices in Demand Writing</strong> – Crafting compelling demand letters that strengthen negotiations.</li>
-      <li>🔹 <strong>Legal Trends in Settlements</strong> – Industry updates on evolving settlement strategies.</li>
-      <li>🔹 <strong>Lien Negotiation Strategies</strong> – Maximizing net-to-client proceeds through effective lien reductions.</li>
-      <li>🔹 <strong>Behind-the-Scenes Expertise</strong> – How ClaimWrit refines legal documentation for efficiency and precision.</li>
-      <li>🔹 <strong>Industry FAQs</strong> – Addressing attorneys’ most common questions on legal documentation and settlement processes.</li>
+    <ul class="topics-list">
+      <li>
+        <details>
+          <summary>Best Practices in Personal Injury Demand Writing - Crafting Demand Letters That Strengthen Settlement Negotiations</summary>
+          <div class="topic-content">
+            <p>A personal injury demand letter is more than a request—it’s a strategic document that sets the tone for negotiations and influences settlement outcomes. A well-crafted demand letter should be clear, fact-driven, and structured to maximize compensation.</p>
+            <p><strong>1. Establishing Liability with a Strong Narrative</strong></p>
+            <ul>
+              <li>✔ Referencing applicable statutes when liability is officially established through a citation or legal determination.</li>
+              <li>✔ Referencing police reports and witness statements to corroborate facts.</li>
+              <li>✔ Structuring accident reconstruction details to support causation.</li>
+            </ul>
+            <p><strong>2. Medical Documentation & Treatment Summary</strong></p>
+            <ul>
+              <li>✔ Chronological medical history from initial emergency care to ongoing treatment.</li>
+              <li>✔ Diagnostic tests, surgical procedures, and rehabilitation details.</li>
+              <li>✔ Future medical needs and estimated costs to justify compensation demands, including a thorough review of medical records to ensure physician-documented estimates and causation assessments are properly captured.</li>
+            </ul>
+            <p><strong>3. Calculating Damages & Justifying Compensation</strong></p>
+            <ul>
+              <li>✔ Economic damages – Medical expenses, lost wages, rehabilitation costs.</li>
+              <li>✔ Non-economic damages – Pain and suffering, emotional distress, loss of enjoyment.</li>
+            </ul>
+            <p><strong>4. Structuring the Letter for Maximum Impact</strong></p>
+            <ul>
+              <li>✔ Bullet-pointed damages and expenses for clarity.</li>
+              <li>✔ Logical progression from incident details to medical findings.</li>
+              <li>✔ Professional, assertive tone that avoids overly emotional appeals.</li>
+            </ul>
+            <p><strong>5. Strengthening Negotiation Leverage</strong></p>
+            <ul>
+              <li>✔ Policy limits and available coverage.</li>
+              <li>✔ Client hardship and long-term impact to justify compensation demands.</li>
+            </ul>
+            <p><strong>Defendant’s Liability Exposure & Potential Litigation Risks</strong></p>
+            <ul>
+              <li>✔ Negligence or misconduct – If a defendant’s actions directly cause injury or damages, they may be held liable.</li>
+              <li>✔ Regulatory violations – Non-compliance with laws or industry standards can lead to lawsuits and financial penalties.</li>
+              <li>✔ Litigation strategy – The risk of trial, settlement negotiations, and potential jury verdicts all factor into liability exposure.</li>
+              <li>✔ Comparable Case Precedents – Past rulings and settlements help establish reasonable compensation expectations, guiding how courts and insurers assess liability and damages.</li>
+            </ul>
+            <p>Courts and insurers assess these risks based on evidence, legal precedent, and financial impact, shaping how cases are resolved.</p>
+            <p><strong>Final Thoughts</strong></p>
+            <p>A strong personal injury demand letter can influence settlement negotiations by establishing liability, framing the narrative, and setting clear compensation expectations. Demand letters serve as a lead-in for negotiations, allowing plaintiffs to define settlement terms and present supporting evidence.</p>
+            <p>A well-crafted demand letter can maximize settlement amounts by clearly outlining damages and liability, making it a critical tool in personal injury cases. When structured effectively, demand letters often lead to settlements rather than litigation, helping clients achieve timely and fair compensation without prolonged legal battles.</p>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Legal Trends in Settlements - How Evolving Legal Strategies Impact Case Resolutions</summary>
+          <div class="topic-content"><!-- Content here --></div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Lien Negotiation Strategies - Maximizing Reductions & Protecting Settlement Proceeds</summary>
+          <div class="topic-content"><!-- Content here --></div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Behind-the-Scenes Expertise - How ClaimWrit Ensures Precision in Legal Documentation</summary>
+          <div class="topic-content"><!-- Content here --></div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Industry FAQs - Addressing Common Questions in Legal Documentation & Settlements</summary>
+          <div class="topic-content"><!-- Content here --></div>
+        </details>
+      </li>
     </ul>
 
+    <!-- Original overview paragraphs remain unchanged -->
+    <p>Crafting compelling demand letters that strengthen negotiations. In this post, we explore the key elements that make your demand letters stand out and drive success.</p>
+    <p>Industry updates on evolving settlement strategies. Learn about recent shifts in insurer approaches and how to stay ahead of the curve in your negotiations.</p>
+    <p>Maximizing net-to-client proceeds through effective lien reductions. We review proven negotiation tactics with medical providers and lienholders to secure better outcomes.</p>
+    <p>How ClaimWrit refines legal documentation for efficiency and precision. A glimpse into our rigorous quality-control process and consistency standards across cases.</p>
+    <p>Addressing attorneys’ most common questions on legal documentation and settlement processes. From formatting queries to strategic considerations, get answers that matter.</p>
     <p>ClaimWrit’s blog offers clear, structured guidance to help attorneys navigate demand drafting and post-settlement procedures with confidence.</p>
   </main>
 
   <footer>
-    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL</p>
+    <p>&copy; 2025 ClaimWrit LLC &middot; Fort Lauderdale, FL</p>
   </footer>
 </body>
 </html>
