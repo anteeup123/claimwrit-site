@@ -2,74 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClaimWrit | Home</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Fallback styling in case JavaScript is disabled */
-    .site-nav-fallback {
-      background: #8ED1C6;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 0.5rem 0;
-    }
-    .site-nav-fallback ul {
+    /* NAVIGATION STYLES */
+    nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      background: #8ED1C6;
+      text-align: center;
     }
-    .site-nav-fallback li {
+    nav ul li {
       display: inline-block;
       margin: 0 1rem;
     }
-    .site-nav-fallback a {
+    nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      padding: 0.5rem 0;
+      padding: 14px 0;
+      display: inline-block;
     }
-    .site-nav-fallback a.active,
-    .site-nav-fallback a:hover {
+    nav ul li a.active,
+    nav ul li a:hover {
       text-decoration: underline;
     }
+
+    /* HOVER BOX */
+    .box {
+      position: relative;
+      width: 6em;
+      height: 6em;
+      margin: 2rem auto;
+      line-height: 6em;
+      overflow: hidden;
+      transform: translateZ(0);
+    }
+    .box div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: inherit;
+      transition: transform .4s ease;
+      font-weight: 600;
+      color: #fff;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .box div::before {
+      content: '';
+      position: absolute;
+      width: 70.71%;
+      height: 70.71%;
+      background: inherit;
+      transform: rotate(45deg);
+      transition: all .4s ease;
+    }
+    .box__right  { background: #0a9d9a; transform: translateX(100%); }
+    .box__left   { background: #197278; transform: translateX(-100%); }
+    .box__top    { background: #ff6f5e; transform: translateY(-100%); }
+    .box__bottom { background: #ffc43d; transform: translateY(100%); }
+    .box__center { background: #ff914d; z-index: -1; }
+    .box__right::before  { right:100%; bottom:0; transform-origin:100% 100%; }
+    .box__left::before   { left:100%; top:0;   transform-origin:0 0;      }
+    .box__top::before    { right:0;    top:100%; transform-origin:100% 0;   }
+    .box__bottom::before { left:0;     bottom:100%;transform-origin:0 100%; }
+    .box__right:hover,
+    .box__left:hover,
+    .box__top:hover,
+    .box__bottom:hover {
+      transform: translate(0,0);
+      z-index:1;
+    }
+    .box__right:hover::before,
+    .box__left:hover::before,
+    .box__top:hover::before,
+    .box__bottom:hover::before {
+      width:100%; height:100%; transform:none;
+    }
+    .box__right:hover  ~ .box__center { transform:translateX(-100%); }
+    .box__left:hover   ~ .box__center { transform:translateX(100%); }
+    .box__top:hover    ~ .box__center { transform:translateY(100%); }
+    .box__bottom:hover ~ .box__center { transform:translateY(-100%); }
   </style>
 </head>
 <body>
-  <!-- Shared nav will be injected here -->
-  <div id="nav-placeholder"></div>
-
-  <noscript>
-    <!-- Fallback nav if JavaScript is disabled -->
-    <nav class="site-nav-fallback">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="our-mission.html">Our Mission & Expertise</a></li>
-        <li><a href="how-we-help.html">How We Help</a></li>
-        <li><a href="request-sample.html">Request Sample Demand</a></li>
-        <li><a href="client-upload.html">Client Portal</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </nav>
-  </noscript>
-
-  <script>
-    // Dynamically include the shared nav from nav.html
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('nav-placeholder').innerHTML = html;
-        // Highlight the active link
-        document.querySelectorAll('#nav-placeholder a').forEach(link => {
-          if (link.getAttribute('href') === 'index.html') {
-            link.classList.add('active');
-          }
-        });
-      })
-      .catch(err => {
-        console.error('Failed to load nav:', err);
-      });
-  </script>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="our-mission.html">Our Mission & Expertise</a></li>
+      <li><a href="how-we-help.html">How We Help</a></li>
+      <li><a href="request-sample.html">Request Sample Demand</a></li>
+      <li><a href="client-upload.html">Client Portal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
 
   <header style="text-align:center; margin-top:2rem;">
     <h1>Precision Demand-Letter Drafting &amp; Post-Settlement Support</h1>
@@ -90,14 +122,17 @@
     </div>
   </section>
 
-  <section style="max-width:900px; margin:3rem auto; text-align:left;">
+  <section style="max-width:900px; margin:3rem auto; text-align:center;">
     <h2>What Sets Us Apart</h2>
     <p><strong>✅ Strategic Demand-Letter Preparation &amp; Post-Settlement Reconciliation</strong><br>
-      Maximizing negotiating leverage with precise demand letters while streamlining lien resolution, expenses, and disbursements for faster case closures.</p>
-    <p><strong>✅ HIPAA-Compliant Portal</strong><br>
-      Securely drag and drop medical records, billing ledgers, and lien documents with confidence.</p>
-    <p><strong>✅ Efficiency-Driven Legal Support</strong><br>
-      We streamline pre-suit and post-settlement processes, helping law firms reduce administrative burdens and close cases faster.</p>
+      Maximizing negotiating leverage with precise demand letters while streamlining lien resolution, expenses, and disbursements for faster case closures.
+    </p>
+    <p style="max-width:900px; margin:1rem auto;"><strong>✅ HIPAA-Compliant Portal</strong><br>
+      Securely drag and drop medical records, billing ledgers, and lien documents with confidence.
+    </p>
+    <p style="max-width:900px; margin:1rem auto;"><strong>✅ Efficiency-Driven Legal Support</strong><br>
+      We streamline pre-suit and post-settlement processes, helping law firms reduce administrative burdens and close cases faster.
+    </p>
   </section>
 
   <section style="background:#f7f9fa; padding:3rem 0; text-align:center;">
