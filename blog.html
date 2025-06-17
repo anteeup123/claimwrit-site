@@ -2,38 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClaimWrit Blog</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Site Navigation Styles */
-    .site-nav {
-      background-color: #7dbeb7;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .site-nav .nav-menu {
-      display: flex;
-      justify-content: center;
+    /* NAVIGATION */
+    nav ul {
       list-style: none;
       margin: 0;
-      padding: 1rem 0;
-      gap: 2rem;
+      padding: 0;
+      background: #8ED1C6;
+      text-align: center;
     }
-    .site-nav .nav-link {
-      color: #ffffff;
+    nav ul li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: white;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      text-transform: none;
+      font-weight: bold;
+      padding: 14px 0;
+      display: inline-block;
     }
-    .site-nav .nav-link:hover {
-      opacity: 0.8;
-    }
-    .site-nav .nav-link.active {
+    nav ul li a.active,
+    nav ul li a:hover {
       text-decoration: underline;
     }
 
-    /* Remove default bullets and markers for topics */
+    /* TOPICS LIST */
     .topics-list {
       list-style: none;
       padding: 0;
@@ -46,7 +43,6 @@
       position: relative;
       padding-left: 1.2em;
       margin-bottom: 0.5em;
-      outline: none;
     }
     .topics-list summary::-webkit-details-marker {
       display: none;
@@ -67,7 +63,11 @@
     details[open] summary {
       color: #0056b3;
     }
-    /* Inner custom lists use check marks, no default bullets */
+    .topic-content {
+      padding: 0.5rem 1rem;
+      background: #f9f9f9;
+      border-top: 1px solid #ccc;
+    }
     .topic-content ul {
       list-style: none;
       padding-left: 1em;
@@ -79,21 +79,24 @@
   </style>
 </head>
 <body>
-  <nav class="site-nav">
-  <div class="nav-bar" style="text-align:center; padding:1rem 0;">
-    <a href="index.html" class="nav-link">Home</a>; 
-    <a href="our-mission.html" class="nav-link">Our Mission & Expertise</a>; 
-    <a href="how-we-help.html" class="nav-link">How We Help</a>; 
-    <a href="request-sample.html" class="nav-link">Request Sample Demand</a>; 
-    <a href="client-upload.html" class="nav-link">Client Portal</a>; 
-    <a href="contact.html" class="nav-link">Contact</a>; 
-    <a href="blog.html" class="nav-link active">Blog</a>
-  </div>
-</nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-mission.html">Our Mission & Expertise</a></li>
+      <li><a href="how-we-help.html">How We Help</a></li>
+      <li><a href="request-sample.html">Request Sample Demand</a></li>
+      <li><a href="client-upload.html">Client Portal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+  </nav>
 
   <main style="padding:3rem 1rem; max-width:800px; margin:0 auto;">
-    <h1>ClaimWrit Blog</h1>
-    <p>Stay informed on best practices in demand-letter drafting, settlement strategies, and lien negotiation with ClaimWrit’s expert insights.</p>
+    <section style="text-align:center;">
+      <h1>ClaimWrit Blog</h1>
+      <p style="font-size:1.25rem; font-weight:normal; margin:0.5em 0;">At ClaimWrit, we provide attorneys with structured guidance to enhance demand drafting, lien negotiations, and settlement procedures.</p>
+      <p style="font-size:1.25rem; font-weight:normal; margin:0.5em 0;">Our blog delivers data-backed strategies and practical solutions, ensuring your legal documentation aligns with industry best practices and evolving settlement trends.</p>
+    </section>
 
     <h2>Featured Topics</h2>
     <ul class="topics-list">
@@ -138,8 +141,7 @@
               <li>✔ Comparable Case Precedents – Past rulings and settlements help establish reasonable compensation expectations, guiding how courts and insurers assess liability and damages.</li>
             </ul>
             <p><strong>Final Thoughts</strong></p>
-            <p>A strong personal injury demand letter can influence settlement negotiations by establishing liability, framing the narrative, and setting clear compensation expectations. Demand letters serve as a lead-in for negotiations, allowing plaintiffs to define settlement terms and present supporting evidence.</p>
-            <p>A well-crafted demand letter can maximize settlement amounts by clearly outlining damages and liability, making it a critical tool in personal injury cases. When structured effectively, demand letters often lead to settlements rather than litigation, helping clients achieve timely and fair compensation without prolonged legal battles.</p>
+            <p>A strong personal injury demand letter can influence settlement negotiations by establishing liability, framing the narrative, and setting clear compensation expectations. A well-crafted demand letter can maximize settlement amounts by clearly outlining damages and liability, making it a critical tool in personal injury cases. When structured effectively, demand letters often lead to settlements rather than litigation, helping clients achieve timely and fair compensation without prolonged legal battles.</p>
           </div>
         </details>
       </li>
@@ -154,7 +156,7 @@
             <ul>
               <li>✔ Use Clear, Structured Medical Documentation – AI models rely on chronological medical history, diagnostic imaging (X-rays, MRIs, CT scans), and physician assessments to evaluate injury severity.</li>
               <li>✔ Reinforce Causation & Liability – AI-driven claim evaluations analyze accident reconstruction details, witness statements, and police reports to establish liability.</li>
-              <li>✔ Quantify Economic &amp; Non-Economic Damages – AI tools assess medical expenses, lost wages, and pain &amp; suffering valuations based on historical jury verdicts.</li>
+              <li>✔ Quantify Economic & Non-Economic Damages – AI tools assess medical expenses, lost wages, and pain & suffering valuations based on historical jury verdicts.</li>
               <li>✔ Anticipate AI-Based Counterarguments – AI models flag pre-existing conditions, gaps in treatment, and inconsistencies in medical records, so attorneys should preemptively address these concerns.</li>
               <li>✔ Provide Comparative Case Precedents – AI-driven settlement evaluations reference similar cases and past rulings to determine payout ranges.</li>
               <li>✔ Analyze Case Precedents to Identify Compensation Trends – Reviewing past verdicts helps attorneys establish reasonable settlement expectations and strengthen negotiation leverage.</li>
@@ -196,7 +198,6 @@
               <li>✔ Medicare, Medicaid, and ERISA Liens – Government and employer-sponsored plans with statutory recovery rights.</li>
               <li>✔ Private Insurance & Hospital Collection Liens – Third-party collection agencies enforcing lien reimbursement for medical services.</li>
             </ul>
-            <p>Since liens attach directly to settlement proceeds, negotiation is critical to maximizing the client’s final recovery.</p>
             <p><strong>2. Understanding Medical Billing Reductions</strong></p>
             <p>Reducing medical bills before settlement distribution helps protect net compensation. Attorneys must negotiate directly with healthcare providers to minimize outstanding treatment costs.</p>
             <ul>
@@ -205,49 +206,6 @@
               <li>✔ Provider Policies – Some hospitals and clinics have internal hardship programs that allow bill reductions for uninsured patients.</li>
               <li>✔ Negotiation Leverage – Attorneys who demonstrate financial hardship or highlight comparable case reductions often secure better outcomes.</li>
             </ul>
-            <p><strong>3. Leveraging Hardship & Case-Specific Factors in Negotiations</strong></p>
-            <p>Attorneys can present case-specific arguments to secure medical bill and lien reductions:</p>
-            <ul>
-              <li>✔ Limited Settlement Funds – If total recovery is insufficient to cover all expenses, providers and lienholders may agree to reductions.</li>
-              <li>✔ Comparative Fault Considerations – If liability is disputed, attorneys can challenge the proportional responsibility for medical costs.</li>
-              <li>✔ Future Medical Needs – If ongoing care is expected, reductions can preserve funds for treatment continuity.</li>
-              <li>✔ Precedent-Based Arguments – Using historical settlement trends to support reasonable fee reductions.</li>
-            </ul>
-            <p><strong>4. Negotiation Strategies for Medical Bill & Lien Reductions</strong></p>
-            <p>Structured negotiation tactics help maximize reductions while ensuring compliance:</p>
-            <ul>
-              <li>✔ Ensure Procurement Reductions Are Applied – Hospitals and insurers must factor in attorney fees when determining final repayment amounts.</li>
-              <li>✔ Request Itemized Billing – Identifying inflated charges, duplicate expenses, and non-recoverable costs.</li>
-              <li>✔ Challenge Excessive Charges – Ensuring only necessary treatment related to the injury is included.</li>
-              <li>✔ Offer Lump-Sum Settlements – Some providers and lienholders accept immediate, discounted payments rather than full balances.</li>
-              <li>✔ Cite Statutory Limitations – Certain jurisdictions place legal caps on recoverable lien amounts and medical billing rates.</li>
-            </ul>
-            <p><strong>5. Analyzing Case Precedents & AI-Powered Settlement Tools</strong></p>
-            <ul>
-              <li>✔ Review Historical Jury Verdicts – Identifying compensation trends for similar injuries and liability scenarios.</li>
-              <li>✔ Compare Prior Settlements – Understanding insurer valuation models and recovery benchmarks.</li>
-              <li>✔ Use AI-Powered Tools Like CaseYak – CaseYak and similar AI platforms help predict settlement values based on historical data, reinforcing compensation expectations.</li>
-            </ul>
-            <p><strong>6. Legal Considerations for Medical Bills & Liens in Settlements</strong></p>
-            <ul>
-              <li>✔ Balance Billing Restrictions – Some states prohibit post-settlement billing beyond agreed-upon reimbursement terms.</li>
-              <li>✔ Procurement Cost Adjustments – Attorneys can argue that providers must apply procurement reductions before finalizing lien amounts.</li>
-              <li>✔ HIPAA Compliance – Negotiations involving medical provider records must adhere to privacy regulations.</li>
-            </ul>
-            <p><strong>7. Communicating Effectively with Medical Providers & Lienholders</strong></p>
-            <ul>
-              <li>✔ Provide Supporting Documentation – Medical records, hardship statements, and structured payment proposals.</li>
-              <li>✔ Maintain Professional Dialogue – Avoid adversarial tones, focusing on cooperative resolution.</li>
-              <li>✔ Follow Up Persistently – Regular communication ensures timely responses and better outcomes.</li>
-            </ul>
-            <p><strong>8. Finalizing Medical Bill & Lien Agreements</strong></p>
-            <ul>
-              <li>✔ Obtain Written Confirmation of Reductions – Ensuring clear documentation to prevent future disputes.</li>
-              <li>✔ Comply with Reporting Requirements – Medicare, Medicaid, ERISA, and state-specific lien statutes must be followed.</li>
-              <li>✔ Distribute Funds Properly – Ensuring client protection and ethical settlement handling.</li>
-            </ul>
-            <p><strong>Final Thoughts</strong></p>
-            <p>Attorneys who balance lien negotiations with medical bill reductions optimize net recovery while protecting client interests. By leveraging case-specific hardship arguments, AI-powered valuation tools, and precedent-based strategies, legal professionals can ensure fair resolutions while maintaining compliance.</p>
           </div>
         </details>
       </li>
@@ -264,33 +222,6 @@
               <li>✔ Clear, structured formatting aligned with insurer evaluation models—streamlining claim review and increasing settlement efficiency.</li>
               <li>✔ Precision in economic and non-economic damage calculations—reinforcing financial justification for settlement demands.</li>
             </ul>
-            <p><strong>2. Multi-Tier Quality Control Process</strong></p>
-            <p>Before finalizing any document, ClaimWrit implements a rigorous review cycle to uphold clarity and negotiation strength:</p>
-            <ul>
-              <li>✔ Detailed case analysis before drafting begins—identifying core liability and damages arguments.</li>
-              <li>✔ Precision checks for consistency, factual accuracy, and insurer-preferred language—ensuring streamlined adjuster review.</li>
-              <li>✔ Final strategic alignment—positioning claims for favorable settlement terms by integrating policy limit leverage and comparative case precedents.</li>
-              <li>✔ Risk mitigation assessments—ensuring demand letters preemptively address insurer objections or potential weaknesses in a case.</li>
-            </ul>
-            <p><strong>3. AI-Assisted Enhancements for Accuracy</strong></p>
-            <p>ClaimWrit integrates AI-powered document review tools where applicable, helping identify:</p>
-            <ul>
-              <li>✔ Medical inconsistencies or overlooked details in chronology reports, ensuring completeness.</li>
-              <li>✔ Adjuster-preferred formatting structures, enhancing readability and claim processing speed.</li>
-              <li>✔ Strategic phrasing improvements to reinforce liability arguments, ensuring demand letters align with insurer evaluation models.</li>
-              <li>✔ Automated validation of medical expenses and wage loss calculations, ensuring demand letters are backed by strong financial documentation.</li>
-              <li>✔ Real-time risk detection—flagging potential insurer counterarguments or disputed areas before submission.</li>
-            </ul>
-            <p><strong>4. Custom Case Metrics & Reports</strong></p>
-            <p>For firms seeking structured post-settlement case assessments, ClaimWrit provides:</p>
-            <ul>
-              <li>✔ Tailored damages spreadsheets—offering clear financial breakdowns for accurate recovery analysis.</li>
-              <li>✔ Lien resolution summaries—detailing post-settlement financial reconciliation and ensuring compliance with statutory reporting requirements.</li>
-              <li>✔ Case valuation insights—integrating comparative claim precedents to help attorneys strategize future negotiations.</li>
-              <li>✔ Negotiation impact assessments—highlighting key trends in insurer response patterns to refine settlement tactics.</li>
-            </ul>
-            <p><strong>Final Thoughts</strong></p>
-            <p>ClaimWrit’s expert-driven approach ensures attorneys receive well-structured, litigation-ready documentation, positioning cases for strong settlements and optimal resolutions. By combining fact-based methodologies, AI-assisted accuracy tools, and multi-tier quality control, ClaimWrit enhances legal precision and negotiation leverage, reinforcing case strength in personal injury settlements.</p>
           </div>
         </details>
       </li>
@@ -343,31 +274,4 @@
               <li>✅ <strong>Can attorneys speed up the process?</strong> – Yes, by finalizing medical bill negotiations before settlement distribution.</li>
               <li>✅ <strong>Do state laws regulate payout timelines?</strong> – Some states impose time limits on insurer payouts to prevent unreasonable delays.</li>
             </ul>
-            <p><strong>5. How Are Attorney Fees Deducted from a Settlement?</strong></p>
-            <ul>
-              <li>✅ <strong>What percentage do attorneys take?</strong> – Standard contingency fees range from 33% to 40%, depending on case complexity.</li>
-              <li>✅ <strong>Are case costs deducted separately?</strong> – Yes, litigation expenses, expert witness fees, and court costs are deducted before client disbursement.</li>
-              <li>✅ <strong>Do clients approve deductions?</strong> – Attorneys must provide itemized fee breakdowns before settlement distribution.</li>
-            </ul>
-            <p><strong>Final Thoughts</strong></p>
-            <p>Navigating legal documentation, medical bill negotiations, and settlement payouts requires precision and strategy. By mastering demand letter structuring, provider negotiations, and insurer settlement tactics, attorneys can maximize recovery and strengthen client outcomes.</p>
-          </div>
-        </details>
-      </li>
-    </ul>
-
-    <!-- Original overview paragraphs remain unchanged -->
-    <p>Crafting compelling demand letters that strengthen negotiations. In this post, we explore the key elements that make your demand letters stand out and drive success.</p>
-    <p>Industry updates on evolving settlement strategies. Learn about recent shifts in insurer approaches and how to stay ahead of the curve in your negotiations.</p>
-    <p>Maximizing net-to-client proceeds through effective lien reductions. We review proven negotiation tactics with medical providers and lienholders to secure better outcomes.</p>
-    <p>How ClaimWrit refines legal documentation for efficiency and precision. A glimpse into our rigorous quality-control process and consistency standards across cases.</p>
-    <p>Addressing attorneys’ most common questions on legal documentation and settlement processes. From formatting queries to strategic considerations, get answers that matter.</p>
-    <p>ClaimWrit’s blog offers clear, structured guidance to help attorneys navigate demand drafting and post-settlement procedures with confidence.</p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 ClaimWrit LLC &middot; Fort Lauderdale, FL</p>
-  </footer>
-</body>
-</html>
-
+            <p><strong>5. How Are Attorney Fees D```
