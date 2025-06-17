@@ -7,26 +7,24 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     /* NAV BAR */
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    .site-nav {
       background: #8ED1C6;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 0.5rem 0;
     }
-    nav ul li {
+    .site-nav .nav-bar {
       display: inline-block;
-      margin: 0 1rem;
     }
-    nav ul li a {
+    .site-nav .nav-link {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      padding: 14px 0;
-      display: inline-block;
+      margin: 0 0.75rem;
+      padding: 0.5rem 0;
     }
-    nav ul li a.active,
-    nav ul li a:hover {
+    .site-nav .nav-link.active,
+    .site-nav .nav-link:hover {
       text-decoration: underline;
     }
 
@@ -91,16 +89,16 @@
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="our-mission.html">Our Mission & Expertise</a></li>
-      <li><a href="how-we-help.html">How We Help</a></li>
-      <li><a href="request-sample.html">Request Sample DEMAND</a></li>
-      <li><a href="client-upload.html">Client Portal</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
+  <nav class="site-nav">
+    <div class="nav-bar">
+      <a href="index.html" class="nav-link active">Home</a>;
+      <a href="our-mission.html" class="nav-link">Our Mission & Expertise</a>;
+      <a href="how-we-help.html" class="nav-link">How We Help</a>;
+      <a href="request-sample.html" class="nav-link">Request Sample DEMAND</a>;
+      <a href="client-upload.html" class="nav-link">Client Portal</a>;
+      <a href="contact.html" class="nav-link">Contact</a>;
+      <a href="blog.html" class="nav-link">Blog</a>
+    </div>
   </nav>
 
   <header style="text-align:center; margin-top:2rem;">
@@ -148,7 +146,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL</p>
+    <p>&copy; 2025 ClaimWrit LLC &middot; Fort Lauderdale, FL</p>
   </footer>
 </body>
 </html>
