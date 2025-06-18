@@ -1,207 +1,94 @@
-/* Nav Bar Styles */
-nav {
-  background: #FFFFFF;
-}
-nav ul {
-  background: transparent;
-}
-nav ul li a {
-  color: #000000;
-  font-weight: bold;
-}
-nav ul li a.active,
-nav ul li a:hover {
-  text-decoration: underline;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClaimWrit | Home</title>
 
-/* Root theme colors */
-/* Root theme colors */
-:root {
-  --bg: #FFFFFF;
-  --c1: #A7C7E7;
-  --c2: #FFFFFF;
-  --c3: #B0E57C;
-  --c4: #F7CAC9;
-  --c5: #D4A5A5;
-  --white: #FFFFFF;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
 
-/* Global base styles */
-html, body {
-  background: var(--bg);
-  font-family: Montserrat, Oswald, Arial, sans-serif;
-  color: #dde;
-  margin: 0;
-  padding: 0;
-}
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-/* Header layout & typography */
-header {
-  height: 50vh;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  background-color: var(--bg);
-  text-align: center;
-  padding-bottom: 5vh;
-}
+<body>
+  <!-- Animated Header -->
+  <header>
+    <div>
+      <h1>ClaimWrit</h1>
+      <p>Personal Injury Demand Preparation</p>
+    </div>
+  </header>
 
-header::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  background-repeat: no-repeat;
-  background-size: 100% 14.28%;       /* Seven bands, each ~1/7th of the height */
-  background-image:
-    linear-gradient(var(--c1), var(--c1)),
-    linear-gradient(var(--c2), var(--c2)),
-    linear-gradient(var(--c1), var(--c1)),
-    linear-gradient(var(--c2), var(--c2)),
-    linear-gradient(var(--c1), var(--c1)),
-    linear-gradient(var(--c2), var(--c2)),
-    linear-gradient(var(--c1), var(--c1));
-  background-position:
-    0%   0%,
-    0%  14.28%,
-    0%  28.56%,
-    0%  42.84%,
-    0%  57.12%,
-    0%  71.40%,
-    0%  85.68%;
-  animation: showBarsHoriz 3.5s forwards;
-}
+  <!-- Navigation Bar Below Header -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="our-mission.html">Our Mission &amp; Expertise</a></li>
+      <li><a href="how-we-help.html">How We Help</a></li>
+      <li><a href="request-sample.html">Request Sample Demand</a></li>
+      <li><a href="client-upload.html">Client Portal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
 
-@keyframes showBarsHoriz {
-  0% {
-    opacity: 0;
-    background-position:
-      0% -100%,
-      0%  -71.4%,
-      0%  -42.8%,
-      0%  -14.2%,
-      0%   14.2%,
-      0%   42.8%,
-      0%   71.4%;
-  }
-  100% {
-    opacity: 1;
-    background-position:
-      0%   0%,
-      0%  14.28%,
-      0%  28.56%,
-      0%  42.84%,
-      0%  57.12%,
-      0%  71.40%,
-      0%  85.68%;
-  }
-}
+  <!-- Hero Section -->
+  <section style="text-align:center; margin-top:2rem;">
+    <h2>Precision Demand-Letter Drafting &amp; Post-Settlement Support</h2>
+    <p>Your back-office ally for clarity, structure, and resolution.</p>
+  </section>
 
+  <!-- Core Values -->
+  <section>
+    <h2 style="text-align:center;">Our Core Values</h2>
+    <p style="text-align:center; max-width:700px; margin:0.5rem auto;">
+      ClaimWrit is built on expertise, precision, and trust, ensuring law firms receive litigation-ready demand letters that drive results efficiently.
+    </p>
+    <div class="box">
+      <div class="box__right">clarity</div>
+      <div class="box__left">structure</div>
+      <div class="box__top">resolution</div>
+      <div class="box__bottom">ClaimWrit</div>
+      <div class="box__center">Hover from any side</div>
+    </div>
+  </section>
 
-@keyframes showText {
-  0% { opacity: 0; transform: translate(-100%, 0); }
-  20% { opacity: 0; }
-  100% { opacity: 1; transform: translate(0, 0); }
-}
+  <!-- What Sets Us Apart -->
+  <section style="max-width:900px; margin:3rem auto; text-align:center;">
+    <h2>What Sets Us Apart</h2>
+    <p><strong>✅ Strategic Demand-Letter Preparation &amp; Post-Settlement Reconciliation</strong><br>
+      Maximizing negotiating leverage with precise demand letters while streamlining lien resolution, expenses, and disbursements for faster case closures.
+    </p>
+    <p style="max-width:900px; margin:1rem auto;"><strong>✅ HIPAA-Compliant Portal</strong><br>
+      Securely drag and drop medical records, billing ledgers, and lien documents with confidence.
+    </p>
+    <p style="max-width:900px; margin:1rem auto;"><strong>✅ Efficiency-Driven Legal Support</strong><br>
+      We streamline pre-suit and post-settlement processes, helping law firms reduce administrative burdens and close cases faster.
+    </p>
+  </section>
 
-header > div {
-  position: relative;
-  transform: translate(-100%, 0);
-  opacity: 0;
-  animation: showText 2s 1 forwards;
-  animation-delay: 3.5s;
-}
+  <!-- Nationwide Support -->
+  <section style="background:#f7f9fa; padding:3rem 0; text-align:center;">
+    <h2>Serving Law Firms Nationwide</h2>
+    <p style="max-width:800px; margin:0.5rem auto;">
+      ClaimWrit provides expert legal support across all U.S. jurisdictions, equipping attorneys with demand-letter precision, post-settlement medical reduction requests, and client balance verification—ensuring faster case resolutions with stronger financial outcomes.
+    </p>
+  </section>
 
-header > div h1 {
-  font-family: 'Oswald', Montserrat, Arial, sans-serif;
-  font-weight: 400;
-  margin: 0;
-  font-size: 10vw;
-  color: #000000; /* ClaimWrit logo text in black */
-}
+  <!-- Request Sample -->
+  <section style="padding:3rem 0; text-align:center;">
+    <h2>Request a Sample Demand Letter</h2>
+    <p style="max-width:600px; margin:0.5rem auto 2rem;">
+      Experience our meticulous approach with a complimentary redacted demand letter—where precision drives results.
+    </p>
+    <a href="request-sample.html" class="cta-button">Request Sample Demand</a>
+  </section>
 
-header > div p {
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: var(--c3);
-  margin: 0;
-  font-size: 5vw;
-  margin-bottom: 5vh;
-}
-
-/* Responsive adjustments */
-@media all and (min-width: 768px) {
-  @keyframes showBarsBig {
-    0% {
-      opacity: 0;
-      background-position: 7% -400%, 21% 500%, 35% -400%, 49% 500%, 63% -400%, 77% 500%, 91% -400%;
-    }
-    14% {
-      background-position: 7% 0%, 21% 500%, 35% -400%, 49% 500%, 63% -400%, 77% 500%, 91% -400%;
-    }
-    28% {
-      background-position: 7% 0%, 21% 100%, 35% -400%, 49% 500%, 63% -400%, 77% 500%, 91% -400%;
-    }
-    42% {
-      background-position: 7% 0%, 21% 100%, 35% 0%, 49% 500%, 63% -400%, 77% 500%, 91% -400%;
-    }
-    56% {
-      background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% -400%, 77% 500%, 91% -400%;
-    }
-    70% {
-      background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% 0%, 77% 500%, 91% -400%;
-    }
-    84% {
-      background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% 0%, 77% 100%, 91% -400%;
-    }
-    98%, 100% {
-      opacity: 1;
-      background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% 0%, 77% 100%, 91% 0%;
-    }
-  }
-
-  @keyframes showTextBig {
-    0% { opacity: 0; transform: translate(-100%, 0); }
-    20% { opacity: 0; }
-    100% { opacity: 1; transform: translate(0, 0); }
-  }
-
-  header {
-    height: 100vh;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  header::after {
-    width: 20vw;
-    height: 100%;
-    background-size: 7% 70%;
-    background-position: 7% 0%, 21% 100%, 35% 0%, 49% 100%, 63% 0%, 77% 100%, 91% 0%;
-    animation-name: showBarsBig;
-  }
-
-  header > div {
-    animation-name: showTextBig;
-    margin-left: 22vw;
-    text-align: left;
-  }
-
-  header > div h1 {
-    font-size: 8vw;
-  }
-
-  header > div p {
-    font-size: 4vw;
-    margin-bottom: 0;
-  }
-}
-
-/* Accessibility fallback */
-@media (prefers-reduced-motion) {
-  header::after { animation: none !important; }
-  header > div { animation: none; opacity: 1; transform: translate(0,0); }
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ClaimWrit LLC &middot; Fort Lauderdale, FL</p>
+  </footer>
+</body>
+</html>
