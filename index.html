@@ -4,97 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClaimWrit | Home</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* NAVIGATION STYLES */
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      background: #8ED1C6;
-      text-align: center;
-    }
-    nav ul li {
-      display: inline-block;
-      margin: 0 1rem;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 14px 0;
-      display: inline-block;
-    }
-    nav ul li a.active,
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
 
-    /* HOVER BOX */
-    .box {
-      position: relative;
-      width: 6em;
-      height: 6em;
-      margin: 2rem auto;
-      line-height: 6em;
-      overflow: hidden;
-      transform: translateZ(0);
-    }
-    .box div {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      line-height: inherit;
-      transition: transform .4s ease;
-      font-weight: 600;
-      color: #fff;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-    }
-    .box div::before {
-      content: '';
-      position: absolute;
-      width: 70.71%;
-      height: 70.71%;
-      background: inherit;
-      transform: rotate(45deg);
-      transition: all .4s ease;
-    }
-    .box__right  { background: #0a9d9a; transform: translateX(100%); }
-    .box__left   { background: #197278; transform: translateX(-100%); }
-    .box__top    { background: #ff6f5e; transform: translateY(-100%); }
-    .box__bottom { background: #ffc43d; transform: translateY(100%); }
-    .box__center { background: #ff914d; z-index: -1; }
-    .box__right::before  { right:100%; bottom:0; transform-origin:100% 100%; }
-    .box__left::before   { left:100%; top:0;   transform-origin:0 0;      }
-    .box__top::before    { right:0;    top:100%; transform-origin:100% 0;   }
-    .box__bottom::before { left:0;     bottom:100%;transform-origin:0 100%; }
-    .box__right:hover,
-    .box__left:hover,
-    .box__top:hover,
-    .box__bottom:hover {
-      transform: translate(0,0);
-      z-index:1;
-    }
-    .box__right:hover::before,
-    .box__left:hover::before,
-    .box__top:hover::before,
-    .box__bottom:hover::before {
-      width:100%; height:100%; transform:none;
-    }
-    .box__right:hover  ~ .box__center { transform:translateX(-100%); }
-    .box__left:hover   ~ .box__center { transform:translateX(100%); }
-    .box__top:hover    ~ .box__center { transform:translateY(100%); }
-    .box__bottom:hover ~ .box__center { transform:translateY(-100%); }
-  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <nav>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="our-mission.html">Our Mission & Expertise</a></li>
+      <li><a href="our-mission.html">Our Mission &amp; Expertise</a></li>
       <li><a href="how-we-help.html">How We Help</a></li>
       <li><a href="request-sample.html">Request Sample Demand</a></li>
       <li><a href="client-upload.html">Client Portal</a></li>
@@ -103,10 +25,17 @@
     </ul>
   </nav>
 
-  <header style="text-align:center; margin-top:2rem;">
-    <h1>Precision Demand-Letter Drafting &amp; Post-Settlement Support</h1>
-    <p>Your back-office ally for clarity, structure, and resolution.</p>
+  <header>
+    <div>
+      <h1>ClaimWrit</h1>
+      <p>Personal Injury Demand Preparation</p>
+    </div>
   </header>
+
+  <section style="text-align:center; margin-top:2rem;">
+    <h2>Precision Demand-Letter Drafting &amp; Post-Settlement Support</h2>
+    <p>Your back-office ally for clarity, structure, and resolution.</p>
+  </section>
 
   <section>
     <h2 style="text-align:center;">Our Core Values</h2>
