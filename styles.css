@@ -209,6 +209,32 @@ section {
   background: var(--primary);
   transform: scale(1.05);
 }
+/* 1. Reduce space above & below each section */
+section {
+  padding: 1.5rem 1rem;   /* was 3rem → now 1.5rem top/bottom */
+}
+
+/* 2. Tweak heading spacing so it sits closer to its paragraph */
+section h2 {
+  margin-top: 1rem;       /* tighten above */
+  margin-bottom: 0.5rem;  /* tighten below */
+}
+
+/* 3. Enlarge paragraph text & tighten its bottom margin */
+section p {
+  font-size: 1.125rem;    /* up from 1rem */
+  line-height: 1.6;       /* comfortable readability */
+  margin-bottom: 1rem;    /* down from 1.5–2rem */
+}
+
+/* 4. If you’re using a special “.section-centered” wrapper, target that too */
+.section-centered {
+  padding: 1.5rem 1rem;
+}
+.section-centered p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
 
 /* Footer */
 footer {
