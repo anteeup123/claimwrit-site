@@ -216,8 +216,8 @@ section {
 
 /* 2. Tweak heading spacing so it sits closer to its paragraph */
 section h2 {
-  margin-top: 1rem;       /* tighten above */
-  margin-bottom: 0.5rem;  /* tighten below */
+  margin-top: .5rem;       /* tighten above */
+  margin-bottom: 0.25rem;  /* tighten below */
 }
 
 /* 3. Enlarge paragraph text & tighten its bottom margin */
