@@ -88,7 +88,6 @@ header::after {
   animation: showBarsHoriz 3.5s forwards;
   z-index: 0;
 }
-
 @keyframes showBarsHoriz {
   0% {
     opacity: 0;
@@ -124,9 +123,66 @@ header .header-content p {
   margin-bottom: 4vh;
   font-size: clamp(1rem, 3vw, 1.5rem);
   color: var(--highlight);
-  position: relative;
-  z-index: 1;
 }
+
+/* Hover Box Styles */
+.box {
+  position: relative;
+  width: 6em;
+  height: 6em;
+  margin: 2rem auto;
+  line-height: 6em;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+.box div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: inherit;
+  transition: transform .4s ease;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.box div::before {
+  content: '';
+  position: absolute;
+  width: 70.71%;
+  height: 70.71%;
+  background: inherit;
+  transform: rotate(45deg);
+  transition: all .4s ease;
+}
+.box__right  { background: var(--accent); transform: translateX(100%); }
+.box__left   { background: var(--primary); transform: translateX(-100%); }
+.box__top    { background: var(--highlight); transform: translateY(-100%); }
+.box__bottom { background: var(--accent); transform: translateY(100%); }
+.box__center { background: var(--neutral); z-index: -1; }
+.box__right::before  { right:100%; bottom:0; transform-origin:100% 100%; }
+.box__left::before   { left:100%; top:0;   transform-origin:0 0;      }
+.box__top::before    { right:0;    top:100%; transform-origin:100% 0;   }
+.box__bottom::before { left:0;     bottom:100%;transform-origin:0 100%; }
+.box__right:hover,
+.box__left:hover,
+.box__top:hover,
+.box__bottom:hover {
+  transform: translate(0,0);
+  z-index:1;
+}
+.box__right:hover::before,
+.box__left:hover::before,
+.box__top:hover::before,
+.box__bottom:hover::before {
+  width:100%; height:100%; transform:none;
+}
+.box__right:hover  ~ .box__center { transform:translateX(-100%); }
+.box__left:hover   ~ .box__center { transform:translateX(100%); }
+.box__top:hover    ~ .box__center { transform:translateY(100%); }
+.box__bottom:hover ~ .box__center { transform:translateY(-100%); }
 
 /* Section Styles */
 section {
