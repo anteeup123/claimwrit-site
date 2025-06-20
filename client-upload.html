@@ -37,7 +37,15 @@
     </p>
 
     <section class="sample-request-form">
-      <form action="submit-request.php" method="POST" enctype="multipart/form-data">
+      <!-- START OF MODIFIED FORM - REPLACED ACTION AND ADDED FIELDS -->
+      <form action="https://formsubmit.co/your-email@claimwrit.com" method="POST" enctype="multipart/form-data">
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_subject" value="New Client Document Upload">
+        <input type="hidden" name="_autoresponse" value="Thank you for your submission to ClaimWrit. Your documents are being processed securely.">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none"> <!-- Spam filter -->
+        
+        <!-- Original Form Fields (Keep These) -->
         <label for="name">Your Name:</label>
         <input id="name" name="name" type="text" required />
 
@@ -51,7 +59,7 @@
         <input id="phone" name="phone" type="tel" />
 
         <label for="doc-type">Document Type:</label>
-        <select id="doc-type" name="sample-type" required>
+        <select id="doc-type" name="document_type" required>
           <option value="" disabled selected>Select a document type</option>
           <option value="hipaa-release">Signed HIPAA Release</option>
           <option value="billing-ledgers">Billing Ledgers</option>
@@ -68,11 +76,13 @@
           TLS 1.2+ in transit, AES-256 at rest. By clicking <em>Submit File</em>, you confirm you have the right to transmit PHI and consent under our <a href="privacy.html">Privacy Policy</a>.
         </p>
 
-        <label for="upload-file">Upload File:</label>
-        <input id="upload-file" name="upload-file" type="file" required />
+        <label for="upload-file">Upload File (Max 20MB):</label>
+        <input id="upload-file" name="attachment" type="file" 
+               accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required />
 
         <button type="submit" class="cta-button">Submit File</button>
       </form>
+      <!-- END OF MODIFIED FORM -->
     </section>
   </main>
 

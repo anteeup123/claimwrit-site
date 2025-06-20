@@ -3,18 +3,59 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Upload Success | ClaimWrit</title>
+  <meta name="description" content="Your document has been successfully uploaded to ClaimWrit's secure portal."/>
+  <title>Upload Successful | ClaimWrit</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <nav>…same nav…</nav>
-  <main style="text-align:center; padding:3rem;">
-    <h1>Upload Successful!</h1>
-    <p>Your document has been securely uploaded. We’ll notify you as soon as it’s processed.</p>
-    <a href="index.html" class="cta-button">Return Home</a>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-mission.html">Our Mission & Expertise</a></li>
+      <li><a href="how-we-help.html">How We Help</a></li>
+      <li><a href="request-sample.html">Request Sample DEMAND</a></li>
+      <li><a href="client-upload.html">Client Portal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main class="upload-success-container">
+    <div class="upload-success-card">
+      <svg class="upload-success-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="17 8 12 3 7 8"></polyline>
+        <line x1="12" y1="3" x2="12" y2="15"></line>
+      </svg>
+      <h1>Upload Successful!</h1>
+      <p class="upload-success-message">Your document has been securely uploaded to our system.</p>
+      
+      <div class="upload-details">
+        <div class="detail-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 16v-4"></path>
+            <path d="M12 8h.01"></path>
+          </svg>
+          <span>We'll notify you via email once processing is complete</span>
+        </div>
+        <div class="detail-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>All documents are stored with bank-level encryption</span>
+        </div>
+      </div>
+      
+      <div class="action-buttons">
+        <a href="client-upload.html" class="cta-button secondary">Upload Another File</a>
+        <a href="index.html" class="cta-button">Return Home</a>
+      </div>
+    </div>
   </main>
+
   <footer>
-    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL</p>
+    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
 </body>
 </html>

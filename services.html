@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>ClaimWrit | How We Help</title>
+  <meta name="description" content="Discover ClaimWrit's comprehensive legal support services including demand letter drafting, settlement analysis, and post-settlement solutions."/>
+  <title>Our Services | ClaimWrit</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <nav>
+  <nav aria-label="Main navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="our-mission.html">Our Mission & Expertise</a></li>
-      <li><a href="how-we-help.html">How We Help</a></li>
+      <li><a href="how-we-help.html" class="active" aria-current="page">How We Help</a></li>
       <li><a href="request-sample.html">Request Sample DEMAND</a></li>
       <li><a href="client-upload.html">Client Portal</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -19,13 +20,85 @@
     </ul>
   </nav>
 
-  <main style="padding:3rem;">
-    <h1>How We Help</h1>
-    <!-- same content as how-we-help.html -->
+  <main class="services-container">
+    <h1>Our Comprehensive Legal Support Services</h1>
+    <p class="services-intro">ClaimWrit offers specialized solutions designed to streamline your legal practice and maximize case outcomes.</p>
+
+    <div class="services-grid">
+      <section class="service-card" aria-labelledby="demand-letters">
+        <div class="service-icon">✍️</div>
+        <h2 id="demand-letters">Demand Letter Drafting</h2>
+        <ul class="service-features">
+          <li>Case-specific narrative development</li>
+          <li>Thorough medical chronology review</li>
+          <li>Liability analysis integration</li>
+          <li>Two-tier quality control process</li>
+        </ul>
+      </section>
+
+      <section class="service-card" aria-labelledby="settlement-support">
+        <div class="service-icon">💰</div>
+        <h2 id="settlement-support">Settlement Analysis</h2>
+        <ul class="service-features">
+          <li>Detailed settlement breakdowns</li>
+          <li>Medical lien resolution support</li>
+          <li>Medicare/Medicaid compliance review</li>
+          <li>Disbursement calculations</li>
+        </ul>
+      </section>
+
+      <section class="service-card" aria-labelledby="post-settlement">
+        <div class="service-icon">📑</div>
+        <h2 id="post-settlement">Post-Settlement Solutions</h2>
+        <ul class="service-features">
+          <li>Settlement documentation preparation</li>
+          <li>Release agreement drafting</li>
+          <li>Disbursement sheet creation</li>
+          <li>Final accounting reports</li>
+        </ul>
+      </section>
+
+      <section class="service-card" aria-labelledby="additional-services">
+        <div class="service-icon">➕</div>
+        <h2 id="additional-services">Additional Services</h2>
+        <ul class="service-features">
+          <li>Asset affidavit preparation (MVA cases)</li>
+          <li>Special damages calculations</li>
+          <li>Pain and suffering analysis</li>
+          <li>Custom reporting formats</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="service-process">
+      <h2>Our Proven Process</h2>
+      <ol class="process-steps">
+        <li>
+          <strong>Case Submission</strong>
+          <p>Upload your case details through our secure portal</p>
+        </li>
+        <li>
+          <strong>Document Review</strong>
+          <p>Our team conducts thorough analysis of medical records</p>
+        </li>
+        <li>
+          <strong>Draft Preparation</strong>
+          <p>We prepare a comprehensive demand package</p>
+        </li>
+        <li>
+          <strong>Quality Assurance</strong>
+          <p>Two-tier review process ensures accuracy</p>
+        </li>
+        <li>
+          <strong>Delivery</strong>
+          <p>Receive your finalized documents within agreed timeframe</p>
+        </li>
+      </ol>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL</p>
+    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
 </body>
 </html>

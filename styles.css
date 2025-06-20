@@ -19,56 +19,138 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* Headings */
-h1, h2 {
-  font-family: 'Oswald', sans-serif;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-}
-
-/* Navigation */
+/* ==================== */
+/* NAVIGATION STYLES */
+/* ==================== */
 nav {
-  background: var(--neutral);
+  background: var(--primary);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   position: relative;
   z-index: 1;
+  padding: 0.5rem 1rem;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
 nav ul li {
   display: inline-block;
   margin: 0 1rem;
+  white-space: nowrap;
 }
+
 nav ul li a {
-  color: var(--text);
+  color: var(--neutral);
   font-weight: bold;
   text-decoration: none;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0.5rem;
+  transition: color 0.3s ease;
+  display: inline-block;
 }
+
 nav ul li a.active,
 nav ul li a:hover {
   text-decoration: underline;
-  color: var(--accent);
+  color: var(--highlight);
 }
 
-/* Animated Header */
+/* Mobile responsiveness for navigation */
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    margin: 0 0.5rem;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* ==================== */
+/* HEADINGS & GENERAL STYLES */
+/* ==================== */
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* ==================== */
+/* LOGO STYLES */
+/* ==================== */
+.header-logo {
+  width: min(300px, 80%);
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  transform: scale(1.02);
+}
+
+.header-content {
+  padding-top: 1.5rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  animation: showText 2s ease 0.5s forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes showText {
+  0%   { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness for Logo */
+@media (max-width: 768px) {
+  .header-logo {
+    width: min(250px, 70%);
+  }
+  .header-logo text {
+    font-size: 36px !important;
+  }
+  .header-logo text:nth-of-type(2) {
+    font-size: 12px !important;
+  }
+}
+
+/* ==================== */
+/* HEADER STYLES */
+/* ==================== */
 header {
   position: relative;
   height: 30vh;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   background: var(--neutral);
   padding-bottom: 2vh;
 }
+
 header::after {
   content: "";
   position: absolute;
@@ -88,6 +170,7 @@ header::after {
   animation: showBarsHoriz 3.5s forwards;
   z-index: 0;
 }
+
 @keyframes showBarsHoriz {
   0% {
     opacity: 0;
@@ -101,31 +184,374 @@ header::after {
   }
 }
 
-/* Header Content */
-header .header-content {
-  position: relative;
-  z-index: 1;
+/* ==================== */
+/* CONTACT PAGE STYLES */
+/* ==================== */
+.contact-container {
+  padding: 3rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
   text-align: center;
-  animation: showText 2s ease 0.5s forwards;
-  opacity: 0;
-}
-@keyframes showText {
-  0%   { opacity: 0; transform: translateY(-50px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-header .header-content h1 {
-  font-size: clamp(2rem, 6vw, 4rem);
-  color: #000;
-  margin: 0;
-}
-header .header-content p {
-  margin: 0;
-  margin-bottom: 4vh;
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  color: var(--highlight);
 }
 
-/* Hover Box Styles */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 400px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.contact-list li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--highlight);
+}
+
+.contact-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.contact-list strong {
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+address {
+  font-style: normal;
+}
+
+.intro-text {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* ==================== */
+/* SERVICES PAGE STYLES */
+/* ==================== */
+.services-container {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-intro {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.service-card {
+  background: var(--neutral);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid var(--accent);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.service-features li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.service-features li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.service-process {
+  background: rgba(168, 218, 220, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.process-steps {
+  list-style: none;
+  padding: 0;
+  counter-reset: step-counter;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.process-steps li {
+  counter-increment: step-counter;
+  padding: 1.5rem 1.5rem 1.5rem 4rem;
+  position: relative;
+  margin-bottom: 1rem;
+  background: var(--neutral);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.process-steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.process-steps strong {
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.process-steps p {
+  margin: 0;
+  color: var(--text);
+}
+
+/* ==================== */
+/* THANK YOU PAGE STYLES */
+/* ==================== */
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+}
+
+.thank-you-card {
+  background: var(--neutral);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid var(--accent);
+}
+
+.thank-you-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  color: var(--accent);
+  stroke-width: 1.5;
+}
+
+.thank-you-message {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.next-steps {
+  background: rgba(168, 218, 220, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.next-steps p {
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.next-steps ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.next-steps li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.next-steps li::before {
+  content: "✓";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* ==================== */
+/* UPLOAD SUCCESS STYLES */
+/* ==================== */
+.upload-success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+}
+
+.upload-success-card {
+  background: var(--neutral);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid var(--accent);
+}
+
+.upload-success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  color: var(--accent);
+  stroke-width: 1.5;
+}
+
+.upload-success-message {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.upload-details {
+  background: rgba(168, 218, 220, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+.detail-item svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+/* ==================== */
+/* CTA BUTTON STYLES */
+/* ==================== */
+.cta-button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  border: 2px solid var(--primary);
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--primary);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.cta-button.secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ==================== */
+/* UTILITY CLASSES */
+/* ==================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==================== */
+/* HOVER BOX STYLES */
+/* ==================== */
 .box {
   position: relative;
   width: 6em;
@@ -135,6 +561,7 @@ header .header-content p {
   overflow: hidden;
   transform: translateZ(0);
 }
+
 .box div {
   position: absolute;
   width: 100%;
@@ -148,99 +575,82 @@ header .header-content p {
   text-transform: uppercase;
   letter-spacing: .5px;
 }
+
 .box div::before {
   content: '';
   position: absolute;
   width: 70.71%;
-  height: 70.71%;
-  background: inherit;
-  transform: rotate(45deg);
-  transition: all .4s ease;
-}
-.box__right  { background: var(--accent); transform: translateX(100%); }
-.box__left   { background: var(--primary); transform: translateX(-100%); }
-.box__top    { background: var(--highlight); transform: translateY(-100%); }
-.box__bottom { background: var(--accent); transform: translateY(100%); }
-.box__center { background: var(--neutral); z-index: -1; }
-.box__right::before  { right:100%; bottom:0; transform-origin:100% 100%; }
-.box__left::before   { left:100%; top:0;   transform-origin:0 0;      }
-.box__top::before    { right:0;    top:100%; transform-origin:100% 0;   }
-.box__bottom::before { left:0;     bottom:100%;transform-origin:0 100%; }
-.box__right:hover,
-.box__left:hover,
-.box__top:hover,
-.box__bottom:hover {
-  transform: translate(0,0);
-  z-index:1;
-}
-.box__right:hover::before,
-.box__left:hover::before,
-.box__top:hover::before,
-.box__bottom:hover::before {
-  width:100%; height:100%; transform:none;
-}
-.box__right:hover  ~ .box__center { transform:translateX(-100%); }
-.box__left:hover   ~ .box__center { transform:translateX(100%); }
-.box__top:hover    ~ .box__center { transform:translateY(100%); }
-.box__bottom:hover ~ .box__center { transform:translateY(-100%); }
-
-/* Section Styles */
-section {
-  padding: 3rem 1rem;
-  text-align: center;
-}
-.section-alt {
-  background: var(--neutral);
 }
 
-/* Button CTA */
-.cta-button {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--neutral);
-  padding: 0.85rem 1.75rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.cta-button:hover {
-  background: var(--primary);
-  transform: scale(1.05);
-}
-/* 1. Reduce space above & below each section */
-section {
-  padding: 1.5rem 1rem;   /* was 3rem → now 1.5rem top/bottom */
-}
-
-/* 2. Tweak heading spacing so it sits closer to its paragraph */
-section h2 {
-  margin-top: .5rem;       /* tighten above */
-  margin-bottom: 0.25rem;  /* tighten below */
-}
-
-/* 3. Enlarge paragraph text & tighten its bottom margin */
-section p {
-  font-size: 1.125rem;    /* up from 1rem */
-  line-height: 1.6;       /* comfortable readability */
-  margin-bottom: 1rem;    /* down from 1.5–2rem */
-}
-
-/* 4. If you’re using a special “.section-centered” wrapper, target that too */
-.section-centered {
-  padding: 1.5rem 1rem;
-}
-.section-centered p {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-  background: var(--primary);
-  color: var(--neutral);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+/* ==================== */
+/* RESPONSIVE ADJUSTMENTS */
+/* ==================== */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav ul {
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    margin: 0 0.5rem;
+  }
+  
+  /* Logo */
+  .header-logo {
+    width: min(250px, 70%);
+  }
+  
+  /* Contact Page */
+  .contact-list {
+    padding: 1rem;
+  }
+  
+  /* Services Page */
+  .services-container {
+    padding: 2rem 1rem;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  .process-steps li {
+    padding: 1rem 1rem 1rem 3.5rem;
+  }
+  
+  .process-steps li::before {
+    left: 0.75rem;
+    top: 1rem;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  /* Thank You Page */
+  .thank-you-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .thank-you-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Upload Success Page */
+  .upload-success-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .upload-success-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .action-buttons .cta-button {
+    width: 100%;
+  }
 }

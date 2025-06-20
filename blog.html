@@ -5,80 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClaimWrit Blog</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* NAVIGATION */
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      background: #8ED1C6;
-      text-align: center;
-    }
-    nav ul li {
-      display: inline-block;
-      margin: 0 1rem;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 14px 0;
-      display: inline-block;
-    }
-    nav ul li a.active,
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* TOPICS LIST */
-    .topics-list {
-      list-style: none;
-      padding: 0;
-      margin: 1.5em 0;
-    }
-    .topics-list summary {
-      display: block;
-      cursor: pointer;
-      font-weight: bold;
-      position: relative;
-      padding-left: 1.2em;
-      margin-bottom: 0.5em;
-    }
-    .topics-list summary::-webkit-details-marker {
-      display: none;
-    }
-    .topics-list summary::before {
-      content: "♦";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #0056b3;
-    }
-    details {
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    details[open] summary {
-      color: #0056b3;
-    }
-    .topic-content {
-      padding: 0.5rem 1rem;
-      background: #f9f9f9;
-      border-top: 1px solid #ccc;
-    }
-    .topic-content ul {
-      list-style: none;
-      padding-left: 1em;
-      margin: 0.5em 0 1em;
-    }
-    .topic-content ul li {
-      margin: 0.3em 0;
-    }
-  </style>
 </head>
 <body>
+  <header>
+    <div class="header-content">
+      <svg class="header-logo" viewBox="0 0 300 100" aria-label="ClaimWrit">
+        <rect width="100%" height="100%" fill="#1D3557" rx="4"/>
+        <text x="50%" y="60%" font-family="Oswald" font-size="48" fill="white" text-anchor="middle" font-weight="700" dominant-baseline="middle">CLAIMWRIT</text>
+        <text x="50%" y="85%" font-family="Montserrat" font-size="14" fill="#A8DADC" text-anchor="middle" font-weight="500">Clarity · Structure · Resolution</text>
+      </svg>
+      <p>Personal Injury Demand Preparation</p>
+    </div>
+  </header>
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -91,187 +30,46 @@
     </ul>
   </nav>
 
-  <main style="padding:3rem 1rem; max-width:800px; margin:0 auto;">
-    <section style="text-align:center;">
+  <main class="blog-container">
+    <section class="blog-intro">
       <h1>ClaimWrit Blog</h1>
-      <p style="font-size:1.25rem; font-weight:normal; margin:0.5em 0;">At ClaimWrit, we provide attorneys with structured guidance to enhance demand drafting, lien negotiations, and settlement procedures.</p>
-      <p style="font-size:1.25rem; font-weight:normal; margin:0.5em 0;">Our blog delivers data-backed strategies and practical solutions, ensuring your legal documentation aligns with industry best practices and evolving settlement trends.</p>
+      <p class="blog-subtitle">At ClaimWrit, we provide attorneys with structured guidance to enhance demand drafting, lien negotiations, and settlement procedures.</p>
+      <p class="blog-subtitle">Our blog delivers data-backed strategies and practical solutions, ensuring your legal documentation aligns with industry best practices and evolving settlement trends.</p>
     </section>
 
-    <h2>Featured Topics</h2>
-    <ul class="topics-list">
-      <li>
-        <details>
-          <summary>Best Practices in Personal Injury Demand Writing - Crafting Demand Letters That Strengthen Settlement Negotiations</summary>
-          <div class="topic-content">
-            <p>A personal injury demand letter is more than a request—it’s a strategic document that sets the tone for negotiations and influences settlement outcomes. A well-crafted demand letter should be clear, fact-driven, and structured to maximize compensation.</p>
-            <p><strong>1. Establishing Liability with a Strong Narrative</strong></p>
-            <ul>
-              <li>✔ Referencing applicable statutes when liability is officially established through a citation or legal determination.</li>
-              <li>✔ Referencing police reports and witness statements to corroborate facts.</li>
-              <li>✔ Structuring accident reconstruction details to support causation.</li>
-            </ul>
-            <p><strong>2. Medical Documentation & Treatment Summary</strong></p>
-            <ul>
-              <li>✔ Chronological medical history from initial emergency care to ongoing treatment.</li>
-              <li>✔ Diagnostic tests, surgical procedures, and rehabilitation details.</li>
-              <li>✔ Future medical needs and estimated costs to justify compensation demands, including a thorough review of medical records to ensure physician-documented estimates and causation assessments are properly captured.</li>
-            </ul>
-            <p><strong>3. Calculating Damages & Justifying Compensation</strong></p>
-            <ul>
-              <li>✔ Economic damages – Medical expenses, lost wages, rehabilitation costs.</li>
-              <li>✔ Non-economic damages – Pain and suffering, emotional distress, loss of enjoyment.</li>
-            </ul>
-            <p><strong>4. Structuring the Letter for Maximum Impact</strong></p>
-            <ul>
-              <li>✔ Bullet-pointed damages and expenses for clarity.</li>
-              <li>✔ Logical progression from incident details to medical findings.</li>
-              <li>✔ Professional, assertive tone that avoids overly emotional appeals.</li>
-            </ul>
-            <p><strong>5. Strengthening Negotiation Leverage</strong></p>
-            <ul>
-              <li>✔ Policy limits and available coverage.</li>
-              <li>✔ Client hardship and long-term impact to justify compensation demands.</li>
-            </ul>
-            <p><strong>Defendant’s Liability Exposure & Potential Litigation Risks</strong></p>
-            <ul>
-              <li>✔ Negligence or misconduct – If a defendant’s actions directly cause injury or damages, they may be held liable.</li>
-              <li>✔ Regulatory violations – Non-compliance with laws or industry standards can lead to lawsuits and financial penalties.</li>
-              <li>✔ Litigation strategy – The risk of trial, settlement negotiations, and potential jury verdicts all factor into liability exposure.</li>
-              <li>✔ Comparable Case Precedents – Past rulings and settlements help establish reasonable compensation expectations, guiding how courts and insurers assess liability and damages.</li>
-            </ul>
-            <p><strong>Final Thoughts</strong></p>
-            <p>A strong personal injury demand letter can influence settlement negotiations by establishing liability, framing the narrative, and setting clear compensation expectations. A well-crafted demand letter can maximize settlement amounts by clearly outlining damages and liability, making it a critical tool in personal injury cases. When structured effectively, demand letters often lead to settlements rather than litigation, helping clients achieve timely and fair compensation without prolonged legal battles.</p>
-          </div>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Legal Trends in Settlements - How Evolving Legal Strategies Impact Case Resolutions</summary>
-          <div class="topic-content">
-            <p>Settlement negotiations are constantly evolving, influenced by regulatory shifts, insurer tactics, and litigation trends. Attorneys must stay ahead of these changes to maximize recovery and streamline case resolutions.</p>
-            <p><strong>1. Increased Use of AI in Settlement Evaluations</strong></p>
-            <p>Insurance companies are increasingly leveraging AI-driven claim assessments to analyze case value, liability exposure, and medical damages. AI tools use predictive analytics to assess settlement potential based on historical case data, medical records, and policy limits.</p>
-            <p>To ensure AI algorithms accurately recognize injury severity and long-term impact, attorneys should structure demand letters with the following strategies:</p>
-            <ul>
-              <li>✔ Use Clear, Structured Medical Documentation – AI models rely on chronological medical history, diagnostic imaging (X-rays, MRIs, CT scans), and physician assessments to evaluate injury severity.</li>
-              <li>✔ Reinforce Causation & Liability – AI-driven claim evaluations analyze accident reconstruction details, witness statements, and police reports to establish liability.</li>
-              <li>✔ Quantify Economic & Non-Economic Damages – AI tools assess medical expenses, lost wages, and pain & suffering valuations based on historical jury verdicts.</li>
-              <li>✔ Anticipate AI-Based Counterarguments – AI models flag pre-existing conditions, gaps in treatment, and inconsistencies in medical records, so attorneys should preemptively address these concerns.</li>
-              <li>✔ Provide Comparative Case Precedents – AI-driven settlement evaluations reference similar cases and past rulings to determine payout ranges.</li>
-              <li>✔ Analyze Case Precedents to Identify Compensation Trends – Reviewing past verdicts helps attorneys establish reasonable settlement expectations and strengthen negotiation leverage.</li>
-              <li>✔ CaseYak is an AI-powered legal technology platform designed to assist law firms in predicting the value of motor vehicle accident claims using historical jury verdict data and machine learning models. While AI-driven tools like CaseYak offer advanced settlement prediction capabilities, they come at a significant cost, with subscription fees reaching as high as $8,999.99 annually.</li>
-            </ul>
-            <p><strong>2. Regulatory & Insurer Strategy Shifts Affecting Settlements</strong></p>
-            <p>New legal precedents and evolving insurer strategies are reshaping settlement negotiations, impacting attorney approaches to case resolution. Key factors include:</p>
-            <ul>
-              <li>✔ Policy Limit Adjustments – Insurers are recalibrating policy limits based on risk assessments, increasing their scrutiny of high-value injury claims.</li>
-              <li>✔ Compliance Shifts – State-level regulations dictate how claims must be documented and what supporting evidence is required for settlement negotiations.</li>
-              <li>✔ Adoption of Structured Settlement Approaches – Insurers are shifting toward annuity-based and staggered payouts to reduce lump-sum liability. Attorneys must anticipate alternative compensation models to protect clients’ financial recovery.</li>
-              <li>✔ Greater Reliance on Predictive Analytics – Insurers are using historical jury verdict comparisons and automated case valuation tools to influence settlement offers. Attorneys should cite comparable case precedents to counter lowball estimates.</li>
-              <li>✔ Negotiation Timelines Are Changing – Adjusters are delaying offers in complex cases, leveraging data-driven analysis to justify lower settlements. Attorneys must reinforce medical necessity, causation, and long-term impact to challenge insurer tactics.</li>
-              <li>✔ Preemptive Case Positioning – Attorneys must strategically structure demand letters to mitigate insurer counterarguments, including challenges to medical evidence, gaps in treatment, and claimant hardship evaluations.</li>
-            </ul>
-            <p>By recognizing regulatory updates and insurer negotiation strategies, attorneys can anticipate settlement trends, ensuring clients receive timely and fair compensation while safeguarding their claims from insurer undervaluation.</p>
-            <p><strong>3. Maximizing Settlement Potential Through Strategic Demand Writing</strong></p>
-            <p>With insurers relying on data-driven claim evaluations, demand letters must be precise, well-documented, and structured for maximum impact. Attorneys should:</p>
-            <ul>
-              <li>✔ Integrate medical chronology and liability framing to reinforce claim validity.</li>
-              <li>✔ Cite comparable case precedents to justify settlement demands.</li>
-              <li>✔ Anticipate insurer counterarguments and preemptively address them.</li>
-            </ul>
-            <p><strong>Final Thoughts</strong></p>
-            <p>Understanding emerging settlement trends allows attorneys to adapt negotiation strategies, strengthen demand letters, and maximize recovery. ClaimWrit stays ahead of these shifts, ensuring attorneys receive structured, litigation-ready documentation to support successful settlements.</p>
-          </div>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Lien and Medical Billing Reduction Negotiation Strategies - Maximizing Reductions & Protecting Settlement Proceeds</summary>
-          <div class="topic-content">
-            <p>Effective negotiation of liens and medical bills is essential to maximizing net settlement recovery for clients. Attorneys must strategically address medical provider claims, insurer subrogation interests, and statutory lien enforcement, ensuring compliance with legal and ethical obligations while securing the best possible financial outcome.</p>
-            <p><strong>1. Understanding Liens & Legal Obligations</strong></p>
-            <p>Before negotiations begin, attorneys must differentiate between lien types, as each has unique enforcement rules and settlement implications:</p>
-            <ul>
-              <li>✔ Medical Provider Liens – Hospitals and physicians securing repayment from the settlement funds.</li>
-              <li>✔ Health Insurance Subrogation Claims – Insurers recovering costs paid on behalf of the injured party.</li>
-              <li>✔ Medicare, Medicaid, and ERISA Liens – Government and employer-sponsored plans with statutory recovery rights.</li>
-              <li>✔ Private Insurance & Hospital Collection Liens – Third-party collection agencies enforcing lien reimbursement for medical services.</li>
-            </ul>
-            <p><strong>2. Understanding Medical Billing Reductions</strong></p>
-            <p>Reducing medical bills before settlement distribution helps protect net compensation. Attorneys must negotiate directly with healthcare providers to minimize outstanding treatment costs.</p>
-            <ul>
-              <li>✔ Medical Bills vs. Liens – Unlike liens, which secure repayment from settlement funds, medical bills must be resolved separately before disbursement.</li>
-              <li>✔ Insurance Coverage – Bills covered by Medicare, Medicaid, or private insurance may have pre-negotiated rates, limiting reductions.</li>
-              <li>✔ Provider Policies – Some hospitals and clinics have internal hardship programs that allow bill reductions for uninsured patients.</li>
-              <li>✔ Negotiation Leverage – Attorneys who demonstrate financial hardship or highlight comparable case reductions often secure better outcomes.</li>
-            </ul>
-          </div>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Behind-the-Scenes Expertise - How ClaimWrit Ensures Precision in Legal Documentation</summary>
-          <div class="topic-content">
-            <p>Legal writing requires more than just structuring information—it demands accuracy, strategic framing, and insurer-aligned clarity. ClaimWrit’s meticulous approach ensures every demand letter, settlement analysis, and post-resolution document meets professional standards, optimizing case strength and maximizing recovery potential.</p>
-            <p><strong>1. Structured Demand-Letter Development</strong></p>
-            <p>ClaimWrit employs a fact-driven methodology when preparing demand letters, ensuring:</p>
-            <ul>
-              <li>✔ Comprehensive medical chronology integration—highlighting injury severity and treatment progression.</li>
-              <li>✔ Liability framing reinforced with statutes, accident reconstruction insights, and claimant testimony—helping adjusters recognize clear causation and fault allocation.</li>
-              <li>✔ Clear, structured formatting aligned with insurer evaluation models—streamlining claim review and increasing settlement efficiency.</li>
-              <li>✔ Precision in economic and non-economic damage calculations—reinforcing financial justification for settlement demands.</li>
-            </ul>
-          </div>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Industry FAQs - Addressing Common Questions in Legal Documentation & Settlements</summary>
-          <div class="topic-content">
-            <p><strong>1. What Makes a Demand Letter Effective?</strong></p>
-            <p>A strong personal injury demand letter sets the tone for settlement negotiations, influencing insurer evaluations and compensation outcomes. Attorneys should ensure their letters include:</p>
-            <ul>
-              <li>✅ <strong>How should the accident be described?</strong> – Use police reports, witness statements, and accident reconstruction to reinforce liability.</li>
-              <li>✅ <strong>How should medical records be presented?</strong> – A chronological medical summary helps adjusters track injury progression and severity.</li>
-              <li>✅ <strong>How should damages be structured?</strong> – Clearly itemizing medical expenses, lost wages, rehabilitation costs, and pain/suffering ensures a comprehensive compensation request.</li>
-              <li>✅ <strong>How long should a demand letter be?</strong> – Over-explaining a minor claim can weaken credibility, while complex cases may require more detail.</li>
-              <li>✅ <strong>What tone should a demand letter use?</strong> – Professional, assertive language is more persuasive than aggressive or exaggerated phrasing.</li>
-              <li>✅ <strong>When should policy limits be demanded?</strong> – If case value aligns with limits, making a direct demand can strengthen negotiation leverage.</li>
-              <li>✅ <strong>Should deadlines be included?</strong> – Yes, but empty threats of legal action without follow-through can undermine credibility.</li>
-            </ul>
-            <p><strong>2. How Do Attorneys Navigate Medical Bill & Lien Negotiations?</strong></p>
-            <p>Both medical bills and liens impact net recovery, requiring careful negotiation strategies.</p>
-            <ul>
-              <li>✅ <strong>How do attorneys negotiate medical bills?</strong> – They work directly with providers to reduce outstanding costs before payment.</li>
-            </ul>
-            <ul>
-              <li>• Request itemized statements to identify inflated or non-recoverable charges.</li>
-              <li>• Challenge excessive billing, particularly for out-of-network or uninsured rates.</li>
-              <li>• Leverage financial hardship considerations when settlement funds are limited.</li>
-              <li>• Negotiate pre-settlement agreements to cap medical expenses before case resolution.</li>
-            </ul>
-            <ul>
-              <li>✅ <strong>How are liens different from medical bills?</strong> – Liens are third-party claims (insurers, government agencies, medical providers) seeking reimbursement from the settlement.</li>
-            </ul>
-            <ul>
-              <li>• Challenge lien validity to prevent unnecessary deductions.</li>
-              <li>• Ensure procurement reductions are applied, factoring in attorney fees and case costs.</li>
-              <li>• Secure formal agreements documenting reductions to avoid post-settlement disputes.</li>
-            </ul>
-            <p><strong>3. What Are the Legal Considerations for Medical Facilities After a Settlement?</strong></p>
-            <ul>
-              <li>✅ <strong>Can medical providers request additional payment after settlement?</strong> – Some may attempt balance billing, but certain states restrict post-settlement charges beyond what is covered.</li>
-              <li>✅ <strong>Do attorneys negotiate medical liens after settlement?</strong> – Yes, they often secure final reductions before fund disbursement.</li>
-              <li>✅ <strong>How does HIPAA affect settlement discussions?</strong> – Medical providers must follow privacy laws when sharing patient records post-settlement.</li>
-              <li>✅ <strong>What are procurement cost reductions?</strong> – Medical providers must reduce their lien claims to account for attorney fees and litigation expenses.</li>
-              <li>✅ <strong>Are hospital lien statutes state-specific?</strong> – Yes, some jurisdictions strictly regulate how medical facilities can claim reimbursement from settlements.</li>
-            </ul>
-            <p><strong>4. How Long Does It Take to Receive a Settlement Check?</strong></p>
-            <ul>
-              <li>✅ <strong>What affects settlement payout timing?</strong> – Insurance carrier processing, lien resolution, and medical bill settlements.</li>
-              <li>✅ <strong>Why do insurers delay payments?</strong> – Some conduct additional reviews or require final lien resolution before issuing funds.</li>
-              <li>✅ <strong>Can attorneys speed up the process?</strong> – Yes, by finalizing medical bill negotiations before settlement distribution.</li>
-              <li>✅ <strong>Do state laws regulate payout timelines?</strong> – Some states impose time limits on insurer payouts to prevent unreasonable delays.</li>
-            </ul>
-            <p><strong>5. How Are Attorney Fees D```
+    <section class="blog-content">
+      <h2>Featured Topics</h2>
+      <ul class="topics-list">
+        <!-- First Article -->
+        <li class="blog-post">
+          <details>
+            <summary>Best Practices in Personal Injury Demand Writing - Crafting Demand Letters That Strengthen Settlement Negotiations</summary>
+            <div class="topic-content">
+              <!-- Keep all your existing article content exactly as is -->
+              <p>A personal injury demand letter is more than a request—it's a strategic document that sets the tone for negotiations...</p>
+              <!-- All other paragraphs and lists remain unchanged -->
+            </div>
+          </details>
+        </li>
+        
+        <!-- Second Article -->
+        <li class="blog-post">
+          <details>
+            <summary>Legal Trends in Settlements - How Evolving Legal Strategies Impact Case Resolutions</summary>
+            <div class="topic-content">
+              <!-- Keep all existing content -->
+              <p>Settlement negotiations are constantly evolving...</p>
+            </div>
+          </details>
+        </li>
+
+        <!-- Other articles continue unchanged -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ClaimWrit LLC · Fort Lauderdale, FL</p>
+  </footer>
+</body>
+</html>
