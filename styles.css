@@ -16,307 +16,82 @@ html, body {
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* Logo Styles */
-.header-logo {
-  width: min(300px, 80%);
-  height: auto;
-  margin: 0 auto 1rem;
-  display: block;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-  transition: transform 0.3s ease;
-}
-
-.header-logo:hover {
-  transform: scale(1.02);
+/* Header Styles */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 .header-content {
-  padding-top: 1.5rem;
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  animation: showText 2s ease 0.5s forwards;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-@keyframes showText {
-  0%   { opacity: 0; transform: translateY(-50px); }
-  100% { opacity: 1; transform: translateY(0); }
+.header-logo {
+  height: 80px;
+  margin-bottom: 0.5rem;
 }
 
 /* Navigation */
 nav {
   background: var(--primary);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  position: relative;
-  z-index: 1;
+  padding: 0.5rem 0;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-nav ul li {
-  display: inline-block;
+nav li {
   margin: 0 1rem;
 }
 
-nav ul li a {
-  color: var(--neutral);
-  font-weight: bold;
+nav a {
+  color: white;
   text-decoration: none;
-  padding: 0.75rem 0;
-  transition: color 0.3s ease;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  text-decoration: underline;
-  color: var(--highlight);
-}
-
-/* Animated Header Background */
-header {
-  position: relative;
-  height: 30vh;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--neutral);
-  padding-bottom: 2vh;
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
-  background-color: inherit;
-  background-repeat: no-repeat;
-  background-size: 100% 20%;
-  background-image:
-    linear-gradient(var(--accent), var(--accent)),
-    linear-gradient(var(--neutral), var(--neutral)),
-    linear-gradient(var(--accent), var(--accent)),
-    linear-gradient(var(--neutral), var(--neutral)),
-    linear-gradient(var(--accent), var(--accent));
-  background-position:
-    0% 0%, 0% 20%, 0% 40%, 0% 60%, 0% 80%;
-  animation: showBarsHoriz 3.5s forwards;
-  z-index: 0;
-}
-
-@keyframes showBarsHoriz {
-  0% {
-    opacity: 0;
-    background-position:
-      0% -100%, 0% -80%, 0% -60%, 0% -40%, 0% -20%;
-  }
-  100% {
-    opacity: 1;
-    background-position:
-      0% 0%, 0% 20%, 0% 40%, 0% 60%, 0% 80%;
-  }
-}
-
-/* Headings */
-h1, h2 {
-  font-family: 'Oswald', sans-serif;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-}
-
-/* Sample Request Page Styles */
-.sample-request-container {
-  padding: 2rem 1rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.intro-text {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.benefits-section {
-  margin: 2rem 0;
-}
-
-.benefits-list {
-  list-style: none;
-  padding-left: 1.5rem;
-}
-
-.benefits-list li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.8rem;
-}
-
-.benefits-list li::before {
-  content: "•";
-  color: var(--accent);
-  font-size: 1.5rem;
-  position: absolute;
-  left: 0;
-  top: -3px;
-}
-
-.form-section {
-  background: var(--neutral);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  margin-top: 2rem;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
+  font-weight: bold;
+  padding: 0.5rem 0;
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
 }
 
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-  transition: border-color 0.3s;
+nav a.active {
+  border-bottom: 2px solid var(--highlight);
 }
 
-.form-group input:focus,
-.form-group select:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-/* Loading Spinner */
-.loader {
-  display: none;
-  width: 20px;
-  height: 20px;
-  border: 3px solid rgba(255,255,255,0.3);
-  border-radius: 50%;
-  border-top-color: white;
-  animation: spin 1s ease-in-out infinite;
-  margin-left: 10px;
-  vertical-align: middle;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* Button CTA */
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent);
-  color: var(--neutral);
-  padding: 0.85rem 1.75rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-  background: var(--primary);
-  transform: scale(1.05);
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  min-height: 60vh;
 }
 
 /* Footer */
 footer {
   background: var(--primary);
-  color: var(--neutral);
+  color: white;
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
   margin-top: 2rem;
 }
 
-/* Mobile Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
   .header-logo {
-    width: min(250px, 70%);
+    height: 60px;
   }
-
-  nav ul li {
-    display: block;
-    margin: 0.5rem 0;
+  
+  nav li {
+    margin: 0 0.5rem;
   }
-
-  header {
-    height: auto;
-    min-height: 200px;
-    padding: 1rem 0;
-  }
-
-  .form-section {
-    padding: 1.5rem;
-  }
-
-  .sample-request-container {
-    padding: 1.5rem 1rem;
-  }
-}
-
-/* Hover Box Styles (Keep existing if needed) */
-.box {
-  position: relative;
-  width: 6em;
-  height: 6em;
-  margin: 2rem auto;
-  line-height: 6em;
-  overflow: hidden;
-  transform: translateZ(0);
-}
-/* ... (rest of your existing box styles) ... */
-
-/* Section Styles */
-section {
-  padding: 1.5rem 1rem;
-  text-align: center;
-}
-
-.section-alt {
-  background: var(--neutral);
-}
-
-.section-centered {
-  padding: 1.5rem 1rem;
-}
-
-.section-centered p {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
 }
