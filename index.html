@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaimWrit - Professional Legal Support Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a4480;
+            --secondary-blue: #2c5aa0;
+            --accent-blue: #4a86e8;
+            --dark-gray: #333;
+            --medium-gray: #666;
+            --light-gray: #f5f7fa;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background-color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-blue);
+        }
+        
+        .section-header h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent-blue);
+            color: var(--white);
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover, 
+        .nav-menu a.active {
+            color: var(--accent-blue);
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero .btn {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        .hero .btn:hover {
+            background: var(--light-gray);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--medium-gray);
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234a86e8'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 极速赛车开奖直播官网7.41 10 6l6 6-6 6-1.41-1.41z'/%3E%3C/svg%3E") center no-repeat;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--light极速赛车开奖直播官网-gray);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--medium-gray);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+        
+        /* Form Styles */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+        
+        textarea {
+            min-height: 150px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .cta .btn {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        .cta .btn:hover {
+            background: var(--light-gray);
+        }
+        
+        /* Success Message */
+        .success-message {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .blog-image {
+            height: 200px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 3rem;
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .blog-meta {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-meta i {
+            margin-right: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 50px 0 20px;
+            margin-top: auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* Page Content */
+        .page-content {
+            padding: 80px 0;
+        }
+        
+        .content-block {
+            margin-bottom: 50px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .step:after {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: all 0.4s ease;
+            }
+            
+            .nav-menu.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            .nav-menu li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .step {
+                margin-bottom: 30px;
+                flex: 0 0 100%;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Page container for multi-page simulation */
+        .page {
+            display: none;
+        }
+        
+        #home-page {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">CLAIMWRIT</div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active nav-link" data-page="home-page">Home</a></li>
+                <li><a href="#mission" class="nav-link" data-page="mission-page">Our Mission & Expertise</a></li>
+                <li><a href="#help" class="nav-link" data-page="help-page">How We Help</a></li>
+                <li><a href="#sample" class="nav-link" data-page="sample-page">Request Sample Demand</a></li>
+                <li><a href="#portal" class="nav-link" data-page="portal-page">Client Portal</a></li>
+                <li><a href="#contact" class="nav-link" data-page="contact-page">Contact</a></li>
+                <li><a href="#blog" class="nav-link" data-page="blog-page">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Container -->
+    <main>
+        <!-- Home Page -->
+        <div id="home-page" class="page">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>Personal Injury Demand Preparation</h1>
+                    <p>Clarity · Structure · Resolution</p>
+                    <p>Precision Demand-Letter Drafting & Post-Settlement Support</p>
+                    <a href="#sample" class="btn nav-link" data-page="sample-page">Request a Sample Demand Letter</a>
+                </div>
+            </section>
+
+            <!-- Introduction Section -->
+            <section>
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Our Commitment to Legal Precision</h2>
+                        <p>Your back-office ally for clarity, structure, and resolution</p>
+                    </div>
+                    <p>At ClaimWrit, clarity of purpose, structural precision, and prompt resolution undergird our legal support services. We are dedicated to equipping counsel with meticulously drafted demand letters and comprehensive post-settlement solutions engineered to streamline workflow, optimize client recoveries, and expedite the orderly resolution of claims.</p>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section style="background-color: var(--light-gray);">
+                <div class="container">
+                    <极速赛车开奖直播官网div class="section-header">
+                        <h2>Our Expertise</h2>
+                        <p>Specialized Solutions for Legal Efficiency</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3>Demand-Letter Precision</h3>
+                            <p>Crafting litigation-ready demand letters so firms can focus on winning cases with strong, well-documented claims.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3>Post-Settlement Reconciliation</h3>
+                            <p>Managing reduction requests and balance verifications for seamless, accurate case resolution.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Client Closing Statements</h3>
+                            <p>Preparing comprehensive client closing statements to finalize settlements professionally and transparently.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quality Control -->
+            <section>
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Quality Control</h2>
+                        <p>Every Document, Double-Checked</p>
+                    </div>
+                    <p>At ClaimWrit, we maintain an uncompromising commitment to precision. Every document is subjected to a meticulous, dual-phase review and verification procedure, ensuring it is impeccably refined and delivered without defect.</p>
+                    
+                    <div class="features-grid" style="margin-top: 50px;">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3>Two-Tier Review</h3>
+                            <p>Each document is reviewed first by the preparer and then by the team lead.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>AI-Assisted Tools</h3>
+                            <p>We leverage technology to enhance accuracy while maintaining human oversight.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h3>Error-Free Delivery</h3>
+                            <p>Ensuring every document arriving in your inbox is polished and ready for submission.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section style="background-color: var(--light-gray);">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Flexible Engagement & Pricing</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Fixed Pricing</h3>
+                            <p>For demand letters with predictable costs and deliverables.</p>
+                            <p><strong>Ideal for:</strong> Standard demand letter preparation</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Hourly Billing</h3>
+                            <p>For comprehensive post-settlement services requiring flexibility.</p>
+                            <p><strong>Ideal for:</strong> Complex cases and ongoing support</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Trusted Legal Support</h2>
+                        <p>What our clients say about our services</p>
+                    </div>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"ClaimWrit's demand letters have transformed our negotiation strategy. Their meticulous attention to medical chronology and liability analysis has significantly increased our settlement amounts."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">JD</div>
+                                <div class="author-info">
+                                    <h4>James Donovan</h4>
+                                    <p>Senior Partner, Donovan Law Group</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"The post-settlement reconciliation services have saved our firm countless hours. Their expertise in medical bill reductions and lien negotiations has maximized our clients' net recovery."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">MS</div>
+                                <div class="author-info">
+                                    <h4>Michelle Sanders</h4>
+                                    <p>Managing Attorney, Sanders & Associates</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"Joanna's contributions have directly supported countless successful settlements, earning the trust of our attorneys, clients, and external partners alike. Her precision, consistency, and commitment to excellence have made her an indispensable member of our team."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">IS</div>
+                                <div class="author-info">
+                                    <h4>Ian Seitel, Esq.</h4>
+                                    <p>Principal, Ian Seitel, P.A.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta">
+                <div class="container">
+                    <h2>Experience Our Meticulous Approach</h2>
+                    <p>Request a complimentary redacted demand letter to see how precision drives results</p>
+                    <a href="#sample" class="btn nav-link" data-page="sample-page">Request Sample Demand Letter</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Our Mission & Expertise Page -->
+        <div id="mission-page" class="page">
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>Our Mission & Expertise</h1>
+                    <p>Precision, Trust, and Results-Driven Legal Support</p>
+                </div>
+            </section>
+
+            <section class="page-content">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Our Mission</h2>
+                    </div>
+                    <div class="content-block">
+                        <p>At ClaimWrit, clarity of purpose, structural precision, and prompt resolution undergird our legal support services. We are dedicated to equipping counsel with meticulously drafted demand letters and comprehensive post-settlement solutions engineered to streamline workflow, optimize client recoveries, and expedite the orderly resolution of claims.</p>
+                    </div>
+
+                    <div class="section-header">
+                        <h2>Our Core Values</h2>
+                    </div>
+                    <div class="content-block">
+                        <p>ClaimWrit is built on expertise, precision, and trust, ensuring law firms receive litigation-ready demand letters that drive results efficiently.</p>
+                    </div>
+
+                    <div class="section-header">
+                        <h2>What Sets Us Apart</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Strategic Demand-Letter Preparation</h3>
+                            <p>Maximizing negotiating leverage with precise demand letters while streamlining lien resolution, expenses, and disbursements for faster case closures.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>HIPAA-Compliant Portal</h3>
+                            <p>Securely drag and drop even the largest medical records, billing ledgers, and lien documents, ensuring effortless and protected file submissions.</p>
+                        </div>
+                    </div>
+
+                    <div class="section-header">
+                        <h2>Our Expertise</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Strategic Demand-Letter Preparation</h3>
+                            <p>Delivering fully litigation-ready demand letters that seamlessly integrate rigorous liability analyses with precise damages computations. Every medical chronology is exhaustively reviewed to ensure all documented injuries, diagnostic findings, and physician observations are accurately reflected.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Post-Settlement Medical Reduction Requests</h3>
+                            <p>Securing the most favorable reductions from medical providers while safeguarding clients' net recoveries and ensuring compliance with all applicable statutory and contractual requirements.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Client Balance Verification & Closing Statements</h3>
+                            <p>Preparing detailed balance verifications and closing statements with exacting attention to detail, guaranteeing financial accuracy and facilitating the orderly and seamless conclusion of each matter.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- How We Help Page -->
+        <div id="help-page" class="page">
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>How We Help</h1>
+                    <p>Streamlining case management and maximizing financial outcomes</p>
+                </div>
+            </section>
+
+            <section class="page-content">
+                <div class="container">
+                    <div class="content-block">
+                        <p>ClaimWrit provides attorneys with precise demand-letter drafting and post-settlement solutions, streamlining case management and maximizing financial outcomes. Whether firms need structured pre-suit demand letters or assistance navigating complex settlement reconciliation, our process is designed for efficiency, accuracy, and reliability.</p>
+                    </div>
+
+                    <div class="section-header">
+                        <h2>Tailored Case Narratives for Stronger Negotiations</h2>
+                    </div>
+                    <div class="content-block">
+                        <p>Every demand letter is meticulously crafted to reflect case-specific details, ensuring attorneys present fact-driven, compelling claims. We incorporate liability nuances and medical complexities, transforming legal documentation into strategic negotiation tools.</p>
+                        <p>ClaimWrit reviews all medical chronology thoroughly, ensuring the demand letter captures every injury, test result, and physician note, reinforcing the strength of a case.</p>
+                        <p>ClaimWrit will also prepare asset affidavits for MVAs at no additional cost upon request—a service that other legal writers charge separately for.</p>
+                    </div>
+
+                    <div class="section-header">
+                        <h2>Rigorous Quality Control: Two-Tier Review Process</h2>
+                    </div>
+                    <div class="content-block">
+                        <p>ClaimWrit prioritizes accuracy at every step. Each demand letter and post-settlement document is reviewed twice—first by the preparer and then by the team lead. With two sets of eyes on every file, attorneys can trust that every document arriving in their inbox is error-free, refined, and ready for submission.</p>
+                        <p>ClaimWrit leverages AI-assisted tools when appropriate to support our meticulous review process, ensuring demand letters capture every relevant medical detail. This technology enhances accuracy while our team maintains direct oversight, reinforcing precision and legal integrity.</p>
+                    </div>
+
+                    <div class="section-header">
+                        <h2>Customized Legal Support</极速赛车开奖直播官网h2>
+                    </div>
+                    <div class="content-block">
+                        <p>ClaimWrit provides tailored demand-letter drafting and post-settlement solutions to match the unique needs of each law firm, ensuring seamless integration into legal workflows.</p>
+                        <p>ClaimWrit stands as a trusted partner for law firms, providing attorneys with the precision and efficiency needed to navigate demand-letter preparation and post-settlement case resolution with confidence.</p>
+                    </div>
+
+                    <div class="section-header">
+                        <h2>Our Process</h2>
+                    </div>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>Upload Case Details</h3>
+                            <p>Securely upload your case details through our HIPAA-compliant portal</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>Document Review</h3>
+                            <p>Our team conducts thorough analysis of medical records and evidence</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>Draft Preparation</h3>
+                            <p>We prepare a comprehensive demand package with precision</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h3>Quality Assurance</h3>
+                            <p>Two-tier review process ensures accuracy and completeness</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <h3>Final Delivery</h3>
+                            <p>Receive your finalized documents within the agreed timeframe</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Request Sample Page -->
+        <div id="sample-page" class="page">
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>Request Sample Demand Letter</h1>
+                    <p>Experience our meticulous approach firsthand</p>
+                </div>
+            </section>
+
+            <section class="page-content">
+                <div class="container">
+                    <div class="form-container">
+                        <div class="section-header">
+                            <h2>Request a Sample</h2>
+                            <p>Attorneys can request copies of redacted demand letters previously written and issued by ClaimWrit. These samples showcase our structured approach to case presentation, highlighting strategic formatting, liability analysis, and medical chronology integration—reinforcing how precision strengthens negotiations.</p>
+                        </div>
+
+                        <form id="sample-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="firm">Law Firm</label>
+                                <input type="text" id="firm" name="firm" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="case-type">Case Type of Interest</label>
+                                <select id="case-type" name="case-type" required>
+                                    <option value="">Select a case type</option>
+                                    <option value="auto">Auto Accident</option>
+                                    <option value="slip">Slip and Fall</option>
+                                    <option value="medical">Medical Malpractice</option>
+                                    <option value="product">Product Liability</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Additional Information (Optional)</label>
+                                <textarea id="message" name="message"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Request Sample</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Client Portal Page -->
+        <div id="portal-page" class="page">
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>Client Portal</h1>
+                    <p>Secure document upload and management</p>
+                </div>
+            </section>
+
+            <section class="page-content">
+                <div class="container">
+                    <div class="form-container">
+                        <h2>Client Login</h2>
+                        
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            
+                            <button type="submit" class="btn">Login</button>
+                            <p style="margin-top: 15px;"><a href="#">Forgot your password?</a></p>
+                        </form>
+                        
+                        <div id="upload-section" style="display: none; margin-top: 40px;">
+                            <h2>Upload Documents</h2>
+                            
+                            <form id="upload-form">
+                                <div class="form-group">
+                                    <label for="client-name">Client Name (First and Last)</label>
+                                    <input type="text" id="client-name" name="client-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="file-upload">Select File to Upload</label>
+                                    <input type="file" id="file-upload" name="file-upload" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="file-description">File Description</label>
+                                    <textarea id="file-description" name="file-description"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn">Upload File</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page">
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>Contact Us</h1>
+                    <p>Get in touch with our team</p>
+                </div>
+            </section>
+
+            <section class="page-content">
+                <div class="container">
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Contact Information</h3>
+                            <p><i class="fas fa-envelope"></i> info@claimwrit.com</p>
+                            <p><i class="fas fa-phone"></i> (954) 408-1937</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Fort Lauderdale, FL</p>
+                            <div class="social-links" style="margin-top: 20px; justify-content: flex-start;">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h3>Send Us a Message</h3>
+                            <form id="contact-form">
+                                <div class="form-group">
+                                    <label for="contact-name">Name</label>
+                                    <input type="text" id="contact-name" name="name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-email">Email</label>
+                                    <input type="email" id="contact-email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-subject">Subject</label>
+                                    <input type="text" id="contact-subject" name="subject" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-message">Message</label>
+                                    <textarea id="contact-message" name="message" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Blog Page -->
+        <div id="blog-page" class="page">
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>ClaimWrit Blog</h1>
+                    <p>Insights and strategies for legal professionals</p>
+                </div>
+            </section>
+
+            <section class="page-content">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Latest Articles</h2>
+                        <p>Structured guidance to enhance demand drafting, lien negotiations, and settlement procedures</p>
+                    </div>
+                    
+                    <div class="blog-grid">
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> October 15, 2023
+                                </div>
+                                <h3>Best Practices in Personal Injury Demand Writing</h3>
+                                <p>Crafting demand letters that strengthen settlement negotiations and maximize compensation outcomes.</p>
+                                <a href="#" class="btn btn-outline" style="margin-top: 15px;">Read Article</a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> September 28, 2023
+                                </div>
+                                <h3>Legal Trends in Settlements</h3>
+                                <p>How evolving legal strategies and AI are impacting case resolutions and negotiation tactics.</p>
+                                <a href="#" class="btn btn-outline" style="margin-top: 15px;">Read Article</a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> August 10, 2023
+                                </div>
+                                <h3>Lien and Medical Billing Reduction Strategies</h3>
+                                <p>Maximizing reductions and protecting settlement proceeds through effective negotiation techniques.</p>
+                                <a href="#" class="btn btn-outline" style="margin-top: 15px;">Read Article</a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog极速赛车开奖直播官网-meta">
+                                    <i class="far fa-calendar"></i> July 22, 2023
+                                </div>
+                                <h3>Behind-the-Scenes Expertise</h3>
+                                <p>How ClaimWrit ensures precision in legal documentation through structured processes and quality control.</p>
+                                <a href="#" class="btn btn-outline" style="margin-top: 15px;">Read Article</a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> June 5, 2023
+                                </div>
+                                <h3>Industry FAQs</h3>
+                                <p>Addressing common questions in legal documentation and settlements for personal injury cases.</p>
+                                <a href="#" class="btn btn-outline" style="margin-top: 15px;">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Success Pages -->
+        <div id="sample-success" class="page">
+            <section class="success-message">
+                <div class="container">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Thank You for Your Request!</h2>
+                    <p>We'll email your selected sample demand letter within 24 hours.</p>
+                    <p style="margin-top: 20px;">A confirmation email will be sent within 1 business hour.</p>
+                    <p>We may follow up with a call to discuss your specific needs.</p>
+                    <a href="#home" class="btn nav-link" data-page="home-page">Return to Homepage</a>
+                </div>
+            </section>
+        </div>
+        
+        <div id="upload-success" class="page">
+            <section class="success-message">
+                <div class="container">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Upload Successful!</h2>
+                    <p>Your document has been securely uploaded to our system.</p>
+                    <p>We'll notify you via email once processing is complete.</p>
+                    <p>All documents are stored with bank-level encryption.</p>
+                    <a href="#portal" class="btn nav-link" data-page="portal-page">Upload Another File</a>
+                    <a href="#home" class="btn btn-outline nav-link" style="margin-top: 15px;" data-page="home-page">Return to Homepage</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>CLAIMWRIT</h3>
+                    <p>Precision Demand-Letter Drafting & Post-Settlement Support for Personal Injury Attorneys.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#help" class="nav-link" data-page="help-page">Demand-Letter Drafting</a></li>
+                        <li><a href="#help" class="nav-link" data-page="help-page">Post-Settlement Reconciliation</a></li>
+                        <li><a href="#help" class="nav-link" data-page="help-page">Medical Bill Reductions</a></li>
+                        <li><a href="#help" class="nav-link" data-page="help-page">Lien Negotiations</a></li>
+                        <li><a href="#help" class="nav-link" data-page="help-page">Client Closing Statements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" class="nav-link" data-page="home-page">Home</a></li>
+                        <li><a href="#mission" class="nav-link" data-page="mission-page">Our Mission</a></li>
+                        <li><a href="#help" class="nav-link" data-page="help-page">How We Help</a></li>
+                        <li><a href="#sample" class="nav-link" data-page="sample-page">Request Sample</a></li>
+                        <li><a href="#blog" class="nav-link" data-page="blog-page">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@claimwrit.com</li>
+                        <li><i class="fas fa-phone"></i> (954) 408-1937</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Fort Lauderdale, FL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2020 ClaimWrit d/b/a of Envisage Companies LLC · Fort Lauderdale, FL · Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.page');
+        
+        // Hide all pages except home
+        pages.forEach(page => {
+            if (page.id !== 'home-page') {
+                page.style.display = 'none';
+            }
+        });
+        
+        // Navigation click handler
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get target page ID
+                const targetPageId = this.getAttribute('data-page');
+                const targetPage = document.getElementById(targetPageId);
+                
+                // Hide all pages
+                pages.forEach(page => {
+                    page.style.display = 'none';
+                });
+                
+                // Show target page
+                if (targetPage) {
+                    targetPage.style.display = 'block';
+                    
+                    // Update active nav link
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                }
+            });
+        });
+        
+        // Form handling
+        document.getElementById('sample-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide all pages
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            
+            // Show success page
+            document.getElementById('sample-success').style.display = 'block';
+            
+            // Update nav
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector('.nav-link[data-page="home-page"]').classList.add('active');
+        });
+        
+        document.getElementById('login-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('upload-section').style.display = 'block';
+        });
+        
+        document.getElementById('upload-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide all pages
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+            
+            // Show success page
+            document.getElementById('upload-success').style.display = 'block';
+            
+            // Update nav
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector('.nav-link[data-page="home-page"]').classList.add('active');
+        });
+        
+        document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will respond as soon as possible.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
