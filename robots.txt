@@ -1,1 +1,3 @@
-Sitemap: https://claimwrit.com/sitemap.xml
+User-agent: *
+Allow: /
+Sitemap: https://www.claimwrit.com/sitemap.xml
