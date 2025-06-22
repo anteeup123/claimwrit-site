@@ -296,6 +296,10 @@
         }
         
         /* Process Section */
+        .process {
+            background: var(--white);
+        }
+        
         .process-steps {
             display: flex;
             justify-content: space-between;
@@ -342,65 +346,25 @@
             margin-bottom: 10px;
         }
         
-        /* Testimonials */
-        .testimonials {
+        /* Commitment Section */
+        .commitment {
             background: linear-gradient(to right, var(--primary), var(--dark));
             color: var(--white);
+            text-align: center;
         }
         
-        .testimonials h2 {
+        .commitment h2 {
             color: var(--white);
         }
         
-        .testimonials h2:after {
+        .commitment h2:after {
             background: var(--secondary);
         }
         
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 30px;
-            position: relative;
-        }
-        
-        .testimonial-card:before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 5rem;
-            color: rgba(255, 255, 255, 0.1);
-            font-family: serif;
-            line-height: 1;
-        }
-        
-        .testimonial-content {
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            margin-right: 15px;
+        .commitment-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
         }
         
         /* CTA Section */
@@ -794,7 +758,6 @@
                     <li><a href="request-sample.html">Request Sample Demand</a></li>
                     <li><a href="client-upload.html">Client Portal</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -892,49 +855,14 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <!-- Commitment Section -->
+    <section class="commitment">
         <div class="container">
             <div class="section-title">
-                <h2>Trusted Legal Support for Law Firms</h2>
+                <h2>Our Commitment to Legal Precision</h2>
             </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>ClaimWrit has transformed how we handle demand letters. Their precision and attention to detail have significantly increased our settlement amounts.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JS</div>
-                        <div>
-                            <h4>John Smith</h4>
-                            <p>Senior Partner, Smith & Associates</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>The post-settlement support has saved our firm countless hours. Their expertise in lien resolution is unmatched in the industry.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MJ</div>
-                        <div>
-                            <h4>Maria Johnson</h4>
-                            <p>Managing Attorney, Johnson Legal Group</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>As a small practice, ClaimWrit gives us the resources of a large firm. Their client portal makes document submission effortless and secure.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RD</div>
-                        <div>
-                            <h4>Robert Davis</h4>
-                            <p>Principal, Davis Law Office</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="commitment-content">
+                <p>At ClaimWrit, clarity of purpose, structural precision, and prompt resolution undergird our legal support services. We are dedicated to equipping counsel with meticulously drafted demand letters and comprehensive post-settlement solutions engineered to streamline workflow, optimize client recoveries, and expedite the orderly resolution of claims.</p>
             </div>
         </div>
     </section>
