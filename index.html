@@ -3,44 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClaimWrit - Florida Personal Injury Demand Letters | Fort Lauderdale Legal Support</title>
-    <meta name="description" content="Florida-focused demand letter drafting & post-settlement support for Fort Lauderdale, Miami & Palm Beach attorneys. Precision drafting compliant with FL §768.79.">
+    <title>ClaimWrit - Professional Legal Support Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- Florida Schema Markup -->
+    <!-- Clean Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LegalService",
       "name": "ClaimWrit",
-      "image": "/logo.png",
       "url": "https://www.claimwrit.com",
-      "telephone": "+1-954-408-1937",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Florida Ave",
-        "addressLocality": "Fort Lauderdale",
-        "addressRegion": "FL",
-        "postalCode": "33301",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 26.1224,
-        "longitude": -80.1373
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "09:00",
-        "closes": "17:00"
-      },
-      "serviceArea": {
-        "@type": "State",
-        "name": "Florida"
-      },
-      "keywords": "Florida personal injury demand letters, Fort Lauderdale claim support, Broward County injury claims"
+      "serviceArea": "United States"
     }
     </script>
     
@@ -383,13 +357,6 @@
             font-size: 1.2rem;
             margin-bottom: 10px;
         }
-
-        /* Added icon styling */
-        .step i {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--secondary);
-        }
         
         /* Commitment Section */
         .commitment {
@@ -563,15 +530,139 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
         }
-
-        /* Florida CTA Banner */
-        .fl-cta-banner {
-            background: linear-gradient(to right, #1a5276, var(--secondary));
+        
+        /* Page Specific Styles */
+        .page-header {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 80px;
             color: var(--white);
             text-align: center;
-            padding: 25px;
+        }
+        
+        .page-header h1 {
+            color: var(--white);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            list-style: none;
             margin-bottom: 30px;
+        }
+        
+        .breadcrumb li {
+            margin: 0 10px;
+            position: relative;
+        }
+        
+        .breadcrumb li:after {
+            content: '/';
+            position: absolute;
+            right: -15px;
+            color: var(--light);
+        }
+        
+        .breadcrumb li:last-child:after {
+            display: none;
+        }
+        
+        .breadcrumb li a {
+            color: var(--light);
+            text-decoration: none;
+        }
+        
+        .breadcrumb li a:hover {
+            color: var(--secondary);
+        }
+        
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-block {
+            margin-bottom: 50px;
+        }
+        
+        /* Client Portal Styles */
+        .portal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
             border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .portal-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 20px 30px;
+            text-align: center;
+        }
+        
+        .portal-content {
+            padding: 30px;
+        }
+        
+        .login-form {
+            display: grid;
+            gap: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .upload-container {
+            text-align: center;
+            border: 2px dashed var(--gray);
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-container:hover {
+            border-color: var(--secondary);
+            background: rgba(52, 152, 219, 0.05);
+        }
+        
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .success-message {
+            background: var(--success);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .success-message i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .security-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .security-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray);
         }
         
         /* Responsive Styles */
@@ -633,6 +724,10 @@
             nav ul li {
                 margin: 15px 0;
             }
+            
+            .page-header {
+                padding: 130px 0 60px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -683,9 +778,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h1>Fort Lauderdale Personal Injury Demand Letters</h1>
+            <h1>CLAIMWRIT</h1>
             <div class="tagline">
-                <span>Precision Drafting for Florida Attorneys</span>
+                <span>Personal Injury Demand Preparation</span>
                 <span>·</span>
                 <span>Clarity</span>
                 <span>·</span>
@@ -693,7 +788,7 @@
                 <span>·</span>
                 <span>Resolution</span>
             </div>
-            <p>Florida-Focused Demand-Letter Drafting & Post-Settlement Support</p>
+            <p>Precision Demand-Letter Drafting & Post-Settlement Support</p>
             <a href="request-sample.html" class="btn btn-accent">Request Sample Demand</a>
         </div>
     </section>
@@ -702,7 +797,7 @@
     <section class="features">
         <div class="container">
             <div class="section-title">
-                <h2>What Sets Us Apart in Florida</h2>
+                <h2>What Sets Us Apart</h2>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
@@ -710,8 +805,8 @@
                         <i class="fas fa-file-contract"></i>
                     </div>
                     <div class="feature-content">
-                        <h3>Strategic Florida Demand Letters</h3>
-                        <p>Maximizing negotiating leverage with Florida-statute-compliant demand letters while streamlining lien resolution for Broward, Miami-Dade & Palm Beach cases.</p>
+                        <h3>Strategic Demand-Letter Preparation</h3>
+                        <p>Maximizing negotiating leverage with precise demand letters while streamlining lien resolution, expenses, and disbursements for faster case closures.</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -719,8 +814,8 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="feature-content">
-                        <h3>HIPAA-Compliant Florida Portal</h3>
-                        <p>Securely submit medical records from Florida providers. Compliant with Florida privacy regulations.</p>
+                        <h3>HIPAA-Compliant Portal</h3>
+                        <p>Securely drag and drop even the largest medical records, billing ledgers, and lien documents, ensuring effortless and protected file submissions.</p>
                     </div>
                 </div>
                 <div class="feature-card">
@@ -728,8 +823,8 @@
                         <i class="fas fa-balance-scale"></i>
                     </div>
                     <div class="feature-content">
-                        <h3>Florida Post-Settlement Solutions</h3>
-                        <p>Managing reduction requests and balance verifications for seamless Florida case resolution with comprehensive closing statements.</p>
+                        <h3>Post-Settlement Solutions</h3>
+                        <p>Managing reduction requests and balance verifications for seamless, accurate case resolution and comprehensive client closing statements.</p>
                     </div>
                 </div>
             </div>
@@ -740,33 +835,33 @@
     <section class="process">
         <div class="container">
             <div class="section-title">
-                <h2>Our Florida Process</h2>
+                <h2>Our Process</h2>
             </div>
             <div class="process-steps">
                 <div class="step">
-                    <div class="step-number"><i class="fas fa-cloud-upload-alt"></i></div>
-                    <h3>Florida Case Upload</h3>
-                    <p>Securely upload your Florida case details through our HIPAA-compliant portal</p>
+                    <div class="step-number">1</div>
+                    <h3>Upload Case Details</h3>
+                    <p>Securely upload your case details through our HIPAA-compliant portal</p>
                 </div>
                 <div class="step">
-                    <div class="step-number"><i class="fas fa-file-medical"></i></div>
-                    <h3>Florida Document Review</h3>
-                    <p>Analysis of Florida medical records compliant with FL §768.79</p>
+                    <div class="step-number">2</div>
+                    <h3>Document Review</h3>
+                    <p>Our team conducts thorough analysis of medical records</p>
                 </div>
                 <div class="step">
-                    <div class="step-number"><i class="fas fa-pencil-alt"></i></div>
-                    <h3>Florida Draft Preparation</h3>
-                    <p>Prepare demand package following Broward/Miami-Dade court requirements</p>
+                    <div class="step-number">3</div>
+                    <h3>Draft Preparation</h3>
+                    <p>We prepare a comprehensive demand package</p>
                 </div>
                 <div class="step">
-                    <div class="step-number"><i class="fas fa-check-double"></i></div>
+                    <div class="step-number">4</div>
                     <h3>Quality Assurance</h3>
-                    <p>Florida-specific review ensures accuracy</p>
+                    <p>Two-tier review process ensures accuracy</p>
                 </div>
                 <div class="step">
-                    <div class="step-number"><i class="fas fa-paper-plane"></i></div>
+                    <div class="step-number">5</div>
                     <h3>Delivery</h3>
-                    <p>Receive Florida-compliant documents within timeframe</p>
+                    <p>Receive your finalized documents within agreed timeframe</p>
                 </div>
             </div>
         </div>
@@ -776,10 +871,10 @@
     <section class="commitment">
         <div class="container">
             <div class="section-title">
-                <h2>Our Commitment to Florida Attorneys</h2>
+                <h2>Our Commitment to Legal Precision</h2>
             </div>
             <div class="commitment-content">
-                <p>At ClaimWrit, we specialize in Florida personal injury claims. Our Fort Lauderdale-based team delivers demand letters compliant with Florida Statute §768.79 and local court rules across Broward, Miami-Dade, and Palm Beach counties. We're dedicated to optimizing Florida client recoveries with locally-attuned solutions.</p>
+                <p>At ClaimWrit, clarity of purpose, structural precision, and prompt resolution undergird our legal support services. We are dedicated to equipping counsel with meticulously drafted demand letters and comprehensive post-settlement solutions engineered to streamline workflow, optimize client recoveries, and expedite the orderly resolution of claims.</p>
             </div>
         </div>
     </section>
@@ -787,38 +882,24 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Experience Our Florida Approach</h2>
-            <p>Request a redacted Florida demand letter to see how precision drives results</p>
-            <a href="request-sample.html" class="btn btn-light">Request Florida Sample Now</a>
+            <h2>Experience Our Meticulous Approach</h2>
+            <p>Request a complimentary redacted demand letter to see how precision drives results</p>
+            <a href="request-sample.html" class="btn btn-light">Request Sample Now</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="fl-cta-banner">
-                <h3>Florida Demand Letter Experts</h3>
-                <p>Serving Fort Lauderdale, Miami, West Palm Beach & Surrounding Areas</p>
-            </div>
-            
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>CLAIMWRIT</h3>
-                    <p>Your Florida back-office ally for clarity, structure, and resolution in personal injury demand preparation.</p>
+                    <p>Florida's back-office ally for clarity, structure, and resolution in personal injury demand preparation and post-settlement support.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Florida Demand-Letter Preparation</a></li>
-                        <li><a href="#">Post-Settlement Support</a></li>
-                        <li><a href="#">Florida Medical Reduction Requests</a></li>
-                        <li><a href="#">Balance Verification</a></li>
-                        <li><a href="#">Florida Closing Statements</a></li>
-                    </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -831,7 +912,17 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact Our Florida Team</h3>
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Demand-Letter Preparation</a></li>
+                        <li><a href="#">Post-Settlement Support</a></li>
+                        <li><a href="#">Medical Reduction Requests</a></li>
+                        <li><a href="#">Balance Verification</a></li>
+                        <li><a href="#">Closing Statement Preparation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
                     <ul>
                         <li><i class="fas fa-envelope"></i> info@claimwrit.com</li>
                         <li><i class="fas fa-phone"></i> 954-408-1937</li>
@@ -840,7 +931,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2023 ClaimWrit | Florida Demand Letter Specialists | 123 Florida Ave, Fort Lauderdale, FL 33301 · <a href="#">Privacy Policy</a></p>
+                <p>© 2023 ClaimWrit d/b/a of Envisage Companies LLC · Fort Lauderdale, FL · <a href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
@@ -862,6 +953,21 @@
             });
         });
         
+        // Set active navigation link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+
         // Form submission handling
         const forms = document.querySelectorAll('form');
         forms.forEach(form => {
