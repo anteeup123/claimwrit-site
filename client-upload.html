@@ -334,11 +334,12 @@
                 
                 <div class="portal-content">
                     <form name="client-upload"
-                          method="POST" 
-                          enctype="multipart/form-data" 
-                          netlify
-                          data-netlify-recaptcha="true"
-                          id="upload-form">
+      method="POST"
+      enctype="multipart/form-data"
+      action="/thank-you.html"  <!-- ADD THIS -->
+      netlify  <!-- KEEP THIS -->
+      data-netlify-recaptcha="true"  <!-- KEEP THIS -->
+      id="upload-form">
                         <input type="hidden" name="form-name" value="client-upload">
                         <input type="hidden" name="_redirect" value="/thank-you.html">
                         
