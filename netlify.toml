@@ -1,0 +1,10 @@
+[build]
+  publish = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[context.production.environment]
+  NF_MAX_UPLOAD_SIZE = "100"  # 100MB max file size

@@ -1,3 +1,5 @@
+# robots.txt for ClaimWrit
 User-agent: *
 Allow: /
+
 Sitemap: https://www.claimwrit.com/sitemap.xml

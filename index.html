@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClaimWrit - Professional Legal Support Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Precision demand-letter drafting and post-settlement support for personal injury attorneys">
     
-    <!-- Clean Schema Markup -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LegalService",
       "name": "ClaimWrit",
       "url": "https://www.claimwrit.com",
-      "serviceArea": "United States"
+      "telephone": "+1-954-408-1937",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fort Lauderdale",
+        "addressRegion": "FL"
+      }
     }
     </script>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset and Base Styles */
+        /* All CSS from your original design */
         * {
             margin: 0;
             padding: 0;
@@ -401,68 +407,6 @@
             font-size: 1.1rem;
         }
         
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        .contact-info {
-            background: var(--light);
-            padding: 30px;
-            border-radius: 8px;
-        }
-        
-        .contact-item {
-            display: flex;
-            margin-bottom: 25px;
-        }
-        
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--secondary);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        .contact-form form {
-            display: grid;
-            gap: 20px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .form-group label {
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
         /* Footer */
         footer {
             background: var(--dark);
@@ -531,140 +475,6 @@
             font-size: 0.9rem;
         }
         
-        /* Page Specific Styles */
-        .page-header {
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 150px 0 80px;
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .page-header h1 {
-            color: var(--white);
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-        
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .breadcrumb li {
-            margin: 0 10px;
-            position: relative;
-        }
-        
-        .breadcrumb li:after {
-            content: '/';
-            position: absolute;
-            right: -15px;
-            color: var(--light);
-        }
-        
-        .breadcrumb li:last-child:after {
-            display: none;
-        }
-        
-        .breadcrumb li a {
-            color: var(--light);
-            text-decoration: none;
-        }
-        
-        .breadcrumb li a:hover {
-            color: var(--secondary);
-        }
-        
-        .content-section {
-            padding: 80px 0;
-        }
-        
-        .content-block {
-            margin-bottom: 50px;
-        }
-        
-        /* Client Portal Styles */
-        .portal-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .portal-header {
-            background: var(--primary);
-            color: var(--white);
-            padding: 20px 30px;
-            text-align: center;
-        }
-        
-        .portal-content {
-            padding: 30px;
-        }
-        
-        .login-form {
-            display: grid;
-            gap: 20px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        
-        .upload-container {
-            text-align: center;
-            border: 2px dashed var(--gray);
-            padding: 40px 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .upload-container:hover {
-            border-color: var(--secondary);
-            background: rgba(52, 152, 219, 0.05);
-        }
-        
-        .upload-icon {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-        
-        .success-message {
-            background: var(--success);
-            color: var(--white);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .success-message i {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .security-features {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .security-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--gray);
-        }
-        
         /* Responsive Styles */
         @media (max-width: 992px) {
             .step {
@@ -723,10 +533,6 @@
             
             nav ul li {
                 margin: 15px 0;
-            }
-            
-            .page-header {
-                padding: 130px 0 60px;
             }
         }
         
@@ -894,11 +700,10 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>CLAIMWRIT</h3>
-                    <p>Florida's back-office ally for clarity, structure, and resolution in personal injury demand preparation and post-settlement support.</p>
+                    <p>Your back-office ally for clarity, structure, and resolution in personal injury demand preparation and post-settlement support.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -931,7 +736,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2023 ClaimWrit d/b/a of Envisage Companies LLC · Fort Lauderdale, FL · <a href="#">Privacy Policy</a></p>
+                <p>© 2023 ClaimWrit d/b/a of Envisage Companies LLC · <a href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
@@ -967,43 +772,6 @@
                 }
             });
         });
-
-        // Form submission handling
-        const forms = document.querySelectorAll('form');
-        forms.forEach(form => {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Show success message for client upload
-                if(form.classList.contains('login-form')) {
-                    document.querySelector('.login-form').style.display = 'none';
-                    document.querySelector('.upload-container').style.display = 'block';
-                }
-                else if(form.classList.contains('upload-form')) {
-                    document.querySelector('.upload-container').style.display = 'none';
-                    document.querySelector('.success-message').style.display = 'block';
-                }
-                else {
-                    // For other forms, redirect to thank you page
-                    window.location.href = 'thank-you.html';
-                }
-            });
-        });
-        
-        // Simulate file upload
-        const uploadContainer = document.querySelector('.upload-container');
-        if(uploadContainer) {
-            uploadContainer.addEventListener('click', () => {
-                document.getElementById('file-upload').click();
-            });
-            
-            document.getElementById('file-upload').addEventListener('change', function() {
-                if(this.files.length > 0) {
-                    document.querySelector('.upload-form button').disabled = false;
-                    document.querySelector('.upload-container p').textContent = this.files[0].name + ' selected';
-                }
-            });
-        }
     </script>
 </body>
 </html>
