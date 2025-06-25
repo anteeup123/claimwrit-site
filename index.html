@@ -1,777 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClaimWrit - Professional Legal Support Services</title>
-    <meta name="description" content="Precision demand-letter drafting and post-settlement support for personal injury attorneys">
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LegalService",
-      "name": "ClaimWrit",
-      "url": "https://www.claimwrit.com",
-      "telephone": "+1-954-408-1937",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Fort Lauderdale",
-        "addressRegion": "FL"
-      }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ClaimWrit</title>
+
+  <!-- Main Styles & FontAwesome -->
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Quick CSS overrides; move these into styles.css if preferred -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background: #fff;
+      color: #1f1f1f;
+      text-align: center;
     }
-    </script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* All CSS from your original design */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #34495e;
-            --text: #2c3e50;
-            --gray: #95a5a6;
-            --white: #ffffff;
-            --success: #27ae60;
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-        
-        h1, h2, h3, h4, h5 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            color: var(--primary);
-        }
-        
-        h2 {
-            font-size: 2rem;
-            color: var(--dark);
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-        }
-        
-        p {
-            margin-bottom: 1rem;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: var(--secondary);
-            color: var(--white);
-            padding: 12px 25px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .btn:hover {
-            background: var(--dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .btn-accent {
-            background: var(--accent);
-        }
-        
-        .btn-accent:hover {
-            background: #c0392b;
-        }
-        
-        .btn-light {
-            background: var(--light);
-            color: var(--dark);
-        }
-        
-        .btn-light:hover {
-            background: #d5dbdb;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        
-        .section-title h2:after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        /* Header Styles */
-        header {
-            background: var(--primary);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-        }
-        
-        .logo span {
-            color: var(--secondary);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 25px;
-        }
-        
-        nav ul li a {
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-            padding: 5px 0;
-            position: relative;
-        }
-        
-        nav ul li a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            transition: width 0.3s ease;
-        }
-        
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--secondary);
-        }
-        
-        nav ul li a:hover:after,
-        nav ul li a.active:after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-            padding-top: 70px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-        
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            color: var(--light);
-        }
-        
-        .hero .tagline {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 40px;
-        }
-        
-        .hero .tagline span {
-            margin: 0 15px;
-            color: var(--secondary);
-        }
-        
-        /* Features Section */
-        .features {
-            background: var(--light);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            background: var(--secondary);
-            color: var(--white);
-            font-size: 2.5rem;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .feature-content {
-            padding: 25px;
-        }
-        
-        .feature-content h3 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        /* Process Section */
-        .process {
-            background: var(--white);
-        }
-        
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 40px;
-            position: relative;
-        }
-        
-        .process-steps:before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 10%;
-            width: 80%;
-            height: 2px;
-            background: var(--secondary);
-            z-index: 1;
-        }
-        
-        .step {
-            width: 20%;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: var(--secondary);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
-            position: relative;
-        }
-        
-        .step h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        
-        /* Commitment Section */
-        .commitment {
-            background: linear-gradient(to right, var(--primary), var(--dark));
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .commitment h2 {
-            color: var(--white);
-        }
-        
-        .commitment h2:after {
-            background: var(--secondary);
-        }
-        
-        .commitment-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
-        
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(to right, var(--secondary), #1a5276);
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .cta h2 {
-            color: var(--white);
-            margin-bottom: 20px;
-        }
-        
-        .cta h2:after {
-            display: none;
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--light);
-            padding: 40px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            color: var(--white);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: var(--light);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: var(--secondary);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .step {
-                width: 25%;
-                margin-bottom: 30px;
-            }
-            
-            .process-steps:before {
-                display: none;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .step {
-                width: 50%;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            nav {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 80%;
-                height: calc(100vh - 70px);
-                background: var(--dark);
-                transition: all 0.3s ease;
-                padding: 20px;
-            }
-            
-            nav.active {
-                left: 0;
-            }
-            
-            nav ul {
-                flex-direction: column;
-            }
-            
-            nav ul li {
-                margin: 15px 0;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .step {
-                width: 100%;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero .tagline {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .hero .tagline span {
-                display: none;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+
+    /* Navigation */
+    .nav-bar {
+      position: sticky; top: 0;
+      background: #fff;
+      border-bottom: 1px solid #dcdcdc;
+      z-index: 100;
+    }
+    .nav-bar ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0; padding: 1rem 0;
+      list-style: none;
+    }
+    .nav-bar a {
+      color: #001f3f;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .nav-bar a:hover,
+    .nav-bar a.active {
+      color: #bfa15d;
+    }
+
+    /* Logo + Hero */
+    .logo-header {
+      padding: 2rem 0 0.5rem;
+    }
+    .logo {
+      max-width: 280px;
+      height: auto;
+    }
+    .subline {
+      margin-top: 0.5rem;
+      color: #666;
+      letter-spacing: 2px;
+    }
+    .hero-statement {
+      max-width: 800px;
+      margin: 2rem auto 0;
+      padding: 0 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Icon Row */
+    .icon-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 3rem auto 2rem;
+      padding: 0 1rem;
+    }
+    .icon-item {
+      flex: 1 1 260px;
+      border: 1px solid #e2e2e2;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .icon-item:hover {
+      background: #f9f9f9;
+      transform: translateY(-2px);
+    }
+    .icon-item i {
+      font-size: 2rem;
+      color: #001f3f;
+      margin-bottom: 0.5rem;
+    }
+    .icon-item p {
+      font-weight: 600;
+      color: #001f3f;
+    }
+    .icon-text {
+      display: none;
+      text-align: left;
+      color: #444;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #f9f9f9;
+      border-top: 1px solid #e2e2e2;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+    .site-footer a {
+      color: #001f3f;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .site-footer a:hover {
+      text-decoration: underline;
+      color: #bfa15d;
+    }
+
+    /* Focus styles */
+    a:focus, button:focus, input:focus, textarea:focus {
+      outline: none;
+    }
+    :focus-visible {
+      outline: 2px dashed #bfa15d;
+      outline-offset: 4px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-bar ul { flex-direction: column; gap:1rem; }
+      .logo { max-width: 180px; }
+      .icon-row { flex-direction: column; }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">CLAIM<span>WRIT</span></a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="our-mission.html">Our Mission &amp; Expertise</a></li>
-                    <li><a href="how-we-help.html">How We Help</a></li>
-                    <li><a href="request-sample.html">Request Sample Demand</a></li>
-                    <li><a href="client-upload.html">Client Portal</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="mission.html">Our Mission</a></li>
+      <li><a href="services.html">How We Help</a></li>
+      <li><a href="sample-request.html">Request Sample</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="client-upload.html">Client Portal</a></li>
+    </ul>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>CLAIMWRIT</h1>
-            <div class="tagline">
-                <span>Personal Injury Demand Preparation</span>
-                <span>·</span>
-                <span>Clarity</span>
-                <span>·</span>
-                <span>Structure</span>
-                <span>·</span>
-                <span>Resolution</span>
-            </div>
-            <p>Precision Demand-Letter Drafting & Post-Settlement Support</p>
-            <a href="request-sample.html" class="btn btn-accent">Request Sample Demand</a>
-        </div>
-    </section>
+  <!-- Logo & Tagline -->
+  <header class="logo-header">
+    <img
+      src="images/ClaimWrit-Logo.jpg"
+      alt="ClaimWrit Logo — Clarity · Structure · Resolution"
+      class="logo"
+    />
+    <p class="subline">Clarity · Structure · Resolution</p>
+  </header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Sets Us Apart</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Strategic Demand-Letter Preparation</h3>
-                        <p>Maximizing negotiating leverage with precise demand letters while streamlining lien resolution, expenses, and disbursements for faster case closures.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>HIPAA-Compliant Portal</h3>
-                        <p>Securely drag and drop even the largest medical records, billing ledgers, and lien documents, ensuring effortless and protected file submissions.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Post-Settlement Solutions</h3>
-                        <p>Managing reduction requests and balance verifications for seamless, accurate case resolution and comprehensive client closing statements.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Statement -->
+  <section class="hero-statement">
+    <p>
+      From compelling litigation-ready demand letters to optional
+      post-settlement reconciliation, ClaimWrit helps attorneys transform
+      raw records into streamlined, accurate case support—so nothing
+      gets lost in the details.
+    </p>
+    <h2>Why the Demand Letter Matters</h2>
+    <p>
+      A compelling personal injury demand letter does more than outline
+      damages—it sets the tone. By establishing liability, presenting
+      supporting evidence, and framing the narrative with clarity, it
+      helps drive settlement negotiations with purpose. When structured
+      strategically, these letters often result in faster, fairer
+      resolutions—maximizing compensation while reducing the need for
+      litigation.
+    </p>
+  </section>
 
-    <!-- Process Section -->
-    <section class="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Process</h2>
-            </div>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Upload Case Details</h3>
-                    <p>Securely upload your case details through our HIPAA-compliant portal</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Document Review</h3>
-                    <p>Our team conducts thorough analysis of medical records</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Draft Preparation</h3>
-                    <p>We prepare a comprehensive demand package</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Quality Assurance</h3>
-                    <p>Two-tier review process ensures accuracy</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <h3>Delivery</h3>
-                    <p>Receive your finalized documents within agreed timeframe</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Expandable Services -->
+  <section class="icon-row">
+    <div class="icon-item" onclick="toggleText('text1')">
+      <i class="fas fa-briefcase" aria-hidden="true"></i>
+      <p>Strategic Legal Support</p>
+      <div class="icon-text" id="text1">
+        <p>
+          Your time is better spent building your argument—not buried in
+          medical notes. ClaimWrit handles the tedium so you don’t have to:
+          we comb through provider records, filter out filler, and surface
+          exactly what matters.
+        </p>
+      </div>
+    </div>
 
-    <!-- Commitment Section -->
-    <section class="commitment">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Commitment to Legal Precision</h2>
-            </div>
-            <div class="commitment-content">
-                <p>At ClaimWrit, clarity of purpose, structural precision, and prompt resolution undergird our legal support services. We are dedicated to equipping counsel with meticulously drafted demand letters and comprehensive post-settlement solutions engineered to streamline workflow, optimize client recoveries, and expedite the orderly resolution of claims.</p>
-            </div>
-        </div>
-    </section>
+    <div class="icon-item" onclick="toggleText('text2')">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Secure Upload Portal</p>
+      <div class="icon-text" id="text2">
+        <p>
+          Drag & drop large case files, PDFs, and images—encrypted,
+          HIPAA-compliant, and automatically organized in one step.
+        </p>
+      </div>
+    </div>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Experience Our Meticulous Approach</h2>
-            <p>Request a complimentary redacted demand letter to see how precision drives results</p>
-            <a href="request-sample.html" class="btn btn-light">Request Sample Now</a>
-        </div>
-    </section>
+    <div class="icon-item" onclick="toggleText('text3')">
+      <i class="fas fa-shield-alt" aria-hidden="true"></i>
+      <p>HIPAA-Compliant Systems</p>
+      <div class="icon-text" id="text3">
+        <p>
+          Bank-grade encryption and strict HIPAA protocols on every file—
+          so you know your documents and client data are fully protected.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>CLAIMWRIT</h3>
-                    <p>Your back-office ally for clarity, structure, and resolution in personal injury demand preparation and post-settlement support.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="our-mission.html">Our Mission & Expertise</a></li>
-                        <li><a href="how-we-help.html">How We Help</a></li>
-                        <li><a href="request-sample.html">Request Sample</a></li>
-                        <li><a href="client-upload.html">Client Portal</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Demand-Letter Preparation</a></li>
-                        <li><a href="#">Post-Settlement Support</a></li>
-                        <li><a href="#">Medical Reduction Requests</a></li>
-                        <li><a href="#">Balance Verification</a></li>
-                        <li><a href="#">Closing Statement Preparation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> info@claimwrit.com</li>
-                        <li><i class="fas fa-phone"></i> 954-408-1937</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Fort Lauderdale, FL</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2023 ClaimWrit d/b/a of Envisage Companies LLC · <a href="#">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2020 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> •
+      <a
+        href="https://www.google.com/maps/place/Fort+Lauderdale,+FL+33334"
+      >Location</a>
+    </p>
+  </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.querySelector('nav');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-        
-        // Close menu when clicking a link
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-            });
-        });
-        
-        // Set active navigation link
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = location.pathname.split('/').pop();
-            const navLinks = document.querySelectorAll('nav a');
-            
-            navLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (linkPage === currentPage) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        });
-    </script>
+  <!-- Toggle Script -->
+  <script>
+    function toggleText(id) {
+      const target = document.getElementById(id);
+      document
+        .querySelectorAll('.icon-text')
+        .forEach(el => el !== target && (el.style.display = 'none'));
+      target.style.display =
+        target.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>

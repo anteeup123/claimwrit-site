@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ClaimWrit</title>
+
+  <!-- Font Awesome & AOS CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Base */
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      color: #1f1f1f;
+      background: #fff;
+      text-align: center;
+    }
+
+    /* NAVIGATION */
+    .nav-bar {
+      position: sticky; top: 0;
+      background: #fff;
+      border-bottom: 1px solid #dcdcdc;
+      z-index: 100;
+    }
+    .nav-bar ul {
+      margin: 0; padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: nowrap;
+    }
+    .nav-bar a {
+      display: block;
+      padding: .75rem 0;
+      text-decoration: none;
+      color: #001f3f;
+      font-weight: 600;
+    }
+    .nav-bar a:hover,
+    .nav-bar a.active {
+      color: #bfa15d;
+    }
+
+    /* HEADER / HERO */
+    .logo-header {
+      padding: 2rem 0 .5rem;
+    }
+    .logo {
+      max-width: 280px;
+      height: auto;
+    }
+    .subline {
+      font-size: 1rem;
+      color: #666;
+      letter-spacing: 2px;
+      margin-top: .5rem;
+    }
+    .hero-statement {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* SECTION BASICS */
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: left;
+    }
+    section h2 {
+      color: #001f3f;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    /* “How We Help” – Process Steps */
+    .section {
+      max-width: 800px;
+      margin: auto;
+      padding: 3rem 1rem;
+      text-align: left;
+    }
+    .section h3 {
+      color: #001f3f;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    .section p, .section ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: .5rem 0;
+    }
+    .process-step { margin-bottom: 2rem; }
+    ul.demand-points {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+    ul.demand-points li { margin-bottom: .5rem; }
+
+    /* Deliverables Grid */
+    .grid-2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .grid-2 > div { flex: 1 1 45%; }
+
+    /* Call-to-Action block */
+    .cta-block {
+      text-align: center;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .cta-block a {
+      display: inline-block;
+      background: #001f3f;
+      color: #fff;
+      padding: .75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .cta-block a:hover { background: #bfa15d; }
+
+    /* SERVICES ICON ROW (Optional – if reusing icon-text) */
+    .icon-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    .icon-item {
+      flex: 1 1 260px;
+      border: 1px solid #e2e2e2;
+      border-radius: 8px;
+      padding: 1rem;
+      cursor: pointer;
+      transition: .2s;
+    }
+    .icon-item:hover {
+      background: #f9f9f9;
+      transform: translateY(-2px);
+    }
+    .icon-item i {
+      font-size: 2rem;
+      color: #001f3f;
+      margin-bottom: .5rem;
+    }
+    .icon-text {
+      display: none;
+      text-align: left;
+      font-size: .95rem;
+      color: #444;
+      margin-top: .5rem;
+    }
+
+    /* FORMS */
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: .5rem;
+      margin-top: .25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    form input[type=submit],
+    form button {
+      max-width: 200px;
+      background: #001f3f;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    form input[type=submit]:hover,
+    form button:hover {
+      background: #bfa15d;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #f9f9f9;
+      padding: 2rem 1rem;
+      border-top: 1px solid #e2e2e2;
+      font-size: .9rem;
+      text-align: center;
+    }
+    .site-footer a {
+      color: #001f3f;
+      text-decoration: none;
+      margin: 0 .5rem;
+    }
+    .site-footer a:hover {
+      color: #bfa15d;
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:768px) {
+      .nav-bar ul { flex-direction: column; gap: 1rem; }
+      .logo { max-width: 180px; }
+      .grid-2 { flex-direction: column; }
+      .icon-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#services">How We Help</a></li>
+      <li><a href="#request-sample">Request Sample</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="client-upload.html" target="_blank">Client Portal</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER / HERO -->
+  <header id="home" class="logo-header">
+    <img src="ClaimWrit-Logo.jpg" alt="ClaimWrit Logo" class="logo"/>
+    <p class="subline">Clarity · Structure · Resolution</p>
+  </header>
+
+  <section class="hero-statement">
+    <p>From compelling litigation-ready demand letters to optional post-settlement reconciliation, ClaimWrit helps attorneys transform raw records into streamlined, accurate case support—so nothing gets lost in the details.</p>
+    <h2>Why the Demand Letter Matters</h2>
+    <p>A compelling personal injury demand letter does more than outline damages—it sets the tone. By establishing liability, presenting supporting evidence, and framing the narrative with clarity, it helps drive settlement negotiations with purpose. When structured strategically, these letters often result in faster, fairer resolutions—maximizing compensation while reducing the need for litigation.</p>
+  </section>
+
+  <!-- MISSION -->
+  <section id="mission" class="section" data-aos="fade-up">
+    <h2>Our Mission & Expertise</h2>
+    <h3>Our Commitment to Legal Precision</h3>
+    <p>At ClaimWrit, clarity of purpose, structural precision, and prompt resolution undergird our legal support services. We are dedicated to equipping counsel with meticulously drafted demand letters and comprehensive post-settlement solutions engineered to streamline workflow, optimize client recoveries, and expedite the orderly resolution of claims.</p>
+
+    <h3>Our Expertise</h3>
+    <ul>
+      <li><strong>Strategic Demand-Letter Preparation</strong> — Fully litigation-ready demand letters that integrate liability analysis with precise damages computations. Every medical chronology is reviewed to ensure all documented injuries, diagnostic findings, and physician observations are accurately reflected.</li>
+      <li><strong>Post-Settlement Medical Reduction Requests</strong> — We analyze subrogation, health-insurance EOBs, and statutory liens to secure the most favorable reductions for clients.</li>
+      <li><strong>Client Balance Verification & Closing Statements</strong> — Detailed balance verifications and closing statements crafted with financial accuracy for smooth file closure.</li>
+    </ul>
+
+    <h3>Quality Control: Every Document, Double-Checked</h3>
+    <p>Every document is reviewed through a dual-phase process—meticulous QA ensures every deliverable is accurate, persuasive, and free of errors.</p>
+
+    <h3>Flexible Engagement & Pricing</h3>
+    <p>ClaimWrit supports flat-fee demand letter drafting or hourly billing for post-settlement services—tailored to match your firm’s needs.</p>
+
+    <h3>Trusted Legal Support for Law Firms</h3>
+    <p>ClaimWrit serves as a steadfast partner to counsel—empowering attorneys with expert drafting, operational support, and streamlined claim closure solutions.</p>
+  </section>
+
+  <!-- HOW WE HELP (Process + Deliverables + CTA) -->
+  <section id="services" class="section">
+    <h2>How ClaimWrit Supports Attorneys—Step by Step</h2>
+    <p>From intake to delivery, here’s how ClaimWrit transforms case documents into litigation-ready support.</p>
+
+    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+      <h3>Step 1: Submit Your Case Files</h3>
+      <p>Upload medical records, billing statements, and incident details through a secure, encrypted client portal—fast, organized, and compliant.</p>
+    </div>
+    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+      <h3>Step 2: Personal Case Review</h3>
+      <p>Each file receives thorough examination to assess timeline accuracy, treatment patterns, provider types, and potential inconsistencies. No automation—every claim is reviewed with care and expertise.</p>
+    </div>
+    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+      <h3>Step 3: Records Are Structured Into a Clear Timeline</h3>
+      <p>Treatment notes, radiology reports, procedures, and discharge summaries are distilled into a coherent, streamlined chronology—focused on case-relevant details, without repetition or filler.</p>
+    </div>
+    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+      <h3>Step 4: Billing Is Summarized</h3>
+      <p>An itemized tabulation of all medical specials is included under the “Injuries and Damages” section of the demand letter. The result is a clear, organized financial overview ready for presentation or negotiation.</p>
+    </div>
+    <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+      <h3>Step 5: Demand Letter Delivered</h3>
+      <p>Each editable letter is professionally formatted and structured on your letterhead for clarity, negotiation leverage, and courtroom readiness. It includes:</p>
+      <ul class="demand-points">
+        <li><strong>I.</strong> Facts and Liability</li>
+        <li><strong>II.</strong> Injuries and Damages</li>
+        <li><strong>III.</strong> Summary and Demand</li>
+      </ul>
+    </div>
+
+    <h2>Deliverables That Set Us Apart</h2>
+    <div class="grid-2">
+      <div data-aos="fade-right" data-aos-delay="100">
+        <h3>Medical Chronology</h3>
+        <p>Organized summaries of all treatment visits, diagnostics, and provider statements—designed to make timelines crystal clear.</p>
+
+        <h3>Injury-Specific Narrative</h3>
+        <p>Clean, concise retelling of the client’s symptoms, treatment progression, and clinical milestones—anchored in records and reality.</p>
+
+        <h3>Billing Snapshot</h3>
+        <p>Itemized statements, grouped by provider and care phase—clear enough for adjusters, detailed enough for trial.</p>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="200">
+        <h3>HIPAA-Compliant Portal</h3>
+        <p>Every document is housed in an encrypted workspace—never passed by email, never stored off-server.</p>
+
+        <h3>Demand Letter Assembly</h3>
+        <p>All findings are packaged into a persuasive, court-ready PDF—professionally formatted and fully editable for final review and signature.</p>
+      </div>
+    </div>
+
+    <div class="cta-block" data-aos="fade-up">
+      <h2>See It In Action</h2>
+      <p>Want to preview formatting, tone, and output? Request a complimentary sample demand letter based on de-identified materials.</p>
+      <a href="#request-sample">Request a Sample</a>
+    </div>
+  </section>
+
+  <!-- REQUEST SAMPLE -->
+  <section id="request-sample" class="section" data-aos="fade-up">
+    <h2>Request a Sample Demand Letter</h2>
+    <p>Submit your information below to receive a complimentary redacted demand letter.</p>
+    <form name="sample-request" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="sample-request"/>
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" name="name" required/>
+      <label for="phone">Your Phone *</label>
+      <input type="tel" id="phone" name="phone" required/>
+      <label for="email">Your Email *</label>
+      <input type="email" id="email" name="email" required/>
+      <label for="firm">Law Firm (optional)</label>
+      <input type="text" id="firm" name="firm"/>
+      <label for="demandType">Type of Sample Demand Requested *</label>
+      <select id="demandType" name="demandType" required>
+        <option value="">-- Please choose an option --</option>
+        <option value="Bodily Injury - Auto (MVA)">Bodily Injury - Auto (MVA)</option>
+        <option value="Passenger Injury - Auto (MVA)">Passenger Injury - Auto (MVA)</option>
+        <option value="Global Demand - Multiple Clients (MVA)">Global Demand - Multiple Clients (MVA)</option>
+        <option value="Uninsured Motorist">Uninsured Motorist</option>
+        <option value="Trip & Fall">Trip & Fall</option>
+        <option value="Slip & Fall">Slip & Fall</option>
+        <option value="Premises Liability - Waterpark">Premises Liability - Waterpark</option>
+        <option value="Assault & Battery">Assault & Battery</option>
+        <option value="Scooter Hit by Vehicle">Scooter Hit by Vehicle</option>
+        <option value="Wrongful Death">Wrongful Death</option>
+      </select>
+      <button type="submit">Request Sample</button>
+    </form>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:info@claimwrit.com">info@claimwrit.com</a><br>
+      <strong>Phone:</strong>
+      <a href="tel:9544081937">954.408.1937</a>
+    </p>
+    <form action="mailto:info@claimwrit.com" method="post" enctype="text/plain">
+      <label for="c-name">Name:</label>
+      <input type="text" id="c-name" name="name" required/>
+      <label for="c-email">Email:</label>
+      <input type="email" id="c-email" name="email" required/>
+      <label for="c-message">Message:</label>
+      <textarea id="c-message" name="message" rows="5" required></textarea>
+      <input type="submit" value="Send"/>
+    </form>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section id="privacy-policy" class="section" data-aos="fade-up">
+    <h2>Privacy Policy</h2>
+    <p><em>Effective Date: April 27, 2024</em></p>
+    <p>ClaimWrit, a d/b/a of Envisage Companies LLC, is committed to protecting your privacy in accordance with HIPAA and applicable Florida law, including FIPA. This policy outlines what data we collect, how we protect it, and your rights.</p>
+
+  
+    <h3>Information We Collect</h3>
+    <ul>
+      <li>Personal Identifying Information (e.g., name, law firm, phone number, email address)</li>
+      <li>Protected Health Information (PHI) uploaded to our client portal</li>
+      <li>Usage details and communication history</li>
+    </ul>
+
+    <h3>How We Collect It</h3>
+    <p>We collect data through secure website forms, our client-upload portal, and direct correspondence such as phone, email, or intake calls.</p>
+
+    <h3>How We Protect It</h3>
+    <p>All data is encrypted using <strong>TLS during transmission</strong> and <strong>AES-256 at rest</strong>. Access is limited to authorized personnel only. Search engine indexing is blocked to help protect submitted documents.</p>
+
+    <h3>How We Use It</h3>
+    <p>We use submitted data exclusively to fulfill your request for services, including demand-letter drafting, lien reductions, and follow-up communications. We do not share or sell your information.</p>
+
+    <h3>Third-Party Services</h3>
+    <p>We may use secure third-party platforms (such as Netlify or Hostinger) to deliver services. These services are contractually obligated to comply with data protection requirements.</p>
+
+    <h3>Analytics & Cookies</h3>
+    <p>This site may use cookies or analytics tools to improve performance and usability. These tools do not collect or process PHI.</p>
+
+    <h3>Retention Period</h3>
+    <p>We retain uploaded or submitted data for the duration of your engagement and archive it afterward in accordance with applicable retention requirements.</p>
+
+    <h3>Your Rights</h3>
+    <p>You may request access to, correction of, or deletion of your information by contacting <a href="mailto:legal@claimwrit.com">legal@claimwrit.com</a>.</p>
+
+    <h3>Breach Notification</h3>
+    <p>ClaimWrit follows HIPAA and FIPA breach notification requirements. In the rare event of a covered incident, clients will be notified within 30 days in accordance with applicable laws.</p>
+
+    <h3>Children’s Privacy</h3>
+    <p>This site is not intended for individuals under the age of 13. We do not knowingly collect personal information from minors.</p>
+
+    <h3>Policy Updates</h3>
+    <p>This policy may be updated periodically. All updates will be posted to this page with a revised effective date.</p>
+
+    <p><a href="#home" class="button-back">← Back to Top</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 ClaimWrit, LLC ·
+      <a href="mailto:info@claimwrit.com">info@claimwrit.com</a> ·
+      <a href="tel:9544081937">954.408.1937</a>
+    </p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700, easing: 'ease-out' });
+
+    function toggleText(id) {
+      const t = document.getElementById(id);
+      document.querySelectorAll('.icon-text')
+              .forEach(el => el !== t && (el.style.display = 'none'));
+      t.style.display = t.style.display === 'block' ? 'none' : 'block';
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const links    = document.querySelectorAll('.nav-bar a[href^="#"]');
+    window.addEventListener('scroll', () => {
+      let y = window.pageYOffset;
+      sections.forEach(s => {
+        if (y >= s.offsetTop - 80 && y < s.offsetTop + s.offsetHeight) {
+          links.forEach(a => a.classList.remove('active'));
+          document.querySelector(`.nav-bar a[href="#${s.id}"]`)
+                  .classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
