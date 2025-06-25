@@ -1,81 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ClaimWrit – Contact Us</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* remove default blue outlines, keep focus-visible */
-    a:focus, input:focus, textarea:focus, button:focus {
-      outline: none;
-    }
-    :focus-visible {
-      outline: 2px dashed #bfa15d;
-      outline-offset: 3px;
-    }
-  </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ClaimWrit – Contact</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+  <div data-include="nav.html"></div>
 
-  <!-- NAVIGATION -->
-  <nav class="nav-bar">
-    <ul>
-      <li><a href="index.html"       class="nav-link" data-title="Home">Home</a></li>
-      <li><a href="mission.html"     class="nav-link" data-title="Our Mission">Our Mission</a></li>
-      <li><a href="services.html"    class="nav-link" data-title="How We Help">How We Help</a></li>
-      <li><a href="sample-request.html" class="nav-link" data-title="Sample Request">Sample Request</a></li>
-      <li><a href="contact.html"     class="nav-link active" data-title="Contact Us">Contact Us</a></li>
-      <li><a href="client-upload.html" class="nav-link" data-title="Client Upload">Client Upload</a></li>
-    </ul>
-  </nav>
-
-  <!-- HEADER -->
   <header class="logo-header">
     <img src="images/ClaimWrit-Logo.jpg"
-         alt="ClaimWrit Logo – Clarity, Structure, Resolution"
-         class="logo" />
+         alt="ClaimWrit Logo — Clarity · Structure · Resolution"
+         class="logo"/>
     <p class="subline">Clarity · Structure · Resolution</p>
   </header>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="section">
+  <main class="section" id="contact">
     <h2>Contact Us</h2>
-    <p>If you have any questions or need assistance, feel free to reach out directly:</p>
     <p>
-      <strong>Email:</strong>
-      <a href="mailto:info@claimwrit.com">info@claimwrit.com</a><br />
-      <strong>Phone:</strong>
-      <a href="tel:9544081937">954.408.1937</a>
+      <strong>Email:</strong> <a href="mailto:info@claimwrit.com">info@claimwrit.com</a><br/>
+      <strong>Phone:</strong> <a href="tel:9544081937">954-408-1937</a>
     </p>
 
     <form action="mailto:info@claimwrit.com" method="post" enctype="text/plain">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+      <label for="c-name">Name:</label>
+      <input type="text" id="c-name" name="name" required/>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+      <label for="c-email">Email:</label>
+      <input type="email" id="c-email" name="email" required/>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="c-message">Message:</label>
+      <textarea id="c-message" name="message" rows="5" required></textarea>
 
       <button type="submit">Send</button>
     </form>
-  </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2025 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
-    <p><a href="privacy-policy.html">Privacy Policy</a></p>
-  </footer>
-
-  <!-- OPTIONAL: small script to highlight the active nav item -->
-  <script>
-    document.querySelectorAll('.nav-link').forEach(a => {
-      if (a.href.endsWith(location.pathname)) {
-        a.classList.add('active');
-      }
-    });
-  </script>
+  <div data-include="footer.html"></div>
+  <script src="include-loader.js"></script>
 </body>
 </html>

@@ -1,250 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>ClaimWrit</title>
-
-  <!-- Main Styles & FontAwesome -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
-
-  <!-- Quick CSS overrides; move these into styles.css if preferred -->
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background: #fff;
-      color: #1f1f1f;
-      text-align: center;
-    }
-
-    /* Navigation */
-    .nav-bar {
-      position: sticky; top: 0;
-      background: #fff;
-      border-bottom: 1px solid #dcdcdc;
-      z-index: 100;
-    }
-    .nav-bar ul {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 0; padding: 1rem 0;
-      list-style: none;
-    }
-    .nav-bar a {
-      color: #001f3f;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .nav-bar a:hover,
-    .nav-bar a.active {
-      color: #bfa15d;
-    }
-
-    /* Logo + Hero */
-    .logo-header {
-      padding: 2rem 0 0.5rem;
-    }
-    .logo {
-      max-width: 280px;
-      height: auto;
-    }
-    .subline {
-      margin-top: 0.5rem;
-      color: #666;
-      letter-spacing: 2px;
-    }
-    .hero-statement {
-      max-width: 800px;
-      margin: 2rem auto 0;
-      padding: 0 1rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    /* Icon Row */
-    .icon-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 900px;
-      margin: 3rem auto 2rem;
-      padding: 0 1rem;
-    }
-    .icon-item {
-      flex: 1 1 260px;
-      border: 1px solid #e2e2e2;
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .icon-item:hover {
-      background: #f9f9f9;
-      transform: translateY(-2px);
-    }
-    .icon-item i {
-      font-size: 2rem;
-      color: #001f3f;
-      margin-bottom: 0.5rem;
-    }
-    .icon-item p {
-      font-weight: 600;
-      color: #001f3f;
-    }
-    .icon-text {
-      display: none;
-      text-align: left;
-      color: #444;
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-    }
-
-    /* Footer */
-    .site-footer {
-      background: #f9f9f9;
-      border-top: 1px solid #e2e2e2;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-    }
-    .site-footer a {
-      color: #001f3f;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    .site-footer a:hover {
-      text-decoration: underline;
-      color: #bfa15d;
-    }
-
-    /* Focus styles */
-    a:focus, button:focus, input:focus, textarea:focus {
-      outline: none;
-    }
-    :focus-visible {
-      outline: 2px dashed #bfa15d;
-      outline-offset: 4px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-bar ul { flex-direction: column; gap:1rem; }
-      .logo { max-width: 180px; }
-      .icon-row { flex-direction: column; }
-    }
-  </style>
 </head>
-
 <body>
-  <!-- Navigation -->
-  <nav class="nav-bar">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="mission.html">Our Mission</a></li>
-      <li><a href="services.html">How We Help</a></li>
-      <li><a href="sample-request.html">Request Sample</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="client-upload.html">Client Portal</a></li>
-    </ul>
-  </nav>
+  <div data-include="nav.html"></div>
 
-  <!-- Logo & Tagline -->
   <header class="logo-header">
-    <img
-      src="images/ClaimWrit-Logo.jpg"
-      alt="ClaimWrit Logo — Clarity · Structure · Resolution"
-      class="logo"
-    />
+    <img src="images/ClaimWrit-Logo.jpg" alt="ClaimWrit Logo" class="logo"/>
     <p class="subline">Clarity · Structure · Resolution</p>
   </header>
 
-  <!-- Hero Statement -->
   <section class="hero-statement">
     <p>
       From compelling litigation-ready demand letters to optional
       post-settlement reconciliation, ClaimWrit helps attorneys transform
-      raw records into streamlined, accurate case support—so nothing
-      gets lost in the details.
+      raw records into streamlined, accurate case support—so nothing gets
+      lost in the details.
     </p>
     <h2>Why the Demand Letter Matters</h2>
     <p>
-      A compelling personal injury demand letter does more than outline
+      A compelling personal-injury demand letter does more than outline
       damages—it sets the tone. By establishing liability, presenting
-      supporting evidence, and framing the narrative with clarity, it
-      helps drive settlement negotiations with purpose. When structured
-      strategically, these letters often result in faster, fairer
-      resolutions—maximizing compensation while reducing the need for
-      litigation.
+      evidence, and framing the narrative with clarity, it drives faster,
+      fairer resolutions—maximizing compensation while reducing litigation.
     </p>
   </section>
 
-  <!-- Expandable Services -->
   <section class="icon-row">
     <div class="icon-item" onclick="toggleText('text1')">
-      <i class="fas fa-briefcase" aria-hidden="true"></i>
+      <i class="fas fa-briefcase"></i>
       <p>Strategic Legal Support</p>
       <div class="icon-text" id="text1">
         <p>
           Your time is better spent building your argument—not buried in
           medical notes. ClaimWrit handles the tedium so you don’t have to:
-          we comb through provider records, filter out filler, and surface
-          exactly what matters.
+          combing through hundreds of provider records, filtering out filler,
+          and surfacing exactly what matters.
         </p>
       </div>
     </div>
 
     <div class="icon-item" onclick="toggleText('text2')">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <i class="fas fa-folder-open"></i>
       <p>Secure Upload Portal</p>
       <div class="icon-text" id="text2">
         <p>
-          Drag & drop large case files, PDFs, and images—encrypted,
-          HIPAA-compliant, and automatically organized in one step.
+          Drag & drop large files—encrypted, HIPAA-compliant, and organized
+          in one quick step.
         </p>
       </div>
     </div>
 
     <div class="icon-item" onclick="toggleText('text3')">
-      <i class="fas fa-shield-alt" aria-hidden="true"></i>
+      <i class="fas fa-shield-alt"></i>
       <p>HIPAA-Compliant Systems</p>
       <div class="icon-text" id="text3">
         <p>
-          Bank-grade encryption and strict HIPAA protocols on every file—
-          so you know your documents and client data are fully protected.
+          Bank-grade encryption and strict HIPAA protocols—your documents
+          and client data are fully protected.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2020 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
-    <p>
-      <a href="privacy-policy.html">Privacy Policy</a> •
-      <a
-        href="https://www.google.com/maps/place/Fort+Lauderdale,+FL+33334"
-      >Location</a>
-    </p>
-  </footer>
-
-  <!-- Toggle Script -->
+  <div data-include="footer.html"></div>
   <script>
     function toggleText(id) {
-      const target = document.getElementById(id);
+      const t = document.getElementById(id);
       document
         .querySelectorAll('.icon-text')
-        .forEach(el => el !== target && (el.style.display = 'none'));
-      target.style.display =
-        target.style.display === 'block' ? 'none' : 'block';
+        .forEach(el => el !== t && (el.style.display = 'none'));
+      t.style.display = t.style.display === 'block' ? 'none' : 'block';
     }
   </script>
+  <!-- loader script -->
+  <script src="include-loader.js"></script>
 </body>
 </html>
+
+       
