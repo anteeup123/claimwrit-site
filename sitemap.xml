@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://claimwrit.com/</loc>
-    <lastmod>2025-06-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <!-- repeat the block below for each additional page:
-  <url>
-    <loc>https://claimwrit.com/another-page</loc>
-    <lastmod>2025-06-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  -->
-</urlset>
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<xsl:stylesheet
+    version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:sm="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <xsl:output method="html" indent="yes" />
+
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title>Sitemap for ClaimWrit</title>
+        <style>
+          body { font-family: Arial, sans-serif; }
+          table { border-collapse: collapse; width: 100%; }
+          th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+          th { background: #f4f4f4; }
+        </style>
+      </head>
+      <body>
+        <h1>ClaimWrit Sitemap</h1>
+        <table>
+          <tr><th>URL</th><th>Last Modified</th><th>Change Freq</th><th>Priority</th></tr>
+          <xsl:for-each select="sm:urlset/sm:url">
+            <tr>
+              <td><a href="{sm:loc}"><xsl:value-of select="sm:loc"/></a></td>
+              <td><xsl:value-of select="sm:lastmod"/></td>
+              <td><xsl:value-of select="sm:changefreq"/></td>
+              <td><xsl:value-of select="sm:priority"/></td>
+            </tr>
+          </xsl:for-each>
+        </table>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
