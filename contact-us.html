@@ -4,9 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ClaimWrit – Contact Us</title>
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional custom focus styling -->
   <style>
-    /* remove default blue outlines, keep focus-visible */
     a:focus, input:focus, textarea:focus, button:focus {
       outline: none;
     }
@@ -21,27 +24,26 @@
   <!-- NAVIGATION -->
   <nav class="nav-bar">
     <ul>
-      <li><a href="index.html"       class="nav-link" data-title="Home">Home</a></li>
-      <li><a href="mission.html"     class="nav-link" data-title="Our Mission">Our Mission</a></li>
-      <li><a href="services.html"    class="nav-link" data-title="How We Help">How We Help</a></li>
-      <li><a href="sample-request.html" class="nav-link" data-title="Sample Request">Sample Request</a></li>
-      <li><a href="contact.html"     class="nav-link active" data-title="Contact Us">Contact Us</a></li>
-      <li><a href="client-upload.html" class="nav-link" data-title="Client Upload">Client Upload</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mission.html">Our Mission</a></li>
+      <li><a href="services.html">How We Help</a></li>
+      <li><a href="sample-request.html">Sample Request</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="client-upload.html">Client Portal</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
     </ul>
   </nav>
 
   <!-- HEADER -->
   <header class="logo-header">
-    <img src="images/ClaimWrit-Logo.jpg"
-         alt="ClaimWrit Logo – Clarity, Structure, Resolution"
-         class="logo" />
+    <img src="images/ClaimWrit-Logo.jpg" alt="ClaimWrit Logo" class="logo" />
     <p class="subline">Clarity · Structure · Resolution</p>
   </header>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="section">
+  <main class="section" id="contact">
     <h2>Contact Us</h2>
-    <p>If you have any questions or need assistance, feel free to reach out directly:</p>
+    <p>If you have any questions or need assistance, feel free to reach out:</p>
     <p>
       <strong>Email:</strong>
       <a href="mailto:info@claimwrit.com">info@claimwrit.com</a><br />
@@ -61,7 +63,7 @@
 
       <button type="submit">Send</button>
     </form>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -69,13 +71,5 @@
     <p><a href="privacy-policy.html">Privacy Policy</a></p>
   </footer>
 
-  <!-- OPTIONAL: small script to highlight the active nav item -->
-  <script>
-    document.querySelectorAll('.nav-link').forEach(a => {
-      if (a.href.endsWith(location.pathname)) {
-        a.classList.add('active');
-      }
-    });
-  </script>
 </body>
 </html>

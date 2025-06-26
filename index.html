@@ -12,7 +12,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 
-  <!-- Quick CSS overrides; move these into styles.css if preferred -->
+  <!-- Focus styling -->
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -22,123 +22,12 @@
       color: #1f1f1f;
       text-align: center;
     }
-
-    /* Navigation */
-    .nav-bar {
-      position: sticky; top: 0;
-      background: #fff;
-      border-bottom: 1px solid #dcdcdc;
-      z-index: 100;
-    }
-    .nav-bar ul {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 0; padding: 1rem 0;
-      list-style: none;
-    }
-    .nav-bar a {
-      color: #001f3f;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .nav-bar a:hover,
-    .nav-bar a.active {
-      color: #bfa15d;
-    }
-
-    /* Logo + Hero */
-    .logo-header {
-      padding: 2rem 0 0.5rem;
-    }
-    .logo {
-      max-width: 280px;
-      height: auto;
-    }
-    .subline {
-      margin-top: 0.5rem;
-      color: #666;
-      letter-spacing: 2px;
-    }
-    .hero-statement {
-      max-width: 800px;
-      margin: 2rem auto 0;
-      padding: 0 1rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    /* Icon Row */
-    .icon-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 900px;
-      margin: 3rem auto 2rem;
-      padding: 0 1rem;
-    }
-    .icon-item {
-      flex: 1 1 260px;
-      border: 1px solid #e2e2e2;
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .icon-item:hover {
-      background: #f9f9f9;
-      transform: translateY(-2px);
-    }
-    .icon-item i {
-      font-size: 2rem;
-      color: #001f3f;
-      margin-bottom: 0.5rem;
-    }
-    .icon-item p {
-      font-weight: 600;
-      color: #001f3f;
-    }
-    .icon-text {
-      display: none;
-      text-align: left;
-      color: #444;
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-    }
-
-    /* Footer */
-    .site-footer {
-      background: #f9f9f9;
-      border-top: 1px solid #e2e2e2;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-    }
-    .site-footer a {
-      color: #001f3f;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    .site-footer a:hover {
-      text-decoration: underline;
-      color: #bfa15d;
-    }
-
-    /* Focus styles */
     a:focus, button:focus, input:focus, textarea:focus {
       outline: none;
     }
     :focus-visible {
       outline: 2px dashed #bfa15d;
       outline-offset: 4px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-bar ul { flex-direction: column; gap:1rem; }
-      .logo { max-width: 180px; }
-      .icon-row { flex-direction: column; }
     }
   </style>
 </head>
@@ -194,9 +83,9 @@
       <div class="icon-text" id="text1">
         <p>
           Your time is better spent building your argument—not buried in
-          medical notes. ClaimWrit handles the tedium so you don’t have to:
-          we comb through provider records, filter out filler, and surface
-          exactly what matters.
+          medical notes. ClaimWrit handles the tedium so you don’t have to: we
+          comb through provider records, filter out filler, and surface exactly
+          what matters.
         </p>
       </div>
     </div>
@@ -217,8 +106,8 @@
       <p>HIPAA-Compliant Systems</p>
       <div class="icon-text" id="text3">
         <p>
-          Bank-grade encryption and strict HIPAA protocols on every file—
-          so you know your documents and client data are fully protected.
+          Bank-grade encryption and strict HIPAA protocols on every file—so
+          you know your documents and client data are fully protected.
         </p>
       </div>
     </div>
@@ -226,12 +115,10 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <p>© 2020 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
+    <p>© 2025 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
     <p>
       <a href="privacy-policy.html">Privacy Policy</a> •
-      <a
-        href="https://www.google.com/maps/place/Fort+Lauderdale,+FL+33334"
-      >Location</a>
+      <a href="https://www.google.com/maps/place/Fort+Lauderdale,+FL+33334">Location</a>
     </p>
   </footer>
 
@@ -239,11 +126,10 @@
   <script>
     function toggleText(id) {
       const target = document.getElementById(id);
-      document
-        .querySelectorAll('.icon-text')
-        .forEach(el => el !== target && (el.style.display = 'none'));
-      target.style.display =
-        target.style.display === 'block' ? 'none' : 'block';
+      document.querySelectorAll('.icon-text').forEach(el => {
+        if (el !== target) el.style.display = 'none';
+      });
+      target.style.display = target.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </body>

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClaimWrit – How We Help</title>
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-  <!-- Kill default blue outlines; keep :focus-visible -->
+  <!-- Accessible focus styles -->
   <style>
     a:focus, button:focus, input:focus, textarea:focus, select:focus {
       outline: none;
@@ -24,25 +24,24 @@
     }
   </style>
 </head>
-
 <body>
   <!-- NAVIGATION -->
   <nav class="nav-bar">
     <ul>
-      <li><a href="index.html"       class="nav-link">Home</a></li>
-      <li><a href="mission.html"     class="nav-link">Our Mission</a></li>
-      <li><a href="services.html"    class="nav-link active">How We Help</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="mission.html" class="nav-link">Our Mission</a></li>
+      <li><a href="services.html" class="nav-link active">How We Help</a></li>
       <li><a href="sample-request.html" class="nav-link">Sample Request</a></li>
-      <li><a href="contact.html"     class="nav-link">Contact Us</a></li>
+      <li><a href="contact.html" class="nav-link">Contact Us</a></li>
       <li><a href="client-upload.html" class="nav-link">Client Upload</a></li>
     </ul>
   </nav>
 
-  <!-- HEADER / LOGO -->
+  <!-- LOGO HEADER -->
   <header class="logo-header">
     <img
       src="images/ClaimWrit-Logo.jpg"
-      alt="ClaimWrit Logo — Clarity, Structure, Resolution"
+      alt="ClaimWrit Logo — Clarity · Structure · Resolution"
       class="logo"
     />
     <p class="subline">Clarity · Structure · Resolution</p>
@@ -150,12 +149,8 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>
-      © 2025 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL
-    </p>
-    <p>
-      <a href="privacy-policy.html">Privacy Policy</a>
-    </p>
+    <p>© 2025 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a></p>
   </footer>
 
   <!-- AOS & Active-link Script -->
@@ -163,10 +158,10 @@
   <script>
     AOS.init({ once: true, duration: 700, easing: 'ease-out' });
 
-    // Ensure only this page’s nav link is marked active
-    document.querySelectorAll('.nav-link').forEach(a => {
-      if (a.getAttribute('href') === 'services.html') {
-        a.classList.add('active');
+    // Highlight active nav link safely
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href') === 'services.html') {
+        link.classList.add('active');
       }
     });
   </script>
