@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ClaimWrit – Sample Request</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="index.html"          class="nav-link">Home</a></li>
+      <li><a href="mission.html"        class="nav-link">Our Mission</a></li>
+      <li><a href="services.html"       class="nav-link">How We Help</a></li>
+      <li><a href="sample-request.html" class="nav-link active">Sample Request</a></li>
+      <li><a href="contact.html"        class="nav-link">Contact</a></li>
+      <li><a href="client-upload.html"  class="nav-link">Client Portal</a></li>
+      <li><a href="privacy-policy.html" class="nav-link">Privacy Policy</a></li>
+    </ul>
+  </nav>
+
+  <!-- LOGO HEADER -->
+  <header class="logo-header">
+    <img src="images/ClaimWrit-Logo.jpg"
+         alt="ClaimWrit Logo – Clarity · Structure · Resolution"
+         class="logo"/>
+    <p class="subline">Clarity · Structure · Resolution</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="section">
+    <h2>Request a Sample Demand Letter</h2>
+    <p>Submit your info below to receive a complimentary redacted demand letter.</p>
+
+    <form name="sample-request" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="sample-request"/>
+
+      <label for="name">Your Name *</label>
+      <input id="name" name="name" required/>
+
+      <label for="phone">Your Phone *</label>
+      <input id="phone" name="phone" required/>
+
+      <label for="email">Your Email *</label>
+      <input id="email" name="email" type="email" required/>
+
+      <label for="firm">Law Firm (optional)</label>
+      <input id="firm" name="firm"/>
+
+      <label for="demandType">Type of Demand *</label>
+      <select id="demandType" name="demandType" required>

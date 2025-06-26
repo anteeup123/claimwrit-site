@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClaimWrit – How We Help</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <!-- Kill default blue outlines; keep :focus-visible -->
+  <style>
+    a:focus, button:focus, input:focus, textarea:focus, select:focus {
+      outline: none;
+    }
+    :focus-visible {
+      outline: 2px dashed #bfa15d;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="index.html"       class="nav-link">Home</a></li>
+      <li><a href="mission.html"     class="nav-link">Our Mission</a></li>
+      <li><a href="services.html"    class="nav-link active">How We Help</a></li>
+      <li><a href="sample-request.html" class="nav-link">Sample Request</a></li>
+      <li><a href="contact.html"     class="nav-link">Contact Us</a></li>
+      <li><a href="client-upload.html" class="nav-link">Client Upload</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER / LOGO -->
+  <header class="logo-header">
+    <img
+      src="images/ClaimWrit-Logo.jpg"
+      alt="ClaimWrit Logo — Clarity, Structure, Resolution"
+      class="logo"
+    />
+    <p class="subline">Clarity · Structure · Resolution</p>
+  </header>
+
+  <!-- HOW WE HELP CONTENT -->
+  <main id="services" class="section" data-aos="fade-up">
+    <h2>How ClaimWrit Supports Attorneys—Step by Step</h2>
+    <p>From intake to delivery, here’s how ClaimWrit transforms case documents into litigation-ready support.</p>
+
+    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+      <h3>Step 1: Submit Your Case Files</h3>
+      <p>
+        Upload medical records, billing statements, and incident details
+        through our secure, encrypted client-upload portal—fast, organized,
+        and compliant.
+      </p>
+    </div>
+
+    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+      <h3>Step 2: Personal Case Review</h3>
+      <p>
+        Each file receives a thorough manual review—assessing timeline
+        accuracy, treatment patterns, provider types, and potential
+        inconsistencies. No black-box automation.
+      </p>
+    </div>
+
+    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+      <h3>Step 3: Structure Into a Clear Timeline</h3>
+      <p>
+        Treatment notes, radiology reports, procedures, and summaries are
+        distilled into a coherent chronology—focused on the facts that matter.
+      </p>
+    </div>
+
+    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+      <h3>Step 4: Billing Is Summarized</h3>
+      <p>
+        We provide an itemized tabulation under “Injuries &amp; Damages”
+        so adjusters and opposing counsel see a crystal-clear financial overview.
+      </p>
+    </div>
+
+    <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+      <h3>Step 5: Demand Letter Delivered</h3>
+      <p>
+        You receive an editable, professionally formatted PDF—courtroom-ready
+        and tailored for negotiation. It includes:
+      </p>
+      <ul class="demand-points">
+        <li><strong>I.</strong> Facts &amp; Liability</li>
+        <li><strong>II.</strong> Injuries &amp; Damages</li>
+        <li><strong>III.</strong> Summary &amp; Demand</li>
+      </ul>
+    </div>
+
+    <!-- Deliverables -->
+    <h2>Deliverables That Set Us Apart</h2>
+    <div class="grid-2">
+      <div data-aos="fade-right" data-aos-delay="100">
+        <h3>Medical Chronology</h3>
+        <p>
+          Organized summaries of every visit, diagnostic finding, and
+          procedure—making timelines crystal clear.
+        </p>
+
+        <h3>Injury-Specific Narrative</h3>
+        <p>
+          Concise retelling of symptoms and treatment progression—
+          anchored in the medical record.
+        </p>
+
+        <h3>Billing Snapshot</h3>
+        <p>
+          Itemized charges grouped by provider and care phase—
+          clear for adjusters, detailed for trial.
+        </p>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="200">
+        <h3>HIPAA-Compliant Portal</h3>
+        <p>
+          Every document is encrypted in transit and at rest—never emailed
+          or stored off-server.
+        </p>
+
+        <h3>Demand Letter Assembly</h3>
+        <p>
+          All findings packaged into a persuasive, court-ready PDF—fully
+          editable for your final review and signature.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-block" data-aos="fade-up">
+      <h2>See It In Action</h2>
+      <p>
+        Want to preview formatting, tone, and output?
+        Request your complimentary sample demand letter.
+      </p>
+      <a href="sample-request.html" class="btn">Request a Sample</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      © 2025 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL
+    </p>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <!-- AOS & Active-link Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700, easing: 'ease-out' });
+
+    // Ensure only this page’s nav link is marked active
+    document.querySelectorAll('.nav-link').forEach(a => {
+      if (a.getAttribute('href') === 'services.html') {
+        a.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

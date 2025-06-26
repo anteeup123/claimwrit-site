@@ -1,295 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - ClaimWrit</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Header and footer styles same as homepage */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #34495e;
-            --text: #2c3e50;
-            --gray: #95a5a6;
-            --white: #ffffff;
-            --success: #27ae60;
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            background-color: var(--white);
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: var(--secondary);
-            color: var(--white);
-            padding: 12px 25px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .btn:hover {
-            background: var(--dark);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .btn-accent {
-            background: var(--accent);
-        }
-        
-        .btn-accent:hover {
-            background: #c0392b;
-        }
-        
-        .btn-light {
-            background: var(--light);
-            color: var(--dark);
-        }
-        
-        .btn-light:hover {
-            background: #d5dbdb;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        .page-header {
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 150px 0 80px;
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .page-header h1 {
-            color: var(--white);
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-        
-        .content-section {
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .success-box {
-            background: rgba(39, 174, 96, 0.1);
-            border-radius: 8px;
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .success-icon {
-            font-size: 4rem;
-            color: var(--success);
-            margin-bottom: 20px;
-        }
-        
-        .btn-container {
-            margin-top: 30px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: var(--primary);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--light);
-            padding: 40px 0 20px;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            nav {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 80%;
-                height: calc(100vh - 70px);
-                background: var(--dark);
-                transition: all 0.3s ease;
-                padding: 20px;
-            }
-            
-            nav.active {
-                left: 0;
-            }
-            
-            nav ul {
-                flex-direction: column;
-            }
-            
-            nav ul li {
-                margin: 15px 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You – ClaimWrit</title>
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Icons & fonts -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Remove default blue outlines; keep focus-visible -->
+  <style>
+    a:focus, button:focus, input:focus, textarea:focus {
+      outline: none;
+    }
+    :focus-visible {
+      outline: 2px dashed #bfa15d;
+      outline-offset: 3px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">CLAIM<span>WRIT</span></a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="our-mission.html">Our Mission &amp; Expertise</a></li>
-                    <li><a href="how-we-help.html">How We Help</a></li>
-                    <li><a href="request-sample.html">Request Sample Demand</a></li>
-                    <li><a href="client-upload.html">Client Portal</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- NAVIGATION -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="index.html"            class="nav-link">Home</a></li>
+      <li><a href="mission.html"          class="nav-link">Our Mission</a></li>
+      <li><a href="services.html"         class="nav-link">How We Help</a></li>
+      <li><a href="sample-request.html"   class="nav-link active">Sample Request</a></li>
+      <li><a href="contact.html"          class="nav-link">Contact Us</a></li>
+      <li><a href="client-upload.html"    class="nav-link">Client Portal</a></li>
+    </ul>
+  </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Thank You</h1>
-        </div>
-    </section>
+  <!-- LOGO & TAGLINE -->
+  <header class="logo-header">
+    <img
+      src="images/ClaimWrit-Logo.jpg"
+      alt="ClaimWrit Logo — Clarity · Structure · Resolution"
+      class="logo"
+    />
+    <p class="subline">Clarity · Structure · Resolution</p>
+  </header>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="success-box">
-                <i class="fas fa-check-circle success-icon"></i>
-                <h2>Your Request Has Been Received</h2>
-                
-                <p>We've successfully received your submission and will process it shortly.</p>
-                
-                <div class="next-steps">
-                    <h3>What Happens Next:</h3>
-                    <ol style="text-align: left; max-width: 500px; margin: 20px auto;">
-                        <li>Our team will review your request within 24 hours</li>
-                        <li>You'll receive the sample demand letter via email</li>
-                        <li>We'll follow up to discuss how we can assist you</li>
-                    </ol>
-                </div>
-                
-                <div class="btn-container">
-                    <a href="index.html" class="btn">Return to Homepage</a>
-                    <a href="contact.html" class="btn btn-light" style="margin-left: 15px;">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Thank You</h1>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>CLAIMWRIT</h3>
-                    <p>Your back-office ally for clarity, structure, and resolution in personal injury demand preparation and post-settlement support.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Demand-Letter Preparation</a></li>
-                        <li><a href="#">Post-Settlement Support</a></li>
-                        <li><a href="#">Medical Reduction Requests</a></li>
-                        <li><a href="#">Balance Verification</a></li>
-                        <li><a href="#">Closing Statement Preparation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> info@claimwrit.com</li>
-                        <li><i class="fas fa-phone"></i> 954-408-1937</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Fort Lauderdale, FL</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2023 ClaimWrit d/b/a of Envisage Companies LLC · <a href="#">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
+  <!-- CONTENT -->
+  <section class="content-section">
+    <div class="success-box">
+      <i class="fas fa-check-circle success-icon"></i>
+      <h2>Your Request Has Been Received</h2>
+      <p>We've successfully received your submission and will process it shortly.</p>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.querySelector('nav');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-        
-        // Close menu when clicking a link
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-            });
-        });
-        
-        // Set active navigation link
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = location.pathname.split('/').pop();
-            const navLinks = document.querySelectorAll('nav a');
-            
-            navLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (linkPage === currentPage) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        });
-    </script>
+      <h3>What Happens Next:</h3>
+      <ol class="next-steps">
+        <li>We review your request within 24 hours</li>
+        <li>You receive the sample demand letter via email</li>
+        <li>We follow up to discuss next steps</li>
+      </ol>
+
+      <div class="btn-container">
+        <a href="index.html" class="btn">Return to Homepage</a>
+        <a href="contact.html" class="btn btn-light">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a></p>
+  </footer>
 </body>
 </html>
