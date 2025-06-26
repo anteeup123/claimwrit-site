@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none; /* Ensures all elements ignore default outlines */
 }
 html {
   scroll-behavior: smooth;
@@ -29,7 +30,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 .nav-bar a {
   text-decoration: none;
@@ -137,13 +138,7 @@ button:hover,
   text-decoration: underline;
 }
 
-/* Focus states */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-  outline: none;
-}
+/* Focus styling (keyboard users only) */
 :focus-visible {
   outline: 2px dashed #bfa15d;
   outline-offset: 3px;
