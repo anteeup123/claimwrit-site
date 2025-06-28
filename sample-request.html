@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ClaimWrit – Sample Request</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Sample - ClaimWrit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <nav class="nav-bar">
-    <ul>
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="mission.html" class="nav-link">Our Mission</a></li>
-      <li><a href="services.html" class="nav-link">How We Help</a></li>
-      <li><a href="sample-request.html" class="nav-link active">Sample Request</a></li>
-      <li><a href="contact.html" class="nav-link">Contact</a></li>
-      <li><a href="client-upload.html" class="nav-link">Client Upload</a></li>
-    </ul>
-  </nav>
-
-  <!-- LOGO HEADER -->
+  <!-- HEADER -->
   <header class="logo-header">
-    <img
-      src="images/ClaimWrit-Logo.jpg"
-      alt="ClaimWrit Logo — Clarity · Structure · Resolution"
-      class="logo"
-    />
+    <img src="images/ClaimWrit-Logo.jpg" alt="ClaimWrit Logo" class="logo-image" />
     <p class="subline">Clarity · Structure · Resolution</p>
   </header>
 
-  <!-- SAMPLE REQUEST FORM -->
-  <main class="section">
-    <h2>Request a Sample Demand Letter</h2>
-    <p>Submit your information below to receive a complimentary redacted demand letter.</p>
+  <!-- NAVIGATION -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mission.html">Our Mission</a></li>
+      <li><a href="services.html">How We Help</a></li>
+      <li><a href="sample-request.html" class="active">Sample Request</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="client-upload.html">Client Portal</a></li>
+    </ul>
+  </nav>
 
-    <form name="sample-request" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="sample-request" />
-
-      <label for="name">Your Name *</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="phone">Your Phone *</label>
-      <input type="tel" id="phone" name="phone" required />
-
-      <label for="email">Your Email *</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="firm">Law Firm (optional)</label>
-      <input type="text" id="firm" name="firm" />
-
-      <label for="demandType">Type of Sample Demand *</label>
-      <select id="demandType" name="demandType" required>
-        <option value="">-- Please choose an option --</option>
-        <option value="Bodily Injury - Auto (MVA)">Bodily Injury - Auto (MVA)</option>
-        <option value="Passenger Injury - Auto (MVA)">Passenger Injury - Auto (MVA)</option>
-        <option value="Global Demand - Multiple Clients (MVA)">Global Demand - Multiple Clients (MVA)</option>
-        <option value="Uninsured Motorist">Uninsured Motorist</option>
-        <option value="Trip & Fall">Trip & Fall</option>
-        <option value="Slip & Fall">Slip & Fall</option>
-        <option value="Premises Liability - Waterpark">Premises Liability - Waterpark</option>
-        <option value="Assault & Battery">Assault & Battery</option>
-        <option value="Scooter Hit by Vehicle">Scooter Hit by Vehicle</option>
-        <option value="Wrongful Death">Wrongful Death</option>
-      </select>
-
-      <button type="submit">Request Sample</button>
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <h1>Request a Sample Demand Letter</h1>
+    
+    <form action="process-sample-request.php" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="firm">Law Firm:</label>
+        <input type="text" id="firm" name="firm" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="case_type">Case Type:</label>
+        <select id="case_type" name="case_type" required>
+          <option value="">-- Please choose an option --</option>
+          <option value="Bodily Injury - Auto (MVA)">🚗 Bodily Injury - Auto (MVA)</option>
+          <option value="Passenger Injury - Auto (MVA)">👥 Passenger Injury - Auto (MVA)</option>
+          <option value="Global Demand - Multiple Clients (MVA)">🌎 Global Demand - Multiple Clients (MVA)</option>
+          <option value="Uninsured Motorist">🛡️ Uninsured Motorist</option>
+          <option value="Trip & Fall">🚶 Trip & Fall</option>
+          <option value="Slip & Fall">⚠️ Slip & Fall</option>
+          <option value="Premises Liability">🏢 Premises Liability</option>
+          <option value="Assault & Battery">👊 Assault & Battery</option>
+          <option value="Wrongful Death">⚰️ Wrongful Death</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn-submit">Request Sample</button>
     </form>
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© 2025 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
+    <p>© 2020 ClaimWrit dba Envisage Companies LLC · Fort Lauderdale, FL</p>
     <p><a href="privacy-policy.html">Privacy Policy</a></p>
   </footer>
 </body>

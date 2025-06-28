@@ -1,136 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ClaimWrit</title>
-
-  <!-- Main Styles & FontAwesome -->
-  <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-
-  <!-- Focus styling -->
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background: #fff;
-      color: #1f1f1f;
-      text-align: center;
-    }
-    a:focus, button:focus, input:focus, textarea:focus {
-      outline: none;
-    }
-    :focus-visible {
-      outline: 2px dashed #bfa15d;
-      outline-offset: 4px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClaimWrit - Precision Demand Letters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Navigation -->
+  <!-- HEADER -->
+  <header class="logo-header">
+    <img src="images/ClaimWrit-Logo.jpg" alt="ClaimWrit Logo" class="logo-image" />
+    <p class="subline">Clarity · Structure · Resolution</p>
+  </header>
+
+  <!-- NAVIGATION -->
   <nav class="nav-bar">
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="mission.html">Our Mission</a></li>
       <li><a href="services.html">How We Help</a></li>
-      <li><a href="sample-request.html">Request Sample</a></li>
+      <li><a href="sample-request.html">Sample Request</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="client-upload.html">Client Portal</a></li>
     </ul>
   </nav>
 
-  <!-- Logo & Tagline -->
-  <header class="logo-header">
-    <img
-      src="images/ClaimWrit-Logo.jpg"
-      alt="ClaimWrit Logo — Clarity · Structure · Resolution"
-      class="logo"
-    />
-    <p class="subline">Clarity · Structure · Resolution</p>
-  </header>
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <h1>Your cases deserve weaponized demand letters.</h1>
+    <p class="results-statement">Firms using our service see 20%+ faster settlements on average.</p>
+    
+    <div class="upload-container">
+      <aside class="upload-checklist">
+        <h3>🗂 Submission Checklist</h3>
+        <p>Ensure your files include:</p>
+        <ul>
+          <li>✔ Police Report</li>
+          <li>✔ Medical Bills & Records</li>
+          <li>✔ Proof of Insurance</li>
+          <li>✔ Signed HIPAA Authorization</li>
+        </ul>
+        <a class="checklist-link" href="checklist/00_DEMAND_PACKAGE_SUBMISSION_CHECKLIST.pdf" target="_blank">📥 Download Full Checklist (PDF)</a>
+      </aside>
 
-  <!-- Hero Statement -->
-  <section class="hero-statement">
-    <p>
-      From compelling litigation-ready demand letters to optional
-      post-settlement reconciliation, ClaimWrit helps attorneys transform
-      raw records into streamlined, accurate case support—so nothing
-      gets lost in the details.
-    </p>
-    <h2>Why the Demand Letter Matters</h2>
-    <p>
-      A compelling personal injury demand letter does more than outline
-      damages—it sets the tone. By establishing liability, presenting
-      supporting evidence, and framing the narrative with clarity, it
-      helps drive settlement negotiations with purpose. When structured
-      strategically, these letters often result in faster, fairer
-      resolutions—maximizing compensation while reducing the need for
-      litigation.
-    </p>
-  </section>
+      <section class="upload-form">
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label>Client Full Name – DOA:
+              <input type="text" name="folder" placeholder="e.g., Maria Lopez – DOA 03/14/2022" required />
+            </label>
+          </div>
 
-  <!-- Expandable Services -->
-  <section class="icon-row">
-    <div class="icon-item" onclick="toggleText('text1')">
-      <i class="fas fa-briefcase" aria-hidden="true"></i>
-      <p>Strategic Legal Support</p>
-      <div class="icon-text" id="text1">
-        <p>
-          Your time is better spent building your argument—not buried in
-          medical notes. ClaimWrit handles the tedium so you don’t have to: we
-          comb through provider records, filter out filler, and surface exactly
-          what matters.
-        </p>
-      </div>
+          <div class="form-group">
+            <label>Your Email (confirmation sent to this address):
+              <input type="email" name="email" placeholder="e.g., you@lawfirm.com" required />
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>Select Files:
+              <input type="file" name="files[]" multiple required />
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit">Upload to ClaimWrit</button>
+        </form>
+
+        <p><a href="request-access.html">Request Attorney Access</a> if you do not have login credentials.</p>
+      </section>
     </div>
+  </main>
 
-    <div class="icon-item" onclick="toggleText('text2')">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Secure Upload Portal</p>
-      <div class="icon-text" id="text2">
-        <p>
-          Drag & drop large case files, PDFs, and images—encrypted,
-          HIPAA-compliant, and automatically organized in one step.
-        </p>
-      </div>
-    </div>
-
-    <div class="icon-item" onclick="toggleText('text3')">
-      <i class="fas fa-shield-alt" aria-hidden="true"></i>
-      <p>HIPAA-Compliant Systems</p>
-      <div class="icon-text" id="text3">
-        <p>
-          Bank-grade encryption and strict HIPAA protocols on every file—so
-          you know your documents and client data are fully protected.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© 2025 ClaimWrit d/b/a Envisage Companies LLC · Fort Lauderdale, FL</p>
-    <p>
-      <a href="privacy-policy.html">Privacy Policy</a> •
-      <a href="https://www.google.com/maps/place/Fort+Lauderdale,+FL+33334">Location</a>
-    </p>
+    <p>© 2020 ClaimWrit dba Envisage Companies LLC · Fort Lauderdale, FL</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a></p>
   </footer>
-
-  <!-- Toggle Script -->
-  <script>
-    function toggleText(id) {
-      const target = document.getElementById(id);
-      document.querySelectorAll('.icon-text').forEach(el => {
-        if (el !== target) el.style.display = 'none';
-      });
-      target.style.display = target.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 </body>
 </html>

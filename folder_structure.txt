@@ -1,0 +1,20 @@
+/public_html/
+│
+├── styles.css
+│
+├── index.html
+├── sample-request.html
+├── client-upload.html
+├── request-access.html
+├── dashboard.php
+├── upload.php
+├── process-request.php
+│
+├── /images/
+│   └── ClaimWrit-Logo.jpg
+│
+├── /uploads/
+│   └── (empty - for file uploads)
+│
+└── /checklist/
+    └── 00_DEMAND_PACKAGE_SUBMISSION_CHECKLIST.pdf
