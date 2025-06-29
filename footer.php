@@ -12,17 +12,9 @@
             <h3>Contact Us</h3>
             <address>
                 Fort Lauderdale, FL<br>
-                Phone: (555) 123-4567<br>
+                Phone: (954) 408-1937<br>
                 Email: info@claimwrit.com
             </address>
-        </div>
-        <div class="footer-section">
-            <h3>Follow Us</h3>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
         </div>
     </div>
     <div class="copyright">
@@ -30,6 +22,6 @@
     </div>
 </footer>
 
-<script src="/js/scripts.js"></script>
+<script src="<?= $base_url ?>/js/scripts.js"></script>
 </body>
 </html>

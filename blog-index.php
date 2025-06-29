@@ -1,7 +1,7 @@
 <?php 
 $pageTitle = "ClaimWrit Blogs";
 $currentPage = 'blog';
-include '../includes/header.php'; 
+require_once __DIR__ . '/../includes/header.php'; 
 ?>
 
 <main class="container">
@@ -20,4 +20,4 @@ include '../includes/header.php';
   </article>
 </main>
 
-<?php include '../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

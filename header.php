@@ -1,10 +1,9 @@
 <?php
-require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/config.php';
 
-// Set default page title if not defined
-if (!isset($pageTitle)) {
-    $pageTitle = 'Legal Document Services';
-}
+// Defaults if not set by the page
+if (!isset($pageTitle)) $pageTitle = 'Legal Document Services';
+if (!isset($currentPage)) $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,19 +11,11 @@ if (!isset($pageTitle)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($pageTitle) ?> | <?= $site_name ?></title>
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="<?= $base_url ?>/css/styles.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Favicon -->
     <link rel="icon" href="<?= $base_url ?>/images/favicon.png" type="image/png">
 </head>
 <body>
@@ -42,5 +33,5 @@ if (!isset($pageTitle)) {
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        <?php include __DIR__ . '/nav.php'; ?>
+        <?php require __DIR__ . '/nav.php'; ?>
     </header>

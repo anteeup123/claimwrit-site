@@ -1,28 +1,21 @@
 ﻿<?php
-// test_config.php - COMPLETE VERSION
-if (file_exists(__DIR__ . '/includes/config.php')) {
-    require_once(__DIR__ . '/includes/config.php');
-    echo "Config loaded successfully!" . PHP_EOL;
-    echo "DB_HOST: " . DB_HOST . PHP_EOL;
+require_once __DIR__ . '/includes/config.php';
+
+try {
+    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     
-    // =============================================
-    // NEW DATABASE TEST SECTION (paste everything below)
-    // =============================================
-    echo PHP_EOL . "Testing database connection..." . PHP_EOL;
+    if ($mysqli->connect_error) {
+        throw new Exception("Connection failed: " . $mysqli->connect_error);
+    }
     
-    try {
-        $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        
-        if ($mysqli->connect_error) {
-            throw new Exception("Connection failed: " . $mysqli->connect_error);
-        }
-        
-        echo "✓ Database connection successful!" . PHP_EOL;
-        echo "   MySQL version: " . $mysqli->server_version . PHP_EOL;
-        
-        // Test creating a table (temporary)
-        $testTable = "CREATE TABLE IF NOT EXISTS test_config_check (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            test_value VARCHAR(50),
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        
+    echo "✅ Database connected successfully!<br>";
+    echo "MySQL Server Version: " . $mysqli->server_info;
+    
+    // Test creating a table (optional)
+    $mysqli->query("CREATE TABLE IF NOT EXISTS test_connection (id INT AUTO_INCREMENT PRIMARY KEY, message VARCHAR(255))");
+    echo "<br>✅ Test table created (if didn't exist).";
+    
+    $mysqli->close();
+} catch (Exception $e) {
+    die("❌ Error: " . $e->getMessage());
+}
