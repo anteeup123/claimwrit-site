@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Professional Legal Document Services";
 $currentPage = 'home';
-require_once __DIR__ . '/header.php';
+require_once __DIR__ . '/includes/header.php';
 ?>
 
 <main class="homepage">
@@ -45,5 +45,3 @@ require_once __DIR__ . '/header.php';
         </div>
     </section>
 </main>
-
-<?php require_once __DIR__ . '/footer.php'; ?>
